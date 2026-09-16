@@ -214,15 +214,7 @@ h3 {
 
 /* Completa la parte inferior de la barra con una fotografía oscura */
 .sidebar-photo {
-  position: relative;
-  min-height: 205px;
-  margin: auto 22px 22px;
-  overflow: hidden;
-  border-radius: 25px;
-  background:
-    linear-gradient(rgba(25, 57, 111, 0.9), rgba(25, 57, 111, 0.92)),
-    url("../images/home/vista-general-parque.jpeg") center / cover;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  display: none;
 }
 
 .sidebar-photo::before {
@@ -382,6 +374,99 @@ h3 {
 
 .home-message strong {
   color: var(--blanco);
+}
+
+/* Ordena el título de inicio como en el esquema dibujado */
+.home-title {
+  display: inline-grid;
+  justify-items: center;
+  width: auto;
+  transform: rotate(-1deg);
+}
+
+.home-title__top,
+.home-title__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-title__top {
+  position: relative;
+  z-index: 2;
+  color: var(--azul-oscuro);
+  line-height: 0.96;
+  text-shadow: 0 5px 0 rgba(24, 50, 93, 0.12);
+}
+
+.home-title__line {
+  margin-top: -0.04em;
+  color: var(--blanco);
+  font-size: 0.72em;
+  line-height: 1;
+}
+
+.home-title__sin,
+.home-title__limits {
+  padding: 0.08em 0.22em 0.14em;
+  box-shadow: 0 6px 0 rgba(40, 72, 47, 0.1);
+}
+
+.home-title__sin {
+  border-radius: 16px 4px 4px 16px;
+  background: var(--amarillo);
+  transform: rotate(1deg);
+}
+
+.home-title__limits {
+  margin-left: -0.05em;
+  border-radius: 4px 18px 18px 4px;
+  background: var(--rosa);
+  transform: rotate(-1deg);
+}
+
+/* Coloca el subtítulo sobre la franja turquesa del dibujo */
+.home-screen .home-tagline {
+  display: table;
+  margin: -0.2em auto 31px;
+  padding: 7px 26px 9px;
+  border-radius: 9px 9px 22px 22px;
+  color: var(--azul-oscuro);
+  background: var(--turquesa);
+  box-shadow: 0 6px 0 rgba(40, 72, 47, 0.1);
+  transform: rotate(-3deg);
+}
+
+/* Reproduce el botón rosa con calendario, texto y flecha */
+.home-reserve-button {
+  width: min(430px, 100%);
+  min-height: 67px;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding: 10px 20px;
+  font-size: 1.12rem;
+}
+
+.home-reserve-button__calendar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.home-reserve-button__calendar path:nth-child(2) {
+  fill: currentColor;
+  stroke: none;
+}
+
+.home-reserve-button__arrow {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 /* Da a las llamadas principales la forma rosada del diseño */
