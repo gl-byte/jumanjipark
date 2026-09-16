@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contacta con Jumanji Park y deja preparada tu solicitud de reserva o cotización.">
-  <title>Contacto y reserva | Jumanji Park</title>
+  <meta name="description" content="Contacta a Jumanji Park y envía los datos principales de tu evento.">
+  <title>Contacto | Jumanji Park</title>
   <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
@@ -12,233 +12,96 @@
   <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Reúne la marca, las páginas principales y los accesos sociales -->
+  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park">
-      <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-    </a>
-    <!-- Convierte el menú lateral en un menú compacto cuando la pantalla es pequeña -->
+    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"></a>
+    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
     <div class="navigation">
       <input class="menu-toggle" id="menu-toggle" type="checkbox">
       <label class="menu-button" for="menu-toggle">Menú</label>
       <div class="menu-panel">
-      <nav class="primary-nav" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav-dot">01</span>Inicio</a>
-        <a href="juegos.html"><span class="nav-dot">02</span>Juegos</a>
-        <a href="eventos.html"><span class="nav-dot">03</span>Eventos</a>
-        <a href="alquiler.html"><span class="nav-dot">04</span>Alquiler</a>
-        <a href="contacto.html" aria-current="page"><span class="nav-dot">05</span>Contacto</a>
-      </nav>
-      <!-- Mantiene disponibles las cuatro redes solicitadas -->
-      <div class="header-social" aria-label="Redes sociales">
-        <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
-      </div>
-      <a class="button header-cta" href="#reserva">Reservar ahora</a>
-        <p class="header-note">Juegos y experiencias para compartir momentos inolvidables.</p>
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <a href="index.html"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
+          <a href="juegos.html"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
+          <a href="eventos.html"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
+          <a href="alquiler.html"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
+          <a href="contacto.html" aria-current="page"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
+        </nav>
+        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
       </div>
     </div>
   </header>
 
-  <main class="site-main" id="contenido">
-    <!-- Da la bienvenida y ofrece acceso directo a la reserva -->
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Hablemos de tu evento</p>
-          <h1>Una buena celebración empieza con un mensaje</h1>
-          <p class="lead">Elige tu canal preferido o completa el formulario con la información principal para dejar preparada tu solicitud.</p>
-          <div class="button-row">
-            <a class="button" href="#reserva">Completar formulario</a>
-            <a class="button button--secondary" href="">Abrir WhatsApp</a>
-          </div>
-        </div>
-        <img src="assets/images/generated/eventos/cumpleanos.png" alt="Familias y niños compartiendo una celebración en un espacio de juegos" width="1456" height="1088" fetchpriority="high">
-      </div>
-    </section>
+  <!-- Deja disponibles las cuatro redes solicitadas -->
+  <div class="floating-socials" aria-label="Redes sociales">
+    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
+  </div>
 
-    <!-- Presenta todos los canales sociales solicitados junto al formulario -->
-    <section class="section section--white" id="reserva" aria-labelledby="titulo-contacto">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Contacto y reserva</p>
-          <h2 id="titulo-contacto">Escoge cómo quieres comunicarte</h2>
-          <p class="lead">Los accesos sociales y el formulario están reunidos para que puedas elegir la vía más cómoda.</p>
+  <main class="site-main" id="contenido">
+    <!-- Reúne los accesos directos y el formulario como en el diseño de contacto -->
+    <section class="screen" id="reserva">
+      <div class="screen-inner">
+        <div class="screen-header">
+          <h1 class="screen-title">Contáctanos</h1>
+          <p class="screen-subtitle">¡Escríbenos y te ayudamos con tu reserva!</p>
         </div>
 
         <div class="contact-layout">
-          <!-- Mantiene visibles Facebook, Instagram, TikTok y WhatsApp -->
-          <div class="contact-channels" aria-label="Canales de contacto">
-            <a class="contact-channel" href="">
-              <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
-              <span><strong>WhatsApp</strong><span>Conversación directa</span></span>
-              <b aria-hidden="true">→</b>
+          <div class="contact-options">
+            <a class="contact-option" href="">
+              <div><h2>WhatsApp</h2><p>Escríbenos directo</p><span class="button button--blue">Enviar mensaje</span></div>
             </a>
-            <a class="contact-channel" href="">
-              <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
-              <span><strong>Facebook</strong><span>Novedades y mensajes</span></span>
-              <b aria-hidden="true">→</b>
+            <a class="contact-option" href="">
+              <div><h2>Facebook</h2><p>Síguenos en redes</p><span class="button button--blue">Ir a Facebook</span></div>
             </a>
-            <a class="contact-channel" href="">
-              <img src="assets/icons/instagram.svg" alt="" width="48" height="48">
-              <span><strong>Instagram</strong><span>Fotos y actualidad</span></span>
-              <b aria-hidden="true">→</b>
-            </a>
-            <a class="contact-channel" href="">
-              <img src="assets/icons/tiktok.svg" alt="" width="48" height="48">
-              <span><strong>TikTok</strong><span>Momentos en movimiento</span></span>
-              <b aria-hidden="true">→</b>
+            <a class="contact-option" href="#formulario">
+              <div><h2>Formulario de reserva</h2><p>Completa tus datos y te contactaremos</p><span class="button button--blue">Ir al formulario</span></div>
             </a>
           </div>
 
-          <!-- Recopila los datos básicos necesarios para comprender la solicitud -->
-          <form class="form-card" action="" method="post">
-            <h3>Formulario de reserva</h3>
-            <p>Comparte la información disponible. Los detalles finales se confirman durante el contacto.</p>
+          <!-- Recibe los datos principales necesarios para preparar la consulta -->
+          <form class="form-card" id="formulario" action="" method="post">
+            <h2>Escríbenos</h2>
             <div class="form-grid">
-              <div class="field">
-                <label for="nombre">Nombre completo</label>
-                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="telefono">Teléfono</label>
-                <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
-              </div>
-              <div class="field">
-                <label for="correo">Correo electrónico</label>
-                <input id="correo" name="correo" type="email" autocomplete="email">
-              </div>
-              <div class="field">
-                <label for="fecha">Fecha del evento</label>
-                <input id="fecha" name="fecha" type="date">
-              </div>
-              <div class="field">
-                <label for="evento">Tipo de evento</label>
-                <select id="evento" name="evento" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="cumpleanos">Cumpleaños</option>
-                  <option value="colegio">Colegio</option>
-                  <option value="infantil">Evento infantil</option>
-                  <option value="empresarial">Evento empresarial</option>
-                  <option value="celebracion">Fiesta o celebración</option>
-                  <option value="otro">Otro tipo de evento</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="invitados">Cantidad estimada de invitados</label>
-                <input id="invitados" name="invitados" type="number" min="1" inputmode="numeric">
-              </div>
-              <div class="field field--full">
-                <label for="juego">Juego o paquete de interés</label>
-                <select id="juego" name="juego">
-                  <option value="">Selecciona una opción</option>
-                  <option value="inflables">Inflables</option>
-                  <option value="toro">Toro mecánico</option>
-                  <option value="camas">Camas elásticas</option>
-                  <option value="carritos">Carrusel de carritos</option>
-                  <option value="futbolines">Futbolines</option>
-                  <option value="paquete-esencial">Paquete Esencial</option>
-                  <option value="paquete-diversion">Paquete Diversión</option>
-                  <option value="paquete-gran-evento">Paquete Gran Evento</option>
-                  <option value="orientacion">Necesito orientación</option>
-                </select>
-              </div>
-              <div class="field field--full">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos lo más importante sobre tu evento"></textarea>
-              </div>
-              <div class="field field--full">
-                <button class="button" type="submit">Enviar solicitud</button>
-              </div>
+              <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+              <div class="field"><label for="correo">Correo</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
+              <div class="field"><label for="evento">Tipo de evento</label><select id="evento" name="evento"><option value="">Seleccionar</option><option>Cumpleaños</option><option>Evento escolar</option><option>Evento empresarial</option><option>Fiesta o celebración</option><option>Otro</option></select></div>
+              <div class="field field--full"><label for="fecha">Fecha estimada</label><input id="fecha" name="fecha" type="date"></div>
+              <div class="field field--full"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea></div>
             </div>
-            <p class="form-note">El envío confirma una solicitud de contacto, no una reserva automática.</p>
+            <button class="button" type="submit">Enviar</button>
+            <p class="form-note">La disponibilidad y los detalles se confirman después de revisar la solicitud.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Explica qué información ayuda a orientar mejor la conversación -->
-    <section class="section section--mint" aria-labelledby="titulo-preparar">
+    <!-- Explica qué información ayuda a preparar una respuesta -->
+    <section class="content-section content-section--white" aria-labelledby="titulo-datos">
       <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Antes de escribir</p>
-          <h2 id="titulo-preparar">Tres datos que ayudan a avanzar más rápido</h2>
-        </div>
+        <div class="section-heading"><h2 id="titulo-datos">Lo que necesitamos saber</h2><p>Estos datos permiten orientar la disponibilidad y la propuesta.</p></div>
         <div class="steps">
-          <article class="step">
-            <span class="step-number">1</span>
-            <h3>La fecha</h3>
-            <p>Permite revisar la disponibilidad de las opciones que te interesan.</p>
-          </article>
-          <article class="step">
-            <span class="step-number">2</span>
-            <h3>El tipo de evento</h3>
-            <p>Ayuda a comprender el público y el propósito principal del encuentro.</p>
-          </article>
-          <article class="step">
-            <span class="step-number">3</span>
-            <h3>Los juegos</h3>
-            <p>Sirve para preparar una propuesta más cercana a lo que imaginas.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ofrece una última vía directa para revisar el catálogo -->
-    <section class="section section--compact">
-      <div class="container">
-        <div class="cta-panel">
-          <div>
-            <h2>¿Todavía estás comparando opciones?</h2>
-            <p>Vuelve al catálogo y revisa fotografías, categorías y alternativas disponibles.</p>
-          </div>
-          <a class="button" href="juegos.html">Explorar juegos</a>
+          <article class="step"><span class="step-number">1</span><h3>La ocasión</h3><p>Indica si se trata de un cumpleaños, colegio, empresa u otra celebración.</p></article>
+          <article class="step"><span class="step-number">2</span><h3>La fecha</h3><p>Comparte el día estimado y cualquier detalle importante del lugar.</p></article>
+          <article class="step"><span class="step-number">3</span><h3>Los juegos</h3><p>Menciona las atracciones o paquetes que más te interesan.</p></article>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Reúne enlaces útiles, contacto y redes sociales al final de la página -->
+  <!-- Reúne accesos útiles y redes al final de la página -->
   <footer class="site-footer">
-    <div class="footer-wave" aria-hidden="true"></div>
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-        <p>Diversión, juegos y experiencias para celebrar los momentos que más importan.</p>
-      </div>
-      <div>
-        <h2>Explorar</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="juegos.html">Juegos</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="alquiler.html">Alquiler</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Reservar</h2>
-        <ul class="footer-links">
-          <li><a href="#reserva">Formulario</a></li>
-          <li><a href="alquiler.html#paquetes">Paquetes</a></li>
-          <li><a href="juegos.html">Por juego</a></li>
-          <li><a href="eventos.html">Por evento</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Síguenos</h2>
-        <div class="footer-socials">
-          <a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a>
-          <a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a>
-          <a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a>
-          <a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a>
-        </div>
-      </div>
+      <div class="footer-brand"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"><p>Juegos y experiencias para celebrar momentos inolvidables.</p></div>
+      <div><h2>Explorar</h2><ul class="footer-links"><li><a href="index.html">Inicio</a></li><li><a href="juegos.html">Juegos</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="alquiler.html">Alquiler</a></li></ul></div>
+      <div><h2>Reserva</h2><ul class="footer-links"><li><a href="#formulario">Formulario</a></li><li><a href="alquiler.html#paquetes">Paquetes</a></li><li><a href="juegos.html">Por juego</a></li></ul></div>
+      <div><h2>Síguenos</h2><div class="footer-socials"><a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a><a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a><a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a><a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a></div></div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Jumanji Park. Todos los derechos reservados.</p>
-    </div>
+    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
   </footer>
 </body>
 </html>

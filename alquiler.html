@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explora paquetes, alquiler por juego y opciones de cotización de Jumanji Park.">
+  <meta name="description" content="Explora las modalidades y paquetes de alquiler de Jumanji Park para tu próximo evento.">
   <title>Alquiler | Jumanji Park</title>
   <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/estilos.css">
@@ -12,228 +12,166 @@
   <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Reúne la marca, las páginas principales y los accesos sociales -->
+  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park">
       <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
     </a>
-    <!-- Convierte el menú lateral en un menú compacto cuando la pantalla es pequeña -->
+
+    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
     <div class="navigation">
       <input class="menu-toggle" id="menu-toggle" type="checkbox">
       <label class="menu-button" for="menu-toggle">Menú</label>
       <div class="menu-panel">
-      <nav class="primary-nav" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav-dot">01</span>Inicio</a>
-        <a href="juegos.html"><span class="nav-dot">02</span>Juegos</a>
-        <a href="eventos.html"><span class="nav-dot">03</span>Eventos</a>
-        <a href="alquiler.html" aria-current="page"><span class="nav-dot">04</span>Alquiler</a>
-        <a href="contacto.html"><span class="nav-dot">05</span>Contacto</a>
-      </nav>
-      <!-- Mantiene disponibles las cuatro redes solicitadas -->
-      <div class="header-social" aria-label="Redes sociales">
-        <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
-      </div>
-      <a class="button header-cta" href="contacto.html#reserva">Reservar ahora</a>
-        <p class="header-note">Juegos y experiencias para compartir momentos inolvidables.</p>
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <a href="index.html"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
+          <a href="juegos.html"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
+          <a href="eventos.html"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
+          <a href="alquiler.html" aria-current="page"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
+          <a href="contacto.html"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
+        </nav>
+        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
       </div>
     </div>
   </header>
 
+  <!-- Deja disponibles las cuatro redes solicitadas -->
+  <div class="floating-socials" aria-label="Redes sociales">
+    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
+  </div>
+
   <main class="site-main" id="contenido">
-    <!-- Introduce las modalidades de alquiler y conduce a la cotización -->
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Una propuesta a tu medida</p>
-          <h1>Elige cómo quieres llevar la diversión a tu evento</h1>
-          <p class="lead">Puedes comenzar con un paquete, seleccionar un juego específico o contarnos tu idea para recibir una cotización.</p>
-          <div class="button-row">
-            <a class="button" href="contacto.html#reserva">Solicitar cotización</a>
-            <a class="button button--secondary" href="#modalidades">Ver modalidades</a>
-          </div>
+    <!-- Presenta inmediatamente las cuatro rutas de alquiler -->
+    <section class="screen">
+      <div class="screen-inner">
+        <div class="screen-header">
+          <h1 class="screen-title">Alquiler</h1>
+          <p class="screen-subtitle screen-subtitle--pill">Elige la opción que mejor se adapte a tu evento.</p>
         </div>
-        <img src="assets/images/home/vista-general-parque.jpeg" alt="Vista amplia de las atracciones y juegos de Jumanji Park" width="1600" height="1200" fetchpriority="high">
+
+        <div class="visual-grid rental-grid">
+          <a class="visual-card tone-pink" href="#paquetes">
+            <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable de colores" width="1200" height="1600">
+            <span class="card-label">Paquetes de alquiler</span>
+          </a>
+          <a class="visual-card tone-blue" href="juegos.html">
+            <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Selección de atracciones disponibles" width="934" height="906">
+            <span class="card-label">Alquiler por juego</span>
+          </a>
+          <a class="visual-card tone-green" href="contacto.html#reserva">
+            <img src="assets/images/generated/eventos/celebraciones.png" alt="Celebración familiar con juegos" width="1456" height="1088">
+            <span class="card-label">Promociones</span>
+          </a>
+          <a class="visual-card tone-violet" href="contacto.html#reserva">
+            <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil disponible para alquiler" width="1296" height="968">
+            <span class="card-label">Solicitar cotización</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Presenta las rutas disponibles para preparar el alquiler -->
-    <section class="section section--white" id="modalidades" aria-labelledby="titulo-modalidades">
+    <!-- Muestra los paquetes con el orden visual del esquema de Gemini -->
+    <section class="content-section" id="paquetes" aria-labelledby="titulo-paquetes">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Empieza por aquí</p>
-          <h2 id="titulo-modalidades">Cuatro formas de encontrar tu opción</h2>
-          <p class="lead">Cada ruta conduce a una consulta para confirmar disponibilidad y condiciones antes de reservar.</p>
+          <h2 id="titulo-paquetes">Paquetes de alquiler</h2>
+          <p>Una base sencilla para organizar la diversión. La selección final se confirma según la fecha, el espacio y la disponibilidad.</p>
         </div>
-        <div class="card-grid card-grid--four">
-          <article class="image-card accent-pink">
-            <div class="image-card__media">
-              <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable que puede formar parte de un paquete" width="1200" height="1600" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Paquetes</h3>
-              <p>Una selección agrupada para comenzar con mayor facilidad.</p>
-              <a class="card-link" href="#paquetes">Ver paquetes</a>
-            </div>
-          </article>
-          <article class="image-card accent-blue">
-            <div class="image-card__media">
-              <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico disponible como una opción individual" width="2048" height="1536" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Por juego</h3>
-              <p>Elige una atracción concreta y consulta sus detalles.</p>
-              <a class="card-link" href="juegos.html">Elegir juego</a>
-            </div>
-          </article>
-          <article class="image-card accent-green">
-            <div class="image-card__media">
-              <img src="assets/images/generated/eventos/celebraciones.png" alt="Familia disfrutando una celebración colorida" width="1456" height="1088" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Promociones</h3>
-              <p>Consulta las oportunidades disponibles para tu fecha.</p>
-              <a class="card-link" href="contacto.html#reserva">Consultar promociones</a>
-            </div>
-          </article>
-          <article class="image-card accent-violet">
-            <div class="image-card__media">
-              <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil de vehículos de colores" width="1296" height="968" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Cotización</h3>
-              <p>Describe el evento y recibe una propuesta personalizada.</p>
-              <a class="card-link" href="contacto.html#reserva">Solicitar propuesta</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- Organiza los paquetes sin presentar precios que todavía no están confirmados -->
-    <section class="section section--mint" id="paquetes" aria-labelledby="titulo-paquetes">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Paquetes de alquiler</p>
-          <h2 id="titulo-paquetes">Una base para cada tamaño de celebración</h2>
-          <p class="lead">Los detalles, la duración y el valor se confirman en la cotización según la fecha y disponibilidad.</p>
-        </div>
-        <div class="pricing-grid">
-          <article class="pricing-card">
+        <div class="package-grid">
+          <article class="package-card">
             <span class="tag">Punto de partida</span>
             <h3>Paquete Esencial</h3>
-            <p>Una propuesta compacta para encuentros que buscan sumar un foco principal de diversión.</p>
+            <p>Una opción compacta para reuniones y celebraciones pequeñas.</p>
             <ul class="check-list">
-              <li>Selección definida contigo</li>
-              <li>Duración por confirmar</li>
-              <li>Cotización personalizada</li>
+              <li>Selección principal de juegos</li>
+              <li>Duración acordada</li>
+              <li>Orientación personalizada</li>
             </ul>
-            <a class="button" href="contacto.html#reserva">Consultar esencial</a>
+            <a class="button" href="contacto.html#reserva">Seleccionar</a>
           </article>
-          <article class="pricing-card">
+
+          <article class="package-card">
             <span class="tag">Más variedad</span>
             <h3>Paquete Diversión</h3>
-            <p>Una combinación intermedia pensada para ofrecer distintas experiencias durante el evento.</p>
+            <p>Una combinación equilibrada para mantener el evento en movimiento.</p>
             <ul class="check-list">
-              <li>Variedad de categorías</li>
-              <li>Organización según el público</li>
-              <li>Cotización personalizada</li>
+              <li>Juegos de distintas categorías</li>
+              <li>Propuesta según las edades</li>
+              <li>Duración acordada</li>
             </ul>
-            <a class="button" href="contacto.html#reserva">Consultar diversión</a>
+            <a class="button" href="contacto.html#reserva">Seleccionar</a>
           </article>
-          <article class="pricing-card">
-            <span class="tag">Propuesta amplia</span>
+
+          <article class="package-card">
+            <span class="tag">Experiencia amplia</span>
             <h3>Paquete Gran Evento</h3>
-            <p>Una alternativa más completa para jornadas con mayor cantidad de invitados y actividades.</p>
+            <p>Una propuesta completa para jornadas con más invitados y actividades.</p>
             <ul class="check-list">
-              <li>Selección amplia de juegos</li>
-              <li>Planificación de la experiencia</li>
-              <li>Cotización personalizada</li>
+              <li>Selección amplia de atracciones</li>
+              <li>Organización de la experiencia</li>
+              <li>Atención para tu solicitud</li>
             </ul>
-            <a class="button button--green" href="contacto.html#reserva">Consultar gran evento</a>
+            <a class="button" href="contacto.html#reserva">Seleccionar</a>
           </article>
+        </div>
+
+        <h2 class="included-title">¿Qué incluye?</h2>
+        <div class="included-grid">
+          <div class="included-item">Atención personalizada</div>
+          <div class="included-item">Coordinación del servicio</div>
+          <div class="included-item">Instalación y desmontaje</div>
         </div>
       </div>
     </section>
 
-    <!-- Explica los pasos de la solicitud hasta la confirmación -->
-    <section class="section section--white" aria-labelledby="titulo-pasos">
+    <!-- Aclara las dudas principales antes de enviar una solicitud -->
+    <section class="content-section content-section--white" aria-labelledby="titulo-preguntas">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Cómo funciona</p>
-          <h2 id="titulo-pasos">Tres pasos para preparar la propuesta</h2>
-        </div>
-        <div class="steps">
-          <article class="step">
-            <span class="step-number">1</span>
-            <h3>Selecciona</h3>
-            <p>Revisa el catálogo y señala el paquete o los juegos que más te interesan.</p>
-          </article>
-          <article class="step">
-            <span class="step-number">2</span>
-            <h3>Describe el evento</h3>
-            <p>Comparte la fecha, el tipo de celebración y cualquier detalle relevante.</p>
-          </article>
-          <article class="step">
-            <span class="step-number">3</span>
-            <h3>Confirma</h3>
-            <p>Recibe la orientación, revisa la disponibilidad y acuerda los detalles finales.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Aclara dudas habituales sin mostrar todo el texto al mismo tiempo -->
-    <section class="section" aria-labelledby="titulo-preguntas">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Antes de reservar</p>
           <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+          <p>Información básica para preparar la consulta.</p>
         </div>
         <div class="faq-list">
           <details>
-            <summary>¿Cómo sé si un juego está disponible?</summary>
-            <p>La disponibilidad se confirma al recibir la fecha y los datos principales del evento.</p>
+            <summary>¿Cómo confirmo la disponibilidad?</summary>
+            <p>Envía la fecha, el lugar y el tipo de evento para revisar las opciones disponibles.</p>
           </details>
           <details>
-            <summary>¿Puedo elegir juegos de distintas categorías?</summary>
-            <p>Sí. Puedes indicar todas las opciones que te interesan para que sean consideradas en la propuesta.</p>
+            <summary>¿Puedo combinar juegos distintos?</summary>
+            <p>Sí. Puedes indicar todas las atracciones que te interesen para preparar una propuesta adecuada.</p>
           </details>
           <details>
-            <summary>¿Los paquetes tienen siempre la misma composición?</summary>
-            <p>La composición se define según disponibilidad, público y características de la celebración.</p>
-          </details>
-          <details>
-            <summary>¿Cuándo se confirma el precio?</summary>
-            <p>El valor se informa dentro de la cotización, después de revisar los detalles enviados.</p>
+            <summary>¿Cuándo se informa el precio?</summary>
+            <p>El valor se confirma en la cotización después de revisar los detalles del evento.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Cierra la página con acceso directo a la solicitud -->
-    <section class="section section--compact">
+    <!-- Invita a continuar con la solicitud de reserva -->
+    <section class="content-section">
       <div class="container">
         <div class="cta-panel">
           <div>
-            <h2>¿Listo para solicitar una propuesta?</h2>
-            <p>Completa los datos principales y deja preparada tu solicitud de alquiler.</p>
+            <h2>¿Preparamos tu propuesta?</h2>
+            <p>Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.</p>
           </div>
-          <a class="button" href="contacto.html#reserva">Ir al formulario</a>
+          <a class="button" href="contacto.html#reserva">Solicitar cotización</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Reúne enlaces útiles, alquileres y redes sociales al final de la página -->
+  <!-- Reúne accesos útiles y redes al final de la página -->
   <footer class="site-footer">
-    <div class="footer-wave" aria-hidden="true"></div>
     <div class="container footer-grid">
       <div class="footer-brand">
         <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-        <p>Diversión, juegos y experiencias para celebrar los momentos que más importan.</p>
+        <p>Juegos y experiencias para celebrar momentos inolvidables.</p>
       </div>
       <div>
         <h2>Explorar</h2>
@@ -250,7 +188,6 @@
           <li><a href="#paquetes">Paquetes</a></li>
           <li><a href="juegos.html">Por juego</a></li>
           <li><a href="contacto.html#reserva">Cotización</a></li>
-          <li><a href="#titulo-preguntas">Preguntas</a></li>
         </ul>
       </div>
       <div>
@@ -263,9 +200,7 @@
         </div>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Jumanji Park. Todos los derechos reservados.</p>
-    </div>
+    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
   </footer>
 </body>
 </html>

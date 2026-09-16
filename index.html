@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jumanji Park ofrece juegos, entretenimiento y opciones de alquiler para celebraciones y eventos.">
-  <title>Jumanji Park | Diversión para tus mejores momentos</title>
+  <meta name="description" content="Jumanji Park ofrece juegos, alquileres y entretenimiento para celebraciones y eventos.">
+  <title>Jumanji Park | Diversión sin límites</title>
   <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
@@ -12,297 +12,118 @@
   <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Reúne la marca, las páginas principales y los accesos sociales -->
+  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park">
       <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
     </a>
-
-    <!-- Convierte el menú lateral en un menú compacto cuando la pantalla es pequeña -->
+    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
     <div class="navigation">
       <input class="menu-toggle" id="menu-toggle" type="checkbox">
       <label class="menu-button" for="menu-toggle">Menú</label>
       <div class="menu-panel">
-      <nav class="primary-nav" aria-label="Navegación principal">
-        <a href="index.html" aria-current="page"><span class="nav-dot">01</span>Inicio</a>
-        <a href="juegos.html"><span class="nav-dot">02</span>Juegos</a>
-        <a href="eventos.html"><span class="nav-dot">03</span>Eventos</a>
-        <a href="alquiler.html"><span class="nav-dot">04</span>Alquiler</a>
-        <a href="contacto.html"><span class="nav-dot">05</span>Contacto</a>
-      </nav>
-
-      <!-- Mantiene disponibles las cuatro redes solicitadas -->
-      <div class="header-social" aria-label="Redes sociales">
-        <a class="social-link" href="" aria-label="Facebook">
-          <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
-        </a>
-        <a class="social-link" href="" aria-label="Instagram">
-          <img src="assets/icons/instagram.svg" alt="" width="48" height="48">
-        </a>
-        <a class="social-link" href="" aria-label="TikTok">
-          <img src="assets/icons/tiktok.svg" alt="" width="48" height="48">
-        </a>
-        <a class="social-link" href="" aria-label="WhatsApp">
-          <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
-        </a>
-      </div>
-
-      <a class="button header-cta" href="contacto.html#reserva">Reservar ahora</a>
-        <p class="header-note">Juegos y experiencias para compartir momentos inolvidables.</p>
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <a href="index.html" aria-current="page"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
+          <a href="juegos.html"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
+          <a href="eventos.html"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
+          <a href="alquiler.html"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
+          <a href="contacto.html"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
+        </nav>
+        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
       </div>
     </div>
   </header>
 
-  <main class="site-main" id="contenido">
-    <!-- Presenta el propósito del negocio y conduce a la reserva -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Diversión para compartir</p>
-          <h1>Momentos grandes, <strong>sonrisas sin límites.</strong></h1>
-          <p class="lead">Encuentra juegos y opciones de entretenimiento para cumpleaños, colegios, celebraciones familiares y encuentros especiales.</p>
-          <div class="button-row">
-            <a class="button" href="contacto.html#reserva">Planear mi evento</a>
-            <a class="button button--secondary" href="juegos.html">Conocer los juegos</a>
-          </div>
-          <ul class="hero-chips" aria-label="Ventajas principales">
-            <li>Opciones para distintas edades</li>
-            <li>Atención personalizada</li>
-            <li>Experiencias memorables</li>
-          </ul>
-        </div>
+  <!-- Deja disponibles las cuatro redes solicitadas -->
+  <div class="floating-socials" aria-label="Redes sociales">
+    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
+  </div>
 
-        <div class="hero-media">
-          <img class="hero-photo" src="assets/images/home/vista-general-parque.jpeg" alt="Vista general de los inflables y futbolines de Jumanji Park" width="1600" height="1200" fetchpriority="high">
-          <div class="hero-badge">Todo empieza con una idea. Nosotros te ayudamos a convertirla en diversión.</div>
-        </div>
+  <main class="site-main" id="contenido">
+    <!-- Reproduce el mensaje principal del diseño de inicio -->
+    <section class="screen home-screen">
+      <div class="screen-inner">
+        <h1 class="screen-title">¡Diversión<br>sin límites!</h1>
+        <p class="screen-subtitle">Para tus mejores momentos</p>
+        <div class="home-message">En <strong>Jumanji Park</strong> alquilamos juegos, inflables, atracciones y entretenimiento para distintas edades y celebraciones.</div>
+        <a class="button button-arrow" href="contacto.html#reserva">Reservar ahora</a>
       </div>
     </section>
 
-    <!-- Muestra las categorías principales con fotografías reales del negocio -->
-    <section class="section section--white" aria-labelledby="titulo-juegos">
+    <!-- Presenta una selección rápida de juegos con fotografías reales -->
+    <section class="content-section" aria-labelledby="titulo-destacados">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Nuestro catálogo</p>
-          <h2 id="titulo-juegos">Juegos para llenar el día de energía</h2>
-          <p class="lead">Explora alternativas pensadas para moverse, reír y compartir. Cada opción puede incorporarse a una propuesta de alquiler.</p>
+          <h2 id="titulo-destacados">Diversión para elegir</h2>
+          <p>Combina atracciones y experiencias según la edad de tus invitados y el estilo de tu evento.</p>
         </div>
-
-        <div class="card-grid card-grid--scroll">
-          <article class="image-card accent-pink">
-            <div class="image-card__media">
-              <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable colorido instalado en el parque" width="1200" height="1600" loading="lazy">
-            </div>
-            <div class="image-card__body">
+        <div class="detail-grid">
+          <article class="detail-card">
+            <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable colorido" width="1200" height="1600" loading="lazy">
+            <div class="detail-card__body">
               <h3>Inflables</h3>
-              <p>Castillos, recorridos y estructuras llenas de color.</p>
-              <a class="card-link" href="juegos.html#inflables">Ver inflables</a>
+              <p>Castillos y recorridos llenos de color para mantener la energía en movimiento.</p>
+              <a class="button" href="juegos.html#inflables">Ver inflables</a>
             </div>
           </article>
-
-          <article class="image-card accent-blue">
-            <div class="image-card__media">
-              <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico dentro de su zona inflable de seguridad" width="2048" height="1536" loading="lazy">
-            </div>
-            <div class="image-card__body">
+          <article class="detail-card">
+            <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico con zona de seguridad" width="2048" height="1536" loading="lazy">
+            <div class="detail-card__body">
               <h3>Toro mecánico</h3>
-              <p>Un reto entretenido para animar encuentros y celebraciones.</p>
-              <a class="card-link" href="juegos.html#toro-mecanico">Conocer el reto</a>
+              <p>Un desafío entretenido que anima reuniones familiares y eventos especiales.</p>
+              <a class="button button--blue" href="juegos.html#toro-mecanico">Conocer el reto</a>
             </div>
           </article>
-
-          <article class="image-card accent-green">
-            <div class="image-card__media">
-              <img src="assets/images/games/camas-elasticas/cama-elastica-grande.jpeg" alt="Cama elástica amplia con cubierta multicolor" width="1080" height="810" loading="lazy">
-            </div>
-            <div class="image-card__body">
+          <article class="detail-card">
+            <img src="assets/images/games/camas-elasticas/cama-elastica-grande.jpeg" alt="Cama elástica amplia y colorida" width="1080" height="810" loading="lazy">
+            <div class="detail-card__body">
               <h3>Camas elásticas</h3>
-              <p>Un espacio amplio para saltar y disfrutar con libertad.</p>
-              <a class="card-link" href="juegos.html#camas-elasticas">Ver alternativas</a>
-            </div>
-          </article>
-
-          <article class="image-card accent-orange">
-            <div class="image-card__media">
-              <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil con pequeños vehículos de colores" width="1296" height="968" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Carrusel de carritos</h3>
-              <p>Vehículos infantiles en una propuesta alegre y llamativa.</p>
-              <a class="card-link" href="juegos.html#carritos">Descubrir carritos</a>
-            </div>
-          </article>
-
-          <article class="image-card accent-violet">
-            <div class="image-card__media">
-              <img src="assets/images/home/vista-general-parque.jpeg" alt="Futbolines preparados junto a la zona de inflables" width="1600" height="1200" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Futbolines</h3>
-              <p>Partidas rápidas para compartir entre amigos y familiares.</p>
-              <a class="card-link" href="juegos.html#futbolines">Ver futbolines</a>
-            </div>
-          </article>
-
-          <article class="image-card accent-yellow">
-            <div class="image-card__media">
-              <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Composición con distintas alternativas de inflables" width="934" height="906" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Más diversión</h3>
-              <p>Combinaciones y propuestas adaptables a cada ocasión.</p>
-              <a class="card-link" href="juegos.html#otros-juegos">Explorar opciones</a>
+              <p>Una alternativa activa para saltar, jugar y compartir con libertad.</p>
+              <a class="button button--green" href="juegos.html#camas-elasticas">Ver opciones</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Resume las cualidades que orientan la experiencia del cliente -->
-    <section class="section section--compact">
+    <!-- Explica los pasos principales para organizar una reserva -->
+    <section class="content-section content-section--white" aria-labelledby="titulo-pasos">
       <div class="container">
-        <div class="benefit-strip">
-          <div class="benefit">
-            <span class="benefit-mark">01</span>
-            <p><strong>Variedad para elegir</strong><span>Alternativas para distintos estilos de evento.</span></p>
-          </div>
-          <div class="benefit">
-            <span class="benefit-mark">02</span>
-            <p><strong>Propuesta a tu medida</strong><span>La selección se organiza según tu ocasión.</span></p>
-          </div>
-          <div class="benefit">
-            <span class="benefit-mark">03</span>
-            <p><strong>Contacto directo</strong><span>Una ruta clara para consultar y reservar.</span></p>
-          </div>
+        <div class="section-heading">
+          <h2 id="titulo-pasos">Tu evento en tres pasos</h2>
+          <p>Una ruta directa para pasar de la idea a la celebración.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">1</span><h3>Explora</h3><p>Revisa juegos, tipos de evento y paquetes disponibles.</p></article>
+          <article class="step"><span class="step-number">2</span><h3>Cuéntanos</h3><p>Comparte la fecha, el lugar y la cantidad aproximada de invitados.</p></article>
+          <article class="step"><span class="step-number">3</span><h3>Confirma</h3><p>Recibe la orientación y acuerda los detalles de la propuesta.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Presenta los tipos de evento mediante imágenes creadas para esta sección -->
-    <section class="section section--mint" aria-labelledby="titulo-eventos">
-      <div class="container">
-        <div class="section-heading section-heading--center">
-          <p class="eyebrow">Cada ocasión cuenta</p>
-          <h2 id="titulo-eventos">Una experiencia para cada celebración</h2>
-          <p class="lead">Elige el tipo de encuentro y combina actividades, juegos y momentos para recordar.</p>
-        </div>
-
-        <div class="card-grid">
-          <article class="image-card accent-pink">
-            <div class="image-card__media">
-              <img src="assets/images/generated/eventos/cumpleanos.png" alt="Fiesta de cumpleaños infantil en un espacio de juegos" width="1456" height="1088" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Cumpleaños</h3>
-              <p>Una jornada colorida para celebrar a lo grande.</p>
-              <a class="card-link" href="eventos.html#cumpleanos">Ver propuesta</a>
-            </div>
-          </article>
-
-          <article class="image-card accent-blue">
-            <div class="image-card__media">
-              <img src="assets/images/generated/eventos/colegios.png" alt="Niños participando en una actividad recreativa escolar" width="1456" height="1088" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Colegios</h3>
-              <p>Dinámicas para aprender, participar y compartir.</p>
-              <a class="card-link" href="eventos.html#colegios">Ver actividades</a>
-            </div>
-          </article>
-
-          <article class="image-card accent-green">
-            <div class="image-card__media">
-              <img src="assets/images/generated/eventos/empresariales.png" alt="Familias compartiendo juegos durante una jornada empresarial" width="1456" height="1088" loading="lazy">
-            </div>
-            <div class="image-card__body">
-              <h3>Eventos empresariales</h3>
-              <p>Momentos de integración para equipos y familias.</p>
-              <a class="card-link" href="eventos.html#empresariales">Conocer opciones</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Explica la propuesta de alquiler y conduce a las opciones disponibles -->
-    <section class="section section--white">
-      <div class="container feature-list">
-        <article class="feature">
-          <div class="feature-gallery feature-gallery--single">
-            <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Selección de inflables disponibles en el parque" width="934" height="906" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Alquiler flexible</p>
-            <h2>Arma una combinación que encaje con tu evento</h2>
-            <p class="lead">Puedes comenzar por un juego, explorar paquetes o solicitar una propuesta pensada alrededor de tu fecha y tipo de celebración.</p>
-            <ul>
-              <li>Selección por categoría de juego</li>
-              <li>Opciones para eventos pequeños y grandes</li>
-              <li>Cotización antes de confirmar</li>
-            </ul>
-            <a class="button" href="alquiler.html">Explorar alquileres</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Cierra la página con una invitación directa a conversar -->
-    <section class="section section--compact">
+    <!-- Invita a conocer las opciones de alquiler -->
+    <section class="content-section">
       <div class="container">
         <div class="cta-panel">
-          <div>
-            <h2>¿Ya imaginas tu próximo evento?</h2>
-            <p>Cuéntanos la fecha, el tipo de celebración y los juegos que te interesan.</p>
-          </div>
-          <a class="button" href="contacto.html#reserva">Solicitar información</a>
+          <div><h2>Haz que tu celebración se recuerde</h2><p>Encuentra una combinación pensada para tu ocasión.</p></div>
+          <a class="button" href="alquiler.html">Explorar alquileres</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Reúne enlaces útiles, categorías y redes sociales al final de la página -->
+  <!-- Reúne accesos útiles y redes al final de la página -->
   <footer class="site-footer">
-    <div class="footer-wave" aria-hidden="true"></div>
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-        <p>Diversión, juegos y experiencias para celebrar los momentos que más importan.</p>
-      </div>
-
-      <div>
-        <h2>Explorar</h2>
-        <ul class="footer-links">
-          <li><a href="juegos.html">Juegos</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="alquiler.html">Alquiler</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Destacados</h2>
-        <ul class="footer-links">
-          <li><a href="juegos.html#inflables">Inflables</a></li>
-          <li><a href="juegos.html#toro-mecanico">Toro mecánico</a></li>
-          <li><a href="juegos.html#camas-elasticas">Camas elásticas</a></li>
-          <li><a href="eventos.html#cumpleanos">Cumpleaños</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h2>Síguenos</h2>
-        <div class="footer-socials">
-          <a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a>
-          <a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a>
-          <a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a>
-          <a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a>
-        </div>
-      </div>
+      <div class="footer-brand"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"><p>Juegos y experiencias para celebrar momentos inolvidables.</p></div>
+      <div><h2>Explorar</h2><ul class="footer-links"><li><a href="juegos.html">Juegos</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="alquiler.html">Alquiler</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h2>Destacados</h2><ul class="footer-links"><li><a href="juegos.html#inflables">Inflables</a></li><li><a href="juegos.html#toro-mecanico">Toro mecánico</a></li><li><a href="eventos.html#cumpleanos">Cumpleaños</a></li></ul></div>
+      <div><h2>Síguenos</h2><div class="footer-socials"><a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a><a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a><a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a><a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a></div></div>
     </div>
-
-    <div class="container footer-bottom">
-      <p>© 2026 Jumanji Park. Todos los derechos reservados.</p>
-    </div>
+    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
   </footer>
 </body>
 </html>

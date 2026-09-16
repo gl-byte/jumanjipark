@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Conoce los inflables, toro mecánico, camas elásticas, carritos y futbolines de Jumanji Park.">
+  <meta name="description" content="Conoce los juegos, inflables y atracciones disponibles en Jumanji Park.">
   <title>Juegos | Jumanji Park</title>
   <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/estilos.css">
@@ -12,238 +12,83 @@
   <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- Reúne la marca, las páginas principales y los accesos sociales -->
+  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park">
-      <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-    </a>
-
-    <!-- Convierte el menú lateral en un menú compacto cuando la pantalla es pequeña -->
+    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"></a>
+    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
     <div class="navigation">
       <input class="menu-toggle" id="menu-toggle" type="checkbox">
       <label class="menu-button" for="menu-toggle">Menú</label>
       <div class="menu-panel">
-      <nav class="primary-nav" aria-label="Navegación principal">
-        <a href="index.html"><span class="nav-dot">01</span>Inicio</a>
-        <a href="juegos.html" aria-current="page"><span class="nav-dot">02</span>Juegos</a>
-        <a href="eventos.html"><span class="nav-dot">03</span>Eventos</a>
-        <a href="alquiler.html"><span class="nav-dot">04</span>Alquiler</a>
-        <a href="contacto.html"><span class="nav-dot">05</span>Contacto</a>
-      </nav>
-
-      <!-- Mantiene disponibles las cuatro redes solicitadas -->
-      <div class="header-social" aria-label="Redes sociales">
-        <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
-        <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
-      </div>
-
-      <a class="button header-cta" href="contacto.html#reserva">Reservar ahora</a>
-        <p class="header-note">Juegos y experiencias para compartir momentos inolvidables.</p>
+        <nav class="primary-nav" aria-label="Navegación principal">
+          <a href="index.html"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
+          <a href="juegos.html" aria-current="page"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
+          <a href="eventos.html"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
+          <a href="alquiler.html"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
+          <a href="contacto.html"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
+        </nav>
+        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
       </div>
     </div>
   </header>
 
+  <!-- Deja disponibles las cuatro redes solicitadas -->
+  <div class="floating-socials" aria-label="Redes sociales">
+    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
+    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
+  </div>
+
   <main class="site-main" id="contenido">
-    <!-- Introduce el catálogo y muestra una fotografía representativa -->
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <p class="eyebrow">Catálogo Jumanji Park</p>
-          <h1>Juegos que ponen la diversión en movimiento</h1>
-          <p class="lead">Conoce las alternativas disponibles y descubre cuál combina mejor con la edad, el espacio y el estilo de tu evento.</p>
-          <div class="button-row">
-            <a class="button" href="contacto.html#reserva">Consultar disponibilidad</a>
-            <a class="button button--secondary" href="#categorias">Ver categorías</a>
-          </div>
+    <!-- Muestra las categorías de juegos en el mismo orden visual del esquema -->
+    <section class="screen">
+      <div class="screen-inner">
+        <div class="screen-header">
+          <h1 class="screen-title">Juegos</h1>
+          <p class="screen-subtitle screen-subtitle--pill">¡La diversión que tú y tus invitados merecen!</p>
         </div>
-        <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable de Jumanji Park preparado para recibir visitantes" width="1200" height="1600" fetchpriority="high">
-      </div>
-    </section>
-
-    <!-- Permite saltar directamente a cada tipo de juego -->
-    <section class="section section--compact section--white" id="categorias" aria-label="Categorías de juegos">
-      <div class="container">
-        <ul class="anchor-nav">
-          <li><a href="#inflables">Inflables</a></li>
-          <li><a href="#toro-mecanico">Toro mecánico</a></li>
-          <li><a href="#camas-elasticas">Camas elásticas</a></li>
-          <li><a href="#carritos">Carrusel de carritos</a></li>
-          <li><a href="#futbolines">Futbolines</a></li>
-          <li><a href="#otros-juegos">Otros juegos</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Describe cada categoría con fotografías y puntos fáciles de revisar -->
-    <section class="section">
-      <div class="container feature-list">
-        <article class="feature" id="inflables">
-          <div class="feature-gallery">
-            <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Entrada frontal de un castillo inflable colorido" width="1200" height="1600" loading="lazy">
-            <img src="assets/images/games/inflables/inflable-interior.jpeg" alt="Zona interior de un inflable infantil" width="1200" height="1600" loading="lazy">
-            <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Vista combinada de diferentes inflables del parque" width="934" height="906" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Color y movimiento</p>
-            <h2>Inflables</h2>
-            <p class="lead">Una categoría visualmente alegre con diferentes formas, recorridos y tamaños para convertir el espacio en una zona de aventura.</p>
-            <ul>
-              <li>Opciones de castillo, recorrido y tobogán</li>
-              <li>Alternativas para diferentes edades</li>
-              <li>Combinación con otros juegos del catálogo</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Consultar inflables</a>
-          </div>
-        </article>
-
-        <article class="feature" id="toro-mecanico">
-          <div class="feature-gallery feature-gallery--single">
-            <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico instalado dentro de una base inflable" width="2048" height="1536" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Equilibrio y emoción</p>
-            <h2>Toro mecánico</h2>
-            <p class="lead">Una atracción que transforma la participación en un reto entretenido para el público y para quienes se animan a subir.</p>
-            <ul>
-              <li>Actividad central para animar el evento</li>
-              <li>Base inflable alrededor de la atracción</li>
-              <li>Consulta previa según edad y espacio disponible</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Consultar toro mecánico</a>
-          </div>
-        </article>
-
-        <article class="feature" id="camas-elasticas">
-          <div class="feature-gallery">
-            <img src="assets/images/games/camas-elasticas/cama-elastica-grande.jpeg" alt="Cama elástica grande con techo multicolor" width="1080" height="810" loading="lazy">
-            <img src="assets/images/games/camas-elasticas/cama-elastica-pelotas.jpeg" alt="Cama elástica con pelotas grandes y protección lateral" width="1536" height="1368" loading="lazy">
-            <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Composición con distintas atracciones inflables" width="934" height="906" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Saltar y disfrutar</p>
-            <h2>Camas elásticas</h2>
-            <p class="lead">Espacios amplios y protegidos que invitan a moverse, saltar y descargar energía durante la celebración.</p>
-            <ul>
-              <li>Modelos con cerramiento lateral</li>
-              <li>Presentaciones y tamaños variados</li>
-              <li>Uso sujeto a las indicaciones del servicio</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Consultar camas elásticas</a>
-          </div>
-        </article>
-
-        <article class="feature" id="carritos">
-          <div class="feature-gallery feature-gallery--single">
-            <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil bajo techo con pequeños vehículos de colores" width="1296" height="968" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Una vuelta llena de color</p>
-            <h2>Carrusel de carritos</h2>
-            <p class="lead">Una alternativa infantil de recorrido tranquilo, con vehículos coloridos y una presentación llamativa para los más pequeños.</p>
-            <ul>
-              <li>Vehículos de diferentes formas y colores</li>
-              <li>Propuesta pensada para público infantil</li>
-              <li>Disponibilidad confirmada antes de reservar</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Consultar carrusel</a>
-          </div>
-        </article>
-
-        <article class="feature" id="futbolines">
-          <div class="feature-gallery">
-            <img src="assets/images/home/vista-general-parque.jpeg" alt="Varios futbolines instalados frente a los inflables" width="1600" height="1200" loading="lazy">
-            <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Futbolín ubicado junto a un castillo inflable" width="1200" height="1600" loading="lazy">
-            <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil que complementa la variedad de juegos" width="1296" height="968" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Partidas para compartir</p>
-            <h2>Futbolines</h2>
-            <p class="lead">Un juego conocido que permite organizar partidas rápidas, turnos y pequeños desafíos durante todo el encuentro.</p>
-            <ul>
-              <li>Ideal para jugar en parejas o equipos</li>
-              <li>Complemento para zonas de espera y descanso</li>
-              <li>Puede integrarse con otras atracciones</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Consultar futbolines</a>
-          </div>
-        </article>
-
-        <article class="feature" id="otros-juegos">
-          <div class="feature-gallery">
-            <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel de carritos entre las opciones infantiles del parque" width="1296" height="968" loading="lazy">
-            <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Collage con varias alternativas de juego" width="934" height="906" loading="lazy">
-            <img src="assets/images/home/vista-general-parque.jpeg" alt="Ambiente general con diferentes juegos disponibles" width="1600" height="1200" loading="lazy">
-          </div>
-          <div class="feature-copy">
-            <p class="eyebrow">Combina la experiencia</p>
-            <h2>Otros juegos</h2>
-            <p class="lead">La variedad disponible permite preparar una selección más completa según la ocasión y el público invitado.</p>
-            <ul>
-              <li>Consulta de opciones vigentes</li>
-              <li>Combinaciones adaptadas al tipo de evento</li>
-              <li>Orientación antes de confirmar la reserva</li>
-            </ul>
-            <a class="button" href="contacto.html#reserva">Solicitar catálogo</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Cierra el catálogo con una invitación a preparar una combinación -->
-    <section class="section section--compact">
-      <div class="container">
-        <div class="cta-panel">
-          <div>
-            <h2>¿Quieres combinar varios juegos?</h2>
-            <p>Explora las opciones de alquiler y prepara una propuesta alrededor de tu fecha y evento.</p>
-          </div>
-          <a class="button" href="alquiler.html">Ver alquileres</a>
+        <div class="visual-grid games-grid">
+          <a class="visual-card tone-pink" href="#inflables"><img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable colorido" width="1200" height="1600"><span class="card-label">Inflables</span></a>
+          <a class="visual-card tone-turquoise" href="#toro-mecanico"><img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico con zona inflable" width="2048" height="1536"><span class="card-label">Toro mecánico</span></a>
+          <a class="visual-card tone-yellow" href="#carruseles"><img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel de carritos infantiles" width="1296" height="968"><span class="card-label">Carruseles</span></a>
+          <a class="visual-card tone-green" href="#camas-elasticas"><img src="assets/images/games/camas-elasticas/cama-elastica-grande.jpeg" alt="Cama elástica grande" width="1080" height="810"><span class="card-label">Camas elásticas</span></a>
+          <a class="visual-card tone-violet" href="#futbolines"><img src="assets/images/home/vista-general-parque.jpeg" alt="Futbolines en la zona de juegos" width="1600" height="1200"><span class="card-label">Futbolines</span></a>
+          <a class="visual-card tone-orange" href="#carritos"><img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carritos infantiles de colores" width="1296" height="968"><span class="card-label">Carritos</span></a>
+          <a class="visual-card tone-turquoise" href="#otros-juegos"><img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Selección de otros juegos disponibles" width="934" height="906"><span class="card-label">Otros juegos</span></a>
         </div>
       </div>
     </section>
+
+    <!-- Amplía la información de cada tipo de juego -->
+    <section class="content-section" aria-labelledby="titulo-catalogo">
+      <div class="container">
+        <div class="section-heading"><h2 id="titulo-catalogo">Conoce el catálogo</h2><p>Explora cada categoría y consulta disponibilidad para la fecha de tu evento.</p></div>
+        <div class="detail-grid">
+          <article class="detail-card" id="inflables"><img src="assets/images/games/inflables/inflable-interior.jpeg" alt="Interior de un juego inflable" width="1200" height="1600" loading="lazy"><div class="detail-card__body"><h3>Inflables</h3><p>Castillos, recorridos y áreas de juego para llenar la celebración de color y movimiento.</p><a class="button" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="toro-mecanico"><img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico preparado para una actividad" width="2048" height="1536" loading="lazy"><div class="detail-card__body"><h3>Toro mecánico</h3><p>Una atracción desafiante y entretenida para animar a participantes y espectadores.</p><a class="button button--blue" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="carruseles"><img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil de carritos" width="1296" height="968" loading="lazy"><div class="detail-card__body"><h3>Carruseles</h3><p>Una experiencia amable y colorida pensada especialmente para el público infantil.</p><a class="button button--green" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="camas-elasticas"><img src="assets/images/games/camas-elasticas/cama-elastica-pelotas.jpeg" alt="Cama elástica con pelotas de colores" width="1080" height="810" loading="lazy"><div class="detail-card__body"><h3>Camas elásticas</h3><p>Espacios preparados para saltar y disfrutar con libertad durante el evento.</p><a class="button button--green" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="futbolines"><img src="assets/images/home/vista-general-parque.jpeg" alt="Futbolines preparados junto a otros juegos" width="1600" height="1200" loading="lazy"><div class="detail-card__body"><h3>Futbolines</h3><p>Partidas rápidas para compartir entre amigos, familias y equipos.</p><a class="button button--violet" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="carritos"><img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Vehículos infantiles en un carrusel" width="1296" height="968" loading="lazy"><div class="detail-card__body"><h3>Carritos</h3><p>Vehículos infantiles para sumar una actividad atractiva a la celebración.</p><a class="button" href="contacto.html#reserva">Consultar</a></div></article>
+          <article class="detail-card" id="otros-juegos"><img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Composición de diferentes juegos" width="934" height="906" loading="lazy"><div class="detail-card__body"><h3>Otros juegos</h3><p>Consulta alternativas y combinaciones disponibles para completar tu propuesta.</p><a class="button button--blue" href="contacto.html#reserva">Solicitar catálogo</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invita a convertir la selección en una propuesta -->
+    <section class="content-section content-section--white"><div class="container"><div class="cta-panel"><div><h2>¿Ya elegiste tus favoritos?</h2><p>Reúne las opciones que más te gusten y solicita una propuesta.</p></div><a class="button" href="alquiler.html">Ver alquileres</a></div></div></section>
   </main>
 
-  <!-- Reúne enlaces útiles, categorías y redes sociales al final de la página -->
+  <!-- Reúne accesos útiles y redes al final de la página -->
   <footer class="site-footer">
-    <div class="footer-wave" aria-hidden="true"></div>
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166">
-        <p>Diversión, juegos y experiencias para celebrar los momentos que más importan.</p>
-      </div>
-      <div>
-        <h2>Explorar</h2>
-        <ul class="footer-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="alquiler.html">Alquiler</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Categorías</h2>
-        <ul class="footer-links">
-          <li><a href="#inflables">Inflables</a></li>
-          <li><a href="#toro-mecanico">Toro mecánico</a></li>
-          <li><a href="#camas-elasticas">Camas elásticas</a></li>
-          <li><a href="#futbolines">Futbolines</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Síguenos</h2>
-        <div class="footer-socials">
-          <a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a>
-          <a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a>
-          <a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a>
-          <a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a>
-        </div>
-      </div>
+      <div class="footer-brand"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"><p>Juegos y experiencias para celebrar momentos inolvidables.</p></div>
+      <div><h2>Explorar</h2><ul class="footer-links"><li><a href="index.html">Inicio</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="alquiler.html">Alquiler</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h2>Juegos</h2><ul class="footer-links"><li><a href="#inflables">Inflables</a></li><li><a href="#toro-mecanico">Toro mecánico</a></li><li><a href="#camas-elasticas">Camas elásticas</a></li></ul></div>
+      <div><h2>Síguenos</h2><div class="footer-socials"><a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a><a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a><a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a><a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a></div></div>
     </div>
-    <div class="container footer-bottom">
-      <p>© 2026 Jumanji Park. Todos los derechos reservados.</p>
-    </div>
+    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
   </footer>
 </body>
 </html>
