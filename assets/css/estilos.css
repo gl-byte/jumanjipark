@@ -1,5 +1,5 @@
-/* Reúne los colores y medidas que se repiten en todo el sitio */
 :root {
+
   --turquesa: #18bcc8;
   --turquesa-oscuro: #119eb4;
   --verde-fondo: #d9ffc9;
@@ -14,25 +14,24 @@
   --negro: #172115;
   --texto: #344237;
   --blanco: #ffffff;
+
   --barra: 292px;
+
   --sombra: 0 12px 22px rgba(39, 77, 53, 0.22);
   --sombra-suave: 0 7px 15px rgba(39, 77, 53, 0.16);
 }
 
-/* Evita que los espacios cambien el ancho previsto de cada elemento */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Hace suaves los saltos entre secciones de la misma página */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 22px;
 }
 
-/* Define la apariencia general de todas las páginas */
 body {
   margin: 0;
   min-width: 320px;
@@ -87,7 +86,6 @@ h3 {
   margin-bottom: 8px;
 }
 
-/* Permite llegar al contenido principal usando el teclado */
 .skip-link {
   position: fixed;
   top: 10px;
@@ -104,14 +102,13 @@ h3 {
   transform: translateY(0);
 }
 
-/* Mantiene el contenido centrado y con un ancho cómodo */
 .container {
   width: min(1120px, calc(100% - 48px));
   margin-inline: auto;
 }
 
-/* Forma la barra lateral turquesa de los diseños de referencia */
 .site-header {
+
   position: fixed;
   inset: 0 auto 0 0;
   z-index: 100;
@@ -119,6 +116,7 @@ h3 {
   min-height: 100vh;
   overflow: hidden;
   color: var(--blanco);
+
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 26%),
     linear-gradient(180deg, var(--turquesa) 0%, var(--turquesa-oscuro) 100%);
@@ -126,7 +124,6 @@ h3 {
   box-shadow: 8px 0 22px rgba(22, 91, 102, 0.17);
 }
 
-/* Presenta el logo en la parte superior de la barra */
 .brand {
   display: grid;
   height: 194px;
@@ -141,7 +138,6 @@ h3 {
   filter: drop-shadow(0 6px 7px rgba(25, 72, 78, 0.2));
 }
 
-/* Mantiene el menú abierto en escritorio */
 .menu-toggle,
 .menu-button {
   display: none;
@@ -153,7 +149,6 @@ h3 {
   flex-direction: column;
 }
 
-/* Ordena las páginas como botones grandes y fáciles de reconocer */
 .primary-nav {
   display: grid;
   gap: 2px;
@@ -161,6 +156,7 @@ h3 {
 }
 
 .primary-nav a {
+
   display: flex;
   min-height: 53px;
   align-items: center;
@@ -170,6 +166,7 @@ h3 {
   color: var(--blanco);
   font-size: 1.14rem;
   font-weight: 900;
+
   transition: color 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
@@ -182,7 +179,6 @@ h3 {
   transform: translateX(5px);
 }
 
-/* Muestra el símbolo correspondiente junto a cada página */
 .menu-icon {
   width: 30px;
   height: 30px;
@@ -212,33 +208,6 @@ h3 {
   --icon: url("../icons/contacto.svg");
 }
 
-/* Completa la parte inferior de la barra con una fotografía oscura */
-.sidebar-photo {
-  display: none;
-}
-
-.sidebar-photo::before {
-  content: "✦";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: rgba(255, 255, 255, 0.07);
-  font-size: 8rem;
-  transform: translate(-50%, -50%);
-}
-
-.sidebar-photo span {
-  position: absolute;
-  right: 18px;
-  bottom: 16px;
-  left: 18px;
-  color: rgba(255, 255, 255, 0.73);
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* Deja las redes visibles en la esquina superior derecha */
 .floating-socials {
   position: fixed;
   top: 25px;
@@ -270,13 +239,12 @@ h3 {
   height: 100%;
 }
 
-/* Deja libre la zona ocupada por la barra lateral */
 .site-main,
+
 .site-footer {
   margin-left: var(--barra);
 }
 
-/* Crea el panel principal verde de cada página */
 .screen {
   position: relative;
   display: flex;
@@ -284,10 +252,7 @@ h3 {
   align-items: center;
   overflow: hidden;
   padding: 90px 5vw 58px;
-  background:
-    linear-gradient(138deg, transparent 0 76%, rgba(255, 255, 255, 0.53) 76.2% 100%),
-    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.2), transparent 25%),
-    var(--verde-fondo);
+  background: var(--verde-fondo);
 }
 
 .screen::after {
@@ -339,7 +304,6 @@ h3 {
   box-shadow: var(--sombra-suave);
 }
 
-/* Imita la portada central del diseño de inicio */
 .home-screen .screen-inner {
   max-width: 900px;
   text-align: center;
@@ -376,7 +340,6 @@ h3 {
   color: var(--blanco);
 }
 
-/* Ordena el título de inicio como en el esquema dibujado */
 .home-title {
   display: inline-grid;
   justify-items: center;
@@ -385,6 +348,7 @@ h3 {
 }
 
 .home-title__top,
+
 .home-title__line {
   display: flex;
   align-items: center;
@@ -407,6 +371,7 @@ h3 {
 }
 
 .home-title__sin,
+
 .home-title__limits {
   padding: 0.08em 0.22em 0.14em;
   box-shadow: 0 6px 0 rgba(40, 72, 47, 0.1);
@@ -425,7 +390,6 @@ h3 {
   transform: rotate(-1deg);
 }
 
-/* Coloca el subtítulo sobre la franja turquesa del dibujo */
 .home-screen .home-tagline {
   display: table;
   margin: -0.2em auto 31px;
@@ -437,7 +401,6 @@ h3 {
   transform: rotate(-3deg);
 }
 
-/* Reproduce el botón rosa con calendario, texto y flecha */
 .home-reserve-button {
   width: min(430px, 100%);
   min-height: 67px;
@@ -469,7 +432,6 @@ h3 {
   line-height: 1;
 }
 
-/* Da a las llamadas principales la forma rosada del diseño */
 .button {
   display: inline-flex;
   min-height: 50px;
@@ -512,7 +474,6 @@ h3 {
   line-height: 0;
 }
 
-/* Ordena las tarjetas visuales como en los paneles de Gemini */
 .visual-grid {
   display: grid;
   gap: 18px;
@@ -552,6 +513,7 @@ h3 {
 }
 
 .visual-card {
+
   --tone: var(--turquesa);
   display: flex;
   min-width: 0;
@@ -647,7 +609,6 @@ h3 {
   --tone: var(--turquesa);
 }
 
-/* Separa la información ampliada del panel principal */
 .content-section {
   padding: 86px 0;
   background: var(--verde-fondo-claro);
@@ -668,8 +629,8 @@ h3 {
   font-size: 1.04rem;
 }
 
-/* Amplía cada opción con una tarjeta clara y una fotografía */
 .detail-grid {
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 21px;
@@ -684,6 +645,7 @@ h3 {
 }
 
 .detail-card img {
+
   width: 100%;
   height: 205px;
   object-fit: cover;
@@ -702,7 +664,6 @@ h3 {
   margin-bottom: 17px;
 }
 
-/* Presenta los pasos en tarjetas numeradas */
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -740,7 +701,6 @@ h3 {
   background: var(--verde);
 }
 
-/* Organiza los paquetes igual que las tarjetas de la referencia */
 .package-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -842,7 +802,6 @@ h3 {
   border-color: var(--verde);
 }
 
-/* Mantiene las preguntas cerradas hasta que se quieran consultar */
 .faq-list {
   display: grid;
   max-width: 850px;
@@ -868,8 +827,8 @@ h3 {
   padding: 0 21px 19px;
 }
 
-/* Reproduce el reparto entre accesos rápidos y formulario */
 .contact-layout {
+
   display: grid;
   grid-template-columns: minmax(270px, 0.78fr) minmax(380px, 1.22fr);
   align-items: stretch;
@@ -878,46 +837,49 @@ h3 {
 
 .contact-options {
   display: grid;
-  gap: 14px;
+  align-self: start;
+  gap: 8px;
+  padding-block: 12px;
 }
 
-.contact-option {
-  --tone: var(--turquesa);
+.contact-channel {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(33, 71, 125, 0.18);
+  color: var(--azul-oscuro);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.contact-channel img {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+}
+
+.contact-channel__content {
   display: grid;
-  min-height: 132px;
-  place-items: center;
-  padding: 17px;
-  border: 7px solid var(--tone);
-  border-radius: 25px;
-  background: var(--blanco);
-  box-shadow: var(--sombra);
-  text-align: center;
+  min-width: 0;
+  flex: 1;
+  gap: 3px;
 }
 
-.contact-option:nth-child(2) {
-  --tone: var(--rosa);
+.contact-channel__content strong {
+  font-size: 1.15rem;
 }
 
-.contact-option:nth-child(3) {
-  --tone: var(--violeta);
+.contact-channel__content > span {
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
-.contact-option h2 {
-  margin-bottom: 2px;
-  font-size: 1.6rem;
+.contact-channel__arrow {
+  font-size: 1.25rem;
+  transition: transform 180ms ease;
 }
 
-.contact-option p {
-  margin-bottom: 10px;
-}
-
-.contact-option .button {
-  min-height: 41px;
-  padding: 7px 22px;
-  background: var(--azul);
-}
-
-/* Da al formulario el marco verde y los campos del diseño */
 .form-card {
   padding: 27px;
   border: 7px solid var(--verde);
@@ -933,6 +895,7 @@ h3 {
 }
 
 .form-grid {
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 13px;
@@ -967,6 +930,7 @@ h3 {
 }
 
 .field textarea {
+
   min-height: 105px;
   resize: vertical;
 }
@@ -989,7 +953,6 @@ h3 {
   text-align: center;
 }
 
-/* Cierra el contenido con una invitación clara */
 .cta-panel {
   display: flex;
   align-items: center;
@@ -1013,7 +976,6 @@ h3 {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Organiza el pie sin competir con el panel principal */
 .site-footer {
   padding: 60px 0 25px;
   color: rgba(255, 255, 255, 0.75);
@@ -1076,8 +1038,8 @@ h3 {
   font-size: 0.76rem;
 }
 
-/* Ajusta el panel cuando el escritorio es más estrecho */
 @media (max-width: 1180px) {
+
   :root {
     --barra: 246px;
   }
@@ -1105,11 +1067,6 @@ h3 {
     font-size: 1rem;
   }
 
-  .sidebar-photo {
-    min-height: 180px;
-    margin-inline: 16px;
-  }
-
   .screen {
     padding-right: 3vw;
     padding-left: 3vw;
@@ -1130,8 +1087,8 @@ h3 {
   }
 }
 
-/* Convierte la barra lateral en un encabezado compacto */
 @media (max-width: 920px) {
+
   html {
     scroll-padding-top: 80px;
   }
@@ -1210,10 +1167,6 @@ h3 {
     transform: none;
   }
 
-  .sidebar-photo {
-    display: none;
-  }
-
   .floating-socials {
     display: none;
   }
@@ -1224,6 +1177,7 @@ h3 {
   }
 
   .site-main,
+
   .site-footer {
     margin-left: 0;
   }
@@ -1268,17 +1222,10 @@ h3 {
     gap: 18px;
   }
 
-  .contact-option {
-    border-width: 5px;
-  }
-
-  .contact-option h2 {
-    font-size: 1.3rem;
-  }
 }
 
-/* Organiza todo en una columna fluida para teléfonos */
 @media (max-width: 680px) {
+
   .container {
     width: min(100% - 28px, 540px);
   }
@@ -1318,6 +1265,7 @@ h3 {
 
   .games-grid,
   .events-grid,
+
   .rental-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1375,6 +1323,7 @@ h3 {
   .package-grid,
   .included-grid,
   .contact-layout,
+
   .form-grid {
     grid-template-columns: 1fr;
   }
@@ -1402,8 +1351,20 @@ h3 {
     gap: 22px;
   }
 
-  .contact-option {
-    min-height: 122px;
+  .contact-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    padding-block: 0;
+  }
+
+  .contact-channel {
+    gap: 9px;
+  }
+
+  .contact-channel img {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
   }
 
   .form-card {
@@ -1435,8 +1396,8 @@ h3 {
   }
 }
 
-/* Evita desproporciones en teléfonos especialmente estrechos */
 @media (max-width: 390px) {
+
   .brand img {
     width: 104px;
   }
@@ -1477,8 +1438,8 @@ h3 {
   }
 }
 
-/* Reduce movimientos si la persona lo prefiere */
 @media (prefers-reduced-motion: reduce) {
+
   html {
     scroll-behavior: auto;
   }
@@ -1489,5 +1450,770 @@ h3 {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+.page-inicio {
+  --hero-photo: url("../images/home/vista-general-parque.jpeg");
+}
+
+.page-juegos {
+  --hero-photo: url("../images/games/inflables/inflable-interior.jpeg");
+}
+
+.page-eventos {
+  --hero-photo: url("../images/generated/eventos/celebraciones.png");
+}
+
+.page-alquiler {
+  --hero-photo: url("../images/games/toro-mecanico/toro-mecanico.jpeg");
+}
+
+.page-contacto {
+  --hero-photo: url("../images/generated/eventos/cumpleanos.png");
+}
+
+.screen {
+  isolation: isolate;
+}
+
+.screen::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(237, 255, 229, 0.92), rgba(237, 255, 229, 0.76) 48%, rgba(24, 188, 200, 0.25)),
+    var(--hero-photo) center / cover no-repeat;
+  animation: scene-enter 1.2s ease-out both;
+}
+
+.screen::after {
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(235, 63, 131, 0.14), transparent 70%);
+}
+
+.screen-header {
+  width: fit-content;
+  max-width: 100%;
+  padding: 20px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--sombra-suave);
+}
+
+.home-title__top {
+  text-shadow: 0 2px 0 white, 0 4px 18px rgba(255, 255, 255, 0.9);
+}
+
+.content-section {
+  background:
+    linear-gradient(rgba(237, 255, 229, 0.96), rgba(237, 255, 229, 0.97)),
+    url("../images/home/vista-general-parque.jpeg") center / cover no-repeat;
+}
+
+.content-section--white {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.97)),
+    url("../images/generated/eventos/celebraciones.png") center / cover no-repeat;
+}
+
+.cta-panel {
+  background:
+    linear-gradient(110deg, rgba(24, 50, 93, 0.96), rgba(33, 71, 125, 0.85)),
+    url("../images/home/vista-general-parque.jpeg") center / cover no-repeat;
+}
+
+.cta-panel p {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 26px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--azul-oscuro);
+  background: rgba(255, 255, 255, 0.93);
+  font-size: 0.85rem;
+}
+
+.breadcrumbs a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0 0;
+}
+
+.page-contacto .section-nav {
+  margin: 0 0 24px;
+}
+
+.section-nav a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid rgba(33, 71, 125, 0.18);
+  border-radius: 999px;
+  color: var(--azul-oscuro);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(33, 71, 125, 0.1);
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.section-nav a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-suave);
+}
+
+.section-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.card-caption {
+  font-size: 0.88rem;
+  color: var(--azul-oscuro);
+}
+
+.detail-card,
+.package-card,
+.step {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.detail-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.detail-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detail-card__body > .button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.detail-card p {
+  min-height: 0;
+}
+
+.card-details {
+  width: 100%;
+  margin: 0 0 16px;
+  border-top: 1px solid rgba(33, 71, 125, 0.15);
+  border-bottom: 1px solid rgba(33, 71, 125, 0.15);
+}
+
+.card-details summary {
+  padding: 14px 0;
+  color: var(--azul-oscuro);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.card-details p {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+details[open] summary {
+  color: #146b76;
+}
+
+details[open] > p {
+  animation: detail-enter 250ms ease;
+}
+
+.text-link {
+  display: inline-block;
+  padding-block: 8px;
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+  transition: color 200ms ease;
+}
+
+.text-link:hover {
+  color: #a31d53;
+}
+
+.feature-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  overflow: hidden;
+  border: 4px solid white;
+  border-radius: 28px;
+  background: white;
+  box-shadow: var(--sombra-suave);
+}
+
+.feature-panel > img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.feature-panel__body {
+  padding: clamp(24px, 3vw, 42px);
+}
+
+.feature-panel__body h3 {
+  font-size: 1.8rem;
+}
+
+.package-photo {
+  width: calc(100% + 54px);
+  max-width: none;
+  height: 175px;
+  margin: -27px -27px 24px;
+  object-fit: cover;
+}
+
+.package-card {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: #146b76;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.selection-summary {
+  margin: 0 0 22px;
+  padding: 18px;
+  border-left: 4px solid var(--turquesa);
+  border-radius: 12px;
+  background: #edffe5;
+}
+
+.location-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  overflow: hidden;
+  border: 4px solid var(--blanco);
+  border-radius: 28px;
+  background: var(--blanco);
+  box-shadow: var(--sombra-suave);
+}
+
+.location-panel__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(24px, 3vw, 40px);
+}
+
+.location-panel__info h3 {
+  color: var(--azul-oscuro);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+.location-panel__info .button {
+  max-width: 100%;
+  text-align: center;
+}
+
+.location-panel__note {
+  margin: 22px 0 0;
+  font-size: 0.9rem;
+}
+
+.location-panel__note .text-link {
+  padding-block: 0;
+}
+
+.location-panel__map {
+  min-width: 0;
+  min-height: 400px;
+  background: var(--verde-fondo-claro);
+}
+
+.location-panel__map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: 0;
+}
+
+.selection-summary p {
+  margin-bottom: 4px;
+}
+
+.selection-summary .eyebrow {
+  font-size: 0.7rem;
+}
+
+.form-grid,
+.field,
+.contact-layout > * {
+  min-width: 0;
+}
+
+.field input,
+.field select,
+.field textarea {
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.field label {
+  font-size: 0.9rem;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.form-note:empty {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+.menu-button:focus-visible {
+  outline: 3px solid var(--azul-oscuro);
+  outline-offset: 5px;
+}
+
+[id] {
+  scroll-margin-top: 26px;
+}
+
+.detail-card:target,
+.package-card:target {
+  border-color: var(--turquesa);
+  box-shadow: 0 0 0 5px rgba(24, 188, 200, 0.17), var(--sombra);
+}
+
+.screen-inner > .breadcrumbs,
+.screen-header,
+.home-title,
+.home-tagline,
+.home-message,
+.home-reserve-button,
+.visual-grid,
+.section-nav {
+  animation: content-enter 650ms cubic-bezier(0.2, 0.65, 0.3, 1) both;
+}
+
+.screen-header,
+.home-title {
+  animation-delay: 60ms;
+}
+
+.visual-grid,
+.home-message {
+  animation-delay: 140ms;
+}
+
+.section-nav,
+.home-reserve-button {
+  animation-delay: 220ms;
+}
+
+.home-title,
+.home-tagline {
+  animation-name: title-enter;
+}
+
+.button,
+.social-link,
+.brand img {
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.footer-links a {
+  display: inline-block;
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(4px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-channel:hover {
+    color: #146b76;
+    transform: translateX(3px);
+  }
+
+  .contact-channel:hover .contact-channel__arrow {
+    transform: translate(2px, -2px);
+  }
+
+  .detail-card:hover,
+  .step:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+  }
+
+  .package-card:hover {
+    transform: translateY(-6px) rotate(0);
+  }
+
+  .visual-card img,
+  .detail-card > img,
+  .package-photo {
+    transition: filter 350ms ease;
+  }
+
+  .visual-card:hover img,
+  .detail-card:hover > img,
+  .package-card:hover .package-photo {
+    filter: saturate(1.12);
+  }
+
+  .brand:hover img {
+    transform: rotate(-2deg) scale(1.03);
+  }
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes title-enter {
+  from {
+    opacity: 0;
+    scale: 0.96;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes scene-enter {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes detail-enter {
+  from {
+    opacity: 0;
+    translate: 0 -5px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .content-section .section-heading,
+    .detail-card,
+    .package-card,
+    .step,
+    .feature-panel,
+    .location-panel,
+    .cta-panel {
+      animation: content-enter linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 25%;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .menu-toggle:focus-visible + .menu-button {
+    outline: 3px solid white;
+    outline-offset: 4px;
+  }
+
+  .menu-toggle:checked + .menu-button + .menu-panel {
+    animation: detail-enter 240ms ease-out;
+  }
+
+  [id] {
+    scroll-margin-top: 96px;
+  }
+
+  .screen-header {
+    padding: 18px 22px;
+  }
+
+  .feature-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .location-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-panel > img {
+    height: 280px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-screen {
+    min-height: calc(100svh - 74px);
+    display: flex;
+  }
+
+  .screen::before {
+    background-position: center, 60% center;
+  }
+
+  .screen-header {
+    padding: 18px 14px;
+    border-radius: 22px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 22px;
+  }
+
+  .section-nav {
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .section-nav a {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  .feature-panel > img {
+    height: 220px;
+  }
+
+  .home-reserve-button {
+    font-size: 1rem;
+  }
+
+  .detail-card__body {
+    padding: 20px;
+  }
+
+  .selection-summary {
+    padding: 14px;
+  }
+
+  .location-panel {
+    border-radius: 22px;
+  }
+
+  .location-panel__info {
+    padding: 24px 20px;
+  }
+
+  .location-panel__map,
+  .location-panel__map iframe {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 920px) {
+  .screen-inner > .breadcrumbs,
+  .screen-header,
+  .home-title,
+  .home-tagline,
+  .home-message,
+  .home-reserve-button,
+  .visual-grid,
+  .section-nav {
+    animation-duration: 480ms;
+  }
+
+  .screen::before {
+    animation-duration: 800ms;
+  }
+
+  .visual-card,
+  .visual-card:nth-child(even) {
+    animation: card-enter 420ms ease-out both;
+  }
+
+  .visual-card:nth-child(2) {
+    animation-delay: 40ms;
+  }
+
+  .visual-card:nth-child(3) {
+    animation-delay: 80ms;
+  }
+
+  .visual-card:nth-child(n + 4) {
+    animation-delay: 120ms;
+  }
+
+  .button,
+  .social-link,
+  .section-nav a,
+  .visual-card,
+  .contact-channel {
+    transition-duration: 160ms;
+  }
+
+  .menu-button,
+  .card-details summary,
+  .faq-list summary {
+    min-height: 44px;
+  }
+
+  .section-actions .button {
+    width: min(430px, 100%);
+  }
+}
+
+@media (hover: none) {
+  a,
+  button,
+  summary,
+  .menu-button {
+    touch-action: manipulation;
+  }
+
+  .button:hover,
+  .social-link:hover,
+  .section-nav a:hover,
+  .footer-links a:hover,
+  .visual-card:hover,
+  .visual-card:nth-child(even):hover {
+    transform: none;
+  }
+
+  .visual-card:hover {
+    box-shadow: var(--sombra);
+  }
+
+  .primary-nav a:hover:not([aria-current="page"]) {
+    color: var(--blanco);
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .button:active,
+  .social-link:active,
+  .section-nav a:active,
+  .visual-card:active,
+  .visual-card:nth-child(even):active {
+    transform: scale(0.98);
+  }
+
+  .contact-channel:active {
+    transform: scale(0.98);
+  }
+
+  .card-details summary:active,
+  .faq-list summary:active {
+    color: var(--turquesa-oscuro);
+  }
+}
+
+@media (max-width: 440px) {
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }

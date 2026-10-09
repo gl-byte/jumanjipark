@@ -1,107 +1,524 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contacta a Jumanji Park y envía los datos principales de tu evento.">
-  <title>Contacto | Jumanji Park</title>
-  <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/estilos.css">
-</head>
-<body>
-  <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"></a>
-    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
-    <div class="navigation">
-      <input class="menu-toggle" id="menu-toggle" type="checkbox">
-      <label class="menu-button" for="menu-toggle">Menú</label>
-      <div class="menu-panel">
-        <nav class="primary-nav" aria-label="Navegación principal">
-          <a href="index.html"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
-          <a href="juegos.html"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
-          <a href="eventos.html"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
-          <a href="alquiler.html"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
-          <a href="contacto.html" aria-current="page"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
-        </nav>
-        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Deja disponibles las cuatro redes solicitadas -->
-  <div class="floating-socials" aria-label="Redes sociales">
-    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
-  </div>
-
-  <main class="site-main" id="contenido">
-    <!-- Reúne los accesos directos y el formulario como en el diseño de contacto -->
-    <section class="screen" id="reserva">
-      <div class="screen-inner">
-        <div class="screen-header">
-          <h1 class="screen-title">Contáctanos</h1>
-          <p class="screen-subtitle">¡Escríbenos y te ayudamos con tu reserva!</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contacta a Jumanvi y envía los datos principales de tu evento.">
+    <title>
+      Contacto | Jumanvi
+    </title>
+    <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <script src="assets/js/formulario-whatsapp.js" defer>
+    </script>
+  </head>
+  <body class="page-contacto">
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanvi">
+        <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+      </a>
+      <div class="navigation">
+        <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú" aria-controls="menu-panel">
+        <label class="menu-button" for="menu-toggle">
+          Menú
+        </label>
+        <div class="menu-panel" id="menu-panel">
+          <nav class="primary-nav" aria-label="Navegación principal">
+            <a href="index.html">
+              <span class="menu-icon menu-icon--inicio">
+              </span>
+              Inicio
+            </a>
+            <a href="juegos.html">
+              <span class="menu-icon menu-icon--juegos">
+              </span>
+              Juegos
+            </a>
+            <a href="eventos.html">
+              <span class="menu-icon menu-icon--eventos">
+              </span>
+              Eventos
+            </a>
+            <a href="alquiler.html">
+              <span class="menu-icon menu-icon--alquiler">
+              </span>
+              Alquiler
+            </a>
+            <a href="contacto.html" aria-current="page">
+              <span class="menu-icon menu-icon--contacto">
+              </span>
+              Contacto
+            </a>
+          </nav>
         </div>
-
-        <div class="contact-layout">
-          <div class="contact-options">
-            <a class="contact-option" href="">
-              <div><h2>WhatsApp</h2><p>Escríbenos directo</p><span class="button button--blue">Enviar mensaje</span></div>
+      </div>
+    </header>
+    <div class="floating-socials" aria-label="Redes sociales">
+      <a class="social-link" href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+      </a>
+      <a class="social-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+      </a>
+    </div>
+    <main class="site-main" id="contenido">
+      <section class="screen" id="reserva">
+        <div class="screen-inner">
+          <nav class="breadcrumbs" aria-label="Ubicación actual">
+            <a href="index.html">
+              Inicio
             </a>
-            <a class="contact-option" href="">
-              <div><h2>Facebook</h2><p>Síguenos en redes</p><span class="button button--blue">Ir a Facebook</span></div>
+            <span aria-hidden="true">
+              /
+            </span>
+            <span aria-current="page">
+              Contacto
+            </span>
+          </nav>
+          <div class="screen-header">
+            <h1 class="screen-title">
+              Contáctanos
+            </h1>
+            <p class="screen-subtitle">
+              ¡Escríbenos y te ayudamos con tu reserva!
+            </p>
+          </div>
+          <nav class="section-nav" aria-label="Explorar contacto">
+            <a href="alquiler.html#cotizacion">
+              Cómo cotizar
+              <span aria-hidden="true">
+                →
+              </span>
             </a>
-            <a class="contact-option" href="#formulario">
-              <div><h2>Formulario de reserva</h2><p>Completa tus datos y te contactaremos</p><span class="button button--blue">Ir al formulario</span></div>
+            <a href="#formulario">
+              Preparar consulta
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="#ubicacion">
+              Nuestra ubicación
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+          </nav>
+          <div class="contact-layout">
+            <div class="contact-options">
+              <a class="contact-channel" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/whatsapp.svg" alt="" width="44" height="44">
+                <span class="contact-channel__content">
+                  <strong>
+                    WhatsApp
+                  </strong>
+                  <span>
+                    Enviar mensaje · 73835908
+                  </span>
+                </span>
+                <span class="contact-channel__arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <a class="contact-channel" href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/icons/facebook.svg" alt="" width="44" height="44">
+                <span class="contact-channel__content">
+                  <strong>
+                    Facebook
+                  </strong>
+                  <span>
+                    Ir a Facebook
+                  </span>
+                </span>
+                <span class="contact-channel__arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </div>
+            <form class="form-card" id="formulario" action="https://wa.me/59173835908" method="get" target="_blank">
+              <h2>
+                Prepara tu consulta
+              </h2>
+              <div class="selection-summary" id="seleccion-resumen" aria-live="polite">
+                <p class="eyebrow">
+                  Tu punto de partida
+                </p>
+                <p id="seleccion-texto">
+                  Elige qué deseas consultar o cuéntanos tu idea.
+                </p>
+                <a class="text-link" id="volver-seleccion" href="alquiler.html#cotizacion">
+                  Ver cómo cotizar →
+                </a>
+              </div>
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="solicitud">
+                    Servicio de interés
+                  </label>
+                  <select id="solicitud" name="solicitud">
+                    <option value="cotizacion-general">
+                      Cotización personalizada
+                    </option>
+                    <optgroup label="Juegos">
+                      <option value="juego-inflables">
+                        Inflables
+                      </option>
+                      <option value="juego-toro-mecanico">
+                        Toro mecánico
+                      </option>
+                      <option value="juego-carruseles">
+                        Carruseles
+                      </option>
+                      <option value="juego-camas-elasticas">
+                        Camas elásticas
+                      </option>
+                      <option value="juego-futbolines">
+                        Futbolines
+                      </option>
+                      <option value="juego-carritos">
+                        Carritos
+                      </option>
+                      <option value="juego-otros-juegos">
+                        Otros juegos
+                      </option>
+                    </optgroup>
+                    <optgroup label="Eventos">
+                      <option value="evento-cumpleanos">
+                        Cumpleaños
+                      </option>
+                      <option value="evento-colegios">
+                        Colegios
+                      </option>
+                      <option value="evento-infantiles">
+                        Eventos infantiles
+                      </option>
+                      <option value="evento-empresariales">
+                        Eventos empresariales
+                      </option>
+                      <option value="evento-celebraciones">
+                        Fiestas y celebraciones
+                      </option>
+                    </optgroup>
+                    <optgroup label="Paquetes">
+                      <option value="paquete-esencial">
+                        Paquete Esencial
+                      </option>
+                      <option value="paquete-diversion">
+                        Paquete Diversión
+                      </option>
+                      <option value="paquete-gran-evento">
+                        Paquete Gran Evento
+                      </option>
+                    </optgroup>
+                    <optgroup label="Combinaciones">
+                      <option value="combinacion-infantil">
+                        Pequeños exploradores
+                      </option>
+                      <option value="combinacion-familiar">
+                        Familia en juego
+                      </option>
+                      <option value="combinacion-equipos">
+                        Desafío en equipo
+                      </option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="nombre">
+                    Nombre
+                  </label>
+                  <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="telefono">
+                    Teléfono
+                  </label>
+                  <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+                </div>
+                <div class="field">
+                  <label for="correo">
+                    Correo
+                  </label>
+                  <input id="correo" name="correo" type="email" autocomplete="email">
+                </div>
+                <div class="field">
+                  <label for="evento">
+                    Tipo de evento
+                  </label>
+                  <select id="evento" name="evento">
+                    <option value="">
+                      Seleccionar
+                    </option>
+                    <option value="Cumpleaños">
+                      Cumpleaños
+                    </option>
+                    <option value="Evento escolar">
+                      Evento escolar
+                    </option>
+                    <option value="Evento infantil">
+                      Evento infantil
+                    </option>
+                    <option value="Evento empresarial">
+                      Evento empresarial
+                    </option>
+                    <option value="Fiesta o celebración">
+                      Fiesta o celebración
+                    </option>
+                    <option value="Otro">
+                      Otro
+                    </option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="fecha">
+                    Fecha estimada
+                  </label>
+                  <input id="fecha" name="fecha" type="date">
+                </div>
+                <div class="field">
+                  <label for="invitados">
+                    Cantidad de invitados
+                  </label>
+                  <input id="invitados" name="invitados" type="number" min="1" max="100000" inputmode="numeric">
+                </div>
+                <div class="field">
+                  <label for="duracion">
+                    Duración aproximada
+                  </label>
+                  <select id="duracion" name="duracion">
+                    <option value="">
+                      Por definir
+                    </option>
+                    <option value="Hasta 2 horas">
+                      Hasta 2 horas
+                    </option>
+                    <option value="Entre 2 y 4 horas">
+                      Entre 2 y 4 horas
+                    </option>
+                    <option value="Más de 4 horas">
+                      Más de 4 horas
+                    </option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="lugar">
+                    Lugar del evento
+                  </label>
+                  <input id="lugar" name="lugar" type="text" autocomplete="street-address">
+                </div>
+                <div class="field field--full">
+                  <label for="mensaje">
+                    Mensaje
+                  </label>
+                  <textarea id="mensaje" name="text" required>
+                  </textarea>
+                </div>
+              </div>
+              <button class="button" type="submit">
+                Enviar por WhatsApp
+              </button>
+              <p class="form-note">
+                WhatsApp se abrirá con la consulta preparada para que puedas revisarla antes de enviarla.
+              </p>
+              <p id="estado-envio" class="form-note" role="status">
+              </p>
+              <a id="enlace-envio" class="text-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer" hidden>
+                Continuar en WhatsApp →
+              </a>
+              <noscript>
+                <p class="form-note">
+                  Para reunir todos los campos, activa JavaScript. También puedes escribir directamente al
+                  <a href="https://wa.me/59173835908">
+                    73835908
+                  </a>
+                  .
+                </p>
+              </noscript>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="content-section" id="ubicacion" aria-labelledby="titulo-ubicacion">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">
+              Estamos más cerca de tu diversión
+            </p>
+            <h2 id="titulo-ubicacion">
+              Nuestra ubicación
+            </h2>
+            <p>
+              Encuentra Jumanvi en el mapa y prepara tu recorrido.
+            </p>
+          </div>
+          <div class="location-panel">
+            <div class="location-panel__info">
+              <h3>
+                Visita Jumanvi
+              </h3>
+              <p>
+                Abre la ubicación en Google Maps para consultar el recorrido desde tu punto de partida.
+              </p>
+              <a class="button button--blue" href="https://www.google.com/maps/search/?api=1&amp;query=-17.9665278%2C-67.1185556" target="_blank" rel="noopener noreferrer">
+                Abrir en Google Maps
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+              <p class="location-panel__note">
+                Si necesitas coordinar tu visita, escríbenos por
+                <a class="text-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+                  WhatsApp
+                </a>.
+              </p>
+            </div>
+            <div class="location-panel__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3795.2624477054355!2d-67.1211202248216!3d-17.966522683022788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU3JzU5LjUiUyA2N8KwMDcnMDYuOCJX!5e0!3m2!1ses!2sbo!4v1791513290046!5m2!1ses!2sbo"
+                title="Ubicación de Jumanvi en Google Maps"
+                width="600"
+                height="450"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-section content-section--white" aria-labelledby="titulo-datos">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="titulo-datos">
+              Lo que necesitamos saber
+            </h2>
+            <p>
+              Estos datos permiten orientar la disponibilidad y la propuesta.
+            </p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">
+                1
+              </span>
+              <h3>
+                La ocasión
+              </h3>
+              <p>
+                Indica si se trata de un cumpleaños, colegio, empresa u otra celebración.
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-number">
+                2
+              </span>
+              <h3>
+                La fecha
+              </h3>
+              <p>
+                Comparte el día estimado y cualquier detalle importante del lugar.
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-number">
+                3
+              </span>
+              <h3>
+                Los juegos
+              </h3>
+              <p>
+                Menciona las atracciones o paquetes que más te interesan.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+          <p>
+            Juegos y experiencias para celebrar momentos inolvidables.
+          </p>
+        </div>
+        <div>
+          <h2>
+            Explorar
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="juegos.html">
+                Juegos
+              </a>
+            </li>
+            <li>
+              <a href="eventos.html">
+                Eventos
+              </a>
+            </li>
+            <li>
+              <a href="alquiler.html">
+                Alquiler
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Reserva
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="#formulario">
+                Formulario
+              </a>
+            </li>
+            <li>
+              <a href="#ubicacion">
+                Ubicación
+              </a>
+            </li>
+            <li>
+              <a href="alquiler.html#paquetes">
+                Paquetes
+              </a>
+            </li>
+            <li>
+              <a href="juegos.html">
+                Por juego
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Síguenos
+          </h2>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+              Facebook
+            </a>
+            <a href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+              WhatsApp
             </a>
           </div>
-
-          <!-- Recibe los datos principales necesarios para preparar la consulta -->
-          <form class="form-card" id="formulario" action="" method="post">
-            <h2>Escríbenos</h2>
-            <div class="form-grid">
-              <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
-              <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
-              <div class="field"><label for="correo">Correo</label><input id="correo" name="correo" type="email" autocomplete="email"></div>
-              <div class="field"><label for="evento">Tipo de evento</label><select id="evento" name="evento"><option value="">Seleccionar</option><option>Cumpleaños</option><option>Evento escolar</option><option>Evento empresarial</option><option>Fiesta o celebración</option><option>Otro</option></select></div>
-              <div class="field field--full"><label for="fecha">Fecha estimada</label><input id="fecha" name="fecha" type="date"></div>
-              <div class="field field--full"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" required></textarea></div>
-            </div>
-            <button class="button" type="submit">Enviar</button>
-            <p class="form-note">La disponibilidad y los detalles se confirman después de revisar la solicitud.</p>
-          </form>
         </div>
       </div>
-    </section>
-
-    <!-- Explica qué información ayuda a preparar una respuesta -->
-    <section class="content-section content-section--white" aria-labelledby="titulo-datos">
-      <div class="container">
-        <div class="section-heading"><h2 id="titulo-datos">Lo que necesitamos saber</h2><p>Estos datos permiten orientar la disponibilidad y la propuesta.</p></div>
-        <div class="steps">
-          <article class="step"><span class="step-number">1</span><h3>La ocasión</h3><p>Indica si se trata de un cumpleaños, colegio, empresa u otra celebración.</p></article>
-          <article class="step"><span class="step-number">2</span><h3>La fecha</h3><p>Comparte el día estimado y cualquier detalle importante del lugar.</p></article>
-          <article class="step"><span class="step-number">3</span><h3>Los juegos</h3><p>Menciona las atracciones o paquetes que más te interesan.</p></article>
-        </div>
+      <div class="container footer-bottom">
+        <p>
+          © 2026 Jumanvi. Todos los derechos reservados.
+        </p>
       </div>
-    </section>
-  </main>
-
-  <!-- Reúne accesos útiles y redes al final de la página -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"><p>Juegos y experiencias para celebrar momentos inolvidables.</p></div>
-      <div><h2>Explorar</h2><ul class="footer-links"><li><a href="index.html">Inicio</a></li><li><a href="juegos.html">Juegos</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="alquiler.html">Alquiler</a></li></ul></div>
-      <div><h2>Reserva</h2><ul class="footer-links"><li><a href="#formulario">Formulario</a></li><li><a href="alquiler.html#paquetes">Paquetes</a></li><li><a href="juegos.html">Por juego</a></li></ul></div>
-      <div><h2>Síguenos</h2><div class="footer-socials"><a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a><a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a><a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a><a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a></div></div>
-    </div>
-    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

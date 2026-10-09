@@ -1,95 +1,415 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Descubre las opciones de Jumanji Park para cumpleaños, colegios, empresas y celebraciones.">
-  <title>Eventos | Jumanji Park</title>
-  <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/estilos.css">
-</head>
-<body>
-  <!-- Permite llegar al contenido principal sin recorrer todo el menú -->
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <!-- Mantiene la marca y las páginas principales en la barra lateral -->
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanji Park"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"></a>
-    <!-- Convierte la barra lateral en un menú compacto en teléfonos -->
-    <div class="navigation">
-      <input class="menu-toggle" id="menu-toggle" type="checkbox">
-      <label class="menu-button" for="menu-toggle">Menú</label>
-      <div class="menu-panel">
-        <nav class="primary-nav" aria-label="Navegación principal">
-          <a href="index.html"><span class="menu-icon menu-icon--inicio"></span>Inicio</a>
-          <a href="juegos.html"><span class="menu-icon menu-icon--juegos"></span>Juegos</a>
-          <a href="eventos.html" aria-current="page"><span class="menu-icon menu-icon--eventos"></span>Eventos</a>
-          <a href="alquiler.html"><span class="menu-icon menu-icon--alquiler"></span>Alquiler</a>
-          <a href="contacto.html"><span class="menu-icon menu-icon--contacto"></span>Contacto</a>
-        </nav>
-        <div class="sidebar-photo"><span>Diversión para celebrar a lo grande.</span></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Descubre las opciones de Jumanvi para cumpleaños, colegios, empresas y celebraciones.">
+    <title>
+      Eventos | Jumanvi
+    </title>
+    <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+  </head>
+  <body class="page-eventos">
+    <a class="skip-link" href="#contenido">
+      Saltar al contenido
+    </a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanvi">
+        <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+      </a>
+      <div class="navigation">
+        <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú" aria-controls="menu-panel">
+        <label class="menu-button" for="menu-toggle">
+          Menú
+        </label>
+        <div class="menu-panel" id="menu-panel">
+          <nav class="primary-nav" aria-label="Navegación principal">
+            <a href="index.html">
+              <span class="menu-icon menu-icon--inicio">
+              </span>
+              Inicio
+            </a>
+            <a href="juegos.html">
+              <span class="menu-icon menu-icon--juegos">
+              </span>
+              Juegos
+            </a>
+            <a href="eventos.html" aria-current="page">
+              <span class="menu-icon menu-icon--eventos">
+              </span>
+              Eventos
+            </a>
+            <a href="alquiler.html">
+              <span class="menu-icon menu-icon--alquiler">
+              </span>
+              Alquiler
+            </a>
+            <a href="contacto.html">
+              <span class="menu-icon menu-icon--contacto">
+              </span>
+              Contacto
+            </a>
+          </nav>
+        </div>
       </div>
+    </header>
+    <div class="floating-socials" aria-label="Redes sociales">
+      <a class="social-link" href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+      </a>
+      <a class="social-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+      </a>
     </div>
-  </header>
-
-  <!-- Deja disponibles las cuatro redes solicitadas -->
-  <div class="floating-socials" aria-label="Redes sociales">
-    <a class="social-link" href="" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="TikTok"><img src="assets/icons/tiktok.svg" alt="" width="48" height="48"></a>
-    <a class="social-link" href="" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48"></a>
-  </div>
-
-  <main class="site-main" id="contenido">
-    <!-- Presenta los eventos en la misma distribución del esquema -->
-    <section class="screen">
-      <div class="screen-inner">
-        <div class="screen-header">
-          <h1 class="screen-title">Eventos</h1>
-          <p class="screen-subtitle">Haz de cada ocasión un momento especial</p>
+    <main class="site-main" id="contenido">
+      <section class="screen">
+        <div class="screen-inner">
+          <nav class="breadcrumbs" aria-label="Ubicación actual">
+            <a href="index.html">
+              Inicio
+            </a>
+            <span aria-hidden="true">
+              /
+            </span>
+            <span aria-current="page">
+              Eventos
+            </span>
+          </nav>
+          <div class="screen-header">
+            <h1 class="screen-title">
+              Eventos
+            </h1>
+            <p class="screen-subtitle">
+              Haz de cada ocasión un momento especial
+            </p>
+          </div>
+          <div class="visual-grid events-grid">
+            <a class="visual-card tone-orange" href="#cumpleanos">
+              <img src="assets/images/generated/eventos/cumpleanos.png" alt="Cumpleaños infantil con juegos" width="1456" height="1088">
+              <span class="card-label">
+                Cumpleaños
+              </span>
+            </a>
+            <a class="visual-card tone-green" href="#colegios">
+              <img src="assets/images/generated/eventos/colegios.png" alt="Actividad recreativa para colegios" width="1456" height="1088">
+              <span class="card-label">
+                Promociones y colegios
+              </span>
+            </a>
+            <a class="visual-card tone-green" href="#infantiles">
+              <img src="assets/images/generated/eventos/infantiles.png" alt="Evento infantil con juegos" width="1456" height="1088">
+              <span class="card-label">
+                Eventos infantiles
+              </span>
+            </a>
+            <a class="visual-card tone-green" href="#empresariales">
+              <img src="assets/images/generated/eventos/empresariales.png" alt="Jornada empresarial para familias" width="1456" height="1088">
+              <span class="card-label">
+                Eventos empresariales
+              </span>
+            </a>
+            <a class="visual-card tone-green" href="#celebraciones">
+              <img src="assets/images/generated/eventos/celebraciones.png" alt="Fiesta y celebración familiar" width="1456" height="1088">
+              <span class="card-label">
+                Fiestas y celebraciones
+              </span>
+            </a>
+          </div>
+          <nav class="section-nav" aria-label="Explorar eventos">
+            <a href="#titulo-eventos">
+              Elegir mi ocasión
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="juegos.html">
+              Explorar juegos
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="alquiler.html#paquetes">
+              Comparar paquetes
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+          </nav>
         </div>
-        <div class="visual-grid events-grid">
-          <a class="visual-card tone-orange" href="#cumpleanos"><img src="assets/images/generated/eventos/cumpleanos.png" alt="Cumpleaños infantil con juegos" width="1456" height="1088"><span class="card-label">Cumpleaños</span></a>
-          <a class="visual-card tone-green" href="#colegios"><img src="assets/images/generated/eventos/colegios.png" alt="Actividad recreativa para colegios" width="1456" height="1088"><span class="card-label">Promociones y colegios</span></a>
-          <a class="visual-card tone-green" href="#infantiles"><img src="assets/images/generated/eventos/infantiles.png" alt="Evento infantil con juegos" width="1456" height="1088"><span class="card-label">Eventos infantiles</span></a>
-          <a class="visual-card tone-green" href="#empresariales"><img src="assets/images/generated/eventos/empresariales.png" alt="Jornada empresarial para familias" width="1456" height="1088"><span class="card-label">Eventos empresariales</span></a>
-          <a class="visual-card tone-green" href="#celebraciones"><img src="assets/images/generated/eventos/celebraciones.png" alt="Fiesta y celebración familiar" width="1456" height="1088"><span class="card-label">Fiestas y celebraciones</span></a>
+      </section>
+      <section class="content-section" aria-labelledby="titulo-eventos">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="titulo-eventos">
+              Una experiencia para cada ocasión
+            </h2>
+            <p>
+              Selecciona el tipo de encuentro y construye una propuesta alrededor de tus invitados.
+            </p>
+          </div>
+          <div class="detail-grid">
+            <article class="detail-card" id="cumpleanos">
+              <img src="assets/images/generated/eventos/cumpleanos.png" alt="Niños celebrando un cumpleaños" width="1456" height="1088" loading="lazy">
+              <div class="detail-card__body">
+                <h3>
+                  Cumpleaños
+                </h3>
+                <p>
+                  Una jornada colorida para celebrar con movimiento, juegos y momentos compartidos.
+                </p>
+                <details class="card-details">
+                  <summary>
+                    Cómo preparar esta ocasión
+                  </summary>
+                  <p>
+                    Indica la edad del festejado, la cantidad de invitados y el lugar. Podemos orientar la elección entre juegos activos y actividades tranquilas.
+                  </p>
+                </details>
+                <a class="button" href="contacto.html?interes=evento-cumpleanos&amp;evento=Cumplea%C3%B1os#formulario">
+                  Planear cumpleaños
+                </a>
+              </div>
+            </article>
+            <article class="detail-card" id="colegios">
+              <img src="assets/images/generated/eventos/colegios.png" alt="Niños en una actividad escolar" width="1456" height="1088" loading="lazy">
+              <div class="detail-card__body">
+                <h3>
+                  Colegios
+                </h3>
+                <p>
+                  Actividades recreativas para convivencias, promociones y fechas especiales.
+                </p>
+                <details class="card-details">
+                  <summary>
+                    Cómo preparar esta ocasión
+                  </summary>
+                  <p>
+                    Comparte los cursos, las edades y la duración de la jornada. La selección se puede organizar por grupos y turnos.
+                  </p>
+                </details>
+                <a class="button button--green" href="contacto.html?interes=evento-colegios&amp;evento=Evento%20escolar#formulario">
+                  Consultar actividad
+                </a>
+              </div>
+            </article>
+            <article class="detail-card" id="infantiles">
+              <img src="assets/images/generated/eventos/infantiles.png" alt="Evento recreativo infantil" width="1456" height="1088" loading="lazy">
+              <div class="detail-card__body">
+                <h3>
+                  Eventos infantiles
+                </h3>
+                <p>
+                  Propuestas pensadas alrededor de la edad, el espacio y la cantidad de invitados.
+                </p>
+                <details class="card-details">
+                  <summary>
+                    Cómo preparar esta ocasión
+                  </summary>
+                  <p>
+                    Describe las edades y el espacio de juego. Te ayudaremos a elegir atracciones adecuadas al público y al lugar.
+                  </p>
+                </details>
+                <a class="button button--blue" href="contacto.html?interes=evento-infantiles&amp;evento=Evento%20infantil#formulario">
+                  Organizar evento
+                </a>
+              </div>
+            </article>
+            <article class="detail-card" id="empresariales">
+              <img src="assets/images/generated/eventos/empresariales.png" alt="Familias compartiendo en un evento empresarial" width="1456" height="1088" loading="lazy">
+              <div class="detail-card__body">
+                <h3>
+                  Eventos empresariales
+                </h3>
+                <p>
+                  Jornadas de integración para equipos, colaboradores y sus familias.
+                </p>
+                <details class="card-details">
+                  <summary>
+                    Cómo preparar esta ocasión
+                  </summary>
+                  <p>
+                    Indica si la jornada será para colaboradores, familias o ambos. Comparte el aforo y el horario para orientar la propuesta.
+                  </p>
+                </details>
+                <a class="button button--violet" href="contacto.html?interes=evento-empresariales&amp;evento=Evento%20empresarial#formulario">
+                  Preparar jornada
+                </a>
+              </div>
+            </article>
+            <article class="detail-card" id="celebraciones">
+              <img src="assets/images/generated/eventos/celebraciones.png" alt="Familias disfrutando una celebración" width="1456" height="1088" loading="lazy">
+              <div class="detail-card__body">
+                <h3>
+                  Fiestas y celebraciones
+                </h3>
+                <p>
+                  Entretenimiento adaptable para encuentros familiares y fechas importantes.
+                </p>
+                <details class="card-details">
+                  <summary>
+                    Cómo preparar esta ocasión
+                  </summary>
+                  <p>
+                    Cuéntanos el motivo de la reunión y las edades de tus invitados. La elección puede combinar juegos para compartir y atracciones activas.
+                  </p>
+                </details>
+                <a class="button" href="contacto.html?interes=evento-celebraciones&amp;evento=Fiesta%20o%20celebraci%C3%B3n#formulario">
+                  Contar mi idea
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content-section content-section--white" aria-labelledby="titulo-proceso">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="titulo-proceso">
+              Así preparamos tu evento
+            </h2>
+            <p>
+              Tres pasos claros para orientar la propuesta.
+            </p>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">
+                1
+              </span>
+              <h3>
+                Cuéntanos
+              </h3>
+              <p>
+                Comparte la fecha, el tipo de ocasión y el público.
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-number">
+                2
+              </span>
+              <h3>
+                Elige
+              </h3>
+              <p>
+                Selecciona los juegos o paquetes que más se adapten.
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-number">
+                3
+              </span>
+              <h3>
+                Confirma
+              </h3>
+              <p>
+                Revisa la disponibilidad y acuerda los detalles finales.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="container">
+          <div class="cta-panel">
+            <div>
+              <h2>
+                Cada celebración merece su propia mezcla
+              </h2>
+              <p>
+                Combina juegos y experiencias según tu ocasión.
+              </p>
+            </div>
+            <a class="button" href="alquiler.html">
+              Ver alquileres
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+          <p>
+            Juegos y experiencias para celebrar momentos inolvidables.
+          </p>
+        </div>
+        <div>
+          <h2>
+            Explorar
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="juegos.html">
+                Juegos
+              </a>
+            </li>
+            <li>
+              <a href="alquiler.html">
+                Alquiler
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html">
+                Contacto
+              </a>
+            </li>
+            <li>
+              <a href="contacto.html#ubicacion">
+                Ubicación
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Eventos
+          </h2>
+          <ul class="footer-links">
+            <li>
+              <a href="#cumpleanos">
+                Cumpleaños
+              </a>
+            </li>
+            <li>
+              <a href="#colegios">
+                Colegios
+              </a>
+            </li>
+            <li>
+              <a href="#empresariales">
+                Empresariales
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>
+            Síguenos
+          </h2>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+              Facebook
+            </a>
+            <a href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+              WhatsApp
+            </a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <!-- Amplía cada opción de evento con información útil -->
-    <section class="content-section" aria-labelledby="titulo-eventos">
-      <div class="container">
-        <div class="section-heading"><h2 id="titulo-eventos">Una experiencia para cada ocasión</h2><p>Selecciona el tipo de encuentro y construye una propuesta alrededor de tus invitados.</p></div>
-        <div class="detail-grid">
-          <article class="detail-card" id="cumpleanos"><img src="assets/images/generated/eventos/cumpleanos.png" alt="Niños celebrando un cumpleaños" width="1456" height="1088" loading="lazy"><div class="detail-card__body"><h3>Cumpleaños</h3><p>Una jornada colorida para celebrar con movimiento, juegos y momentos compartidos.</p><a class="button" href="contacto.html#reserva">Planear cumpleaños</a></div></article>
-          <article class="detail-card" id="colegios"><img src="assets/images/generated/eventos/colegios.png" alt="Niños en una actividad escolar" width="1456" height="1088" loading="lazy"><div class="detail-card__body"><h3>Colegios</h3><p>Actividades recreativas para convivencias, promociones y fechas especiales.</p><a class="button button--green" href="contacto.html#reserva">Consultar actividad</a></div></article>
-          <article class="detail-card" id="infantiles"><img src="assets/images/generated/eventos/infantiles.png" alt="Evento recreativo infantil" width="1456" height="1088" loading="lazy"><div class="detail-card__body"><h3>Eventos infantiles</h3><p>Propuestas pensadas alrededor de la edad, el espacio y la cantidad de invitados.</p><a class="button button--blue" href="contacto.html#reserva">Organizar evento</a></div></article>
-          <article class="detail-card" id="empresariales"><img src="assets/images/generated/eventos/empresariales.png" alt="Familias compartiendo en un evento empresarial" width="1456" height="1088" loading="lazy"><div class="detail-card__body"><h3>Eventos empresariales</h3><p>Jornadas de integración para equipos, colaboradores y sus familias.</p><a class="button button--violet" href="contacto.html#reserva">Preparar jornada</a></div></article>
-          <article class="detail-card" id="celebraciones"><img src="assets/images/generated/eventos/celebraciones.png" alt="Familias disfrutando una celebración" width="1456" height="1088" loading="lazy"><div class="detail-card__body"><h3>Fiestas y celebraciones</h3><p>Entretenimiento adaptable para encuentros familiares y fechas importantes.</p><a class="button" href="contacto.html#reserva">Contar mi idea</a></div></article>
-        </div>
+      <div class="container footer-bottom">
+        <p>
+          © 2026 Jumanvi. Todos los derechos reservados.
+        </p>
       </div>
-    </section>
-
-    <!-- Explica cómo se prepara la experiencia -->
-    <section class="content-section content-section--white" aria-labelledby="titulo-proceso">
-      <div class="container"><div class="section-heading"><h2 id="titulo-proceso">Así preparamos tu evento</h2><p>Tres pasos claros para orientar la propuesta.</p></div><div class="steps"><article class="step"><span class="step-number">1</span><h3>Cuéntanos</h3><p>Comparte la fecha, el tipo de ocasión y el público.</p></article><article class="step"><span class="step-number">2</span><h3>Elige</h3><p>Selecciona los juegos o paquetes que más se adapten.</p></article><article class="step"><span class="step-number">3</span><h3>Confirma</h3><p>Revisa la disponibilidad y acuerda los detalles finales.</p></article></div></div>
-    </section>
-
-    <!-- Conduce desde el evento hacia las opciones de alquiler -->
-    <section class="content-section"><div class="container"><div class="cta-panel"><div><h2>Cada celebración merece su propia mezcla</h2><p>Combina juegos y experiencias según tu ocasión.</p></div><a class="button" href="alquiler.html">Ver alquileres</a></div></div></section>
-  </main>
-
-  <!-- Reúne accesos útiles y redes al final de la página -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand"><img src="assets/images/brand/logo.svg" alt="Jumanji Park" width="303" height="166"><p>Juegos y experiencias para celebrar momentos inolvidables.</p></div>
-      <div><h2>Explorar</h2><ul class="footer-links"><li><a href="index.html">Inicio</a></li><li><a href="juegos.html">Juegos</a></li><li><a href="alquiler.html">Alquiler</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-      <div><h2>Eventos</h2><ul class="footer-links"><li><a href="#cumpleanos">Cumpleaños</a></li><li><a href="#colegios">Colegios</a></li><li><a href="#empresariales">Empresariales</a></li></ul></div>
-      <div><h2>Síguenos</h2><div class="footer-socials"><a href=""><img src="assets/icons/facebook.svg" alt="" width="48" height="48">Facebook</a><a href=""><img src="assets/icons/instagram.svg" alt="" width="48" height="48">Instagram</a><a href=""><img src="assets/icons/tiktok.svg" alt="" width="48" height="48">TikTok</a><a href=""><img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">WhatsApp</a></div></div>
-    </div>
-    <div class="container footer-bottom"><p>© 2026 Jumanji Park. Todos los derechos reservados.</p></div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
