@@ -1,293 +1,742 @@
+<!-- Indica al navegador que este archivo es una página web actual. -->
 <!doctype html>
+<!-- Abre toda la página, con sus textos en español. -->
 <html lang="es">
+  <!-- Abre la información de la pestaña, el icono y los archivos de diseño; no es el contenido visible. -->
   <head>
+    <!-- Permite mostrar correctamente las tildes, la ñ y los signos de los textos. -->
     <meta charset="utf-8">
+    <!-- Ajusta la página al ancho del teléfono o de la pantalla, sin empezar alejada. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+      Describe el sitio como «Jumanvi ofrece juegos, alquileres y entretenimiento para celebraciones y eventos.»
+      para los buscadores.
+    -->
     <meta name="description" content="Jumanvi ofrece juegos, alquileres y entretenimiento para celebraciones y eventos.">
+    <!--
+      Abre el nombre de la pestaña del navegador.
+      El texto «Jumanvi | Diversión sin límites» es el título que muestra esa pestaña.
+      La última línea termina el nombre de la pestaña.
+    -->
     <title>
       Jumanvi | Diversión sin límites
     </title>
+    <!-- Usa logo.svg de Jumanvi como el pequeño icono de la pestaña del navegador. -->
     <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
+    <!-- Recuerda los juegos de Mi combo y prepara su lista y sus enlaces en esta página. -->
+    <script src="assets/js/combo.js" defer></script>
+    <!-- Aplica estilos.css a esta página: controla colores, tamaños, distribución y movimientos. -->
     <link rel="stylesheet" href="assets/css/estilos.css">
+  <!-- Termina la información de la pestaña, el icono y los archivos de diseño; no es el contenido visible. -->
   </head>
+  <!-- Abre todo lo que se muestra en la página Inicio. -->
   <body class="page-inicio">
+    <!-- Crea el enlace «Saltar al contenido» hacia esta misma página, en el contenido principal. -->
     <a class="skip-link" href="#contenido">
+      <!-- Es el texto «Saltar al contenido» del enlace que lleva a esta misma página, en el contenido principal. -->
       Saltar al contenido
+    <!-- Termina el enlace «Saltar al contenido» hacia esta misma página, en el contenido principal. -->
     </a>
+    <!-- Abre la cabecera: contiene el logo de Jumanvi y las opciones para recorrer el sitio. -->
     <header class="site-header">
+      <!-- Crea el enlace «Ir al inicio de Jumanvi» hacia la página Inicio. -->
       <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanvi">
+        <!--
+          Muestra «Jumanvi» desde «assets/images/brand/logo.svg». Reserva sus proporciones con 303 de ancho y 166
+          de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+      <!-- Termina el enlace «Ir al inicio de Jumanvi» hacia la página Inicio. -->
       </a>
+      <!-- Abre los controles del menú. -->
       <div class="navigation">
+        <!-- Guarda si el menú móvil está abierto o cerrado; el botón «Menú» cambia este control. -->
         <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú" aria-controls="menu-panel">
+        <!-- Presenta el botón visible «Menú», que abre o cierra las opciones en móvil. -->
         <label class="menu-button" for="menu-toggle">
+          <!-- Escribe «Menú» junto al campo o control que corresponde. -->
           Menú
+        <!-- Termina el botón visible «Menú», que abre o cierra las opciones en móvil. -->
         </label>
+        <!-- Abre el panel de opciones del menú. -->
         <div class="menu-panel" id="menu-panel">
+          <!-- Abre el menú Inicio, Juegos, Eventos, Alquiler y Contacto. -->
           <nav class="primary-nav" aria-label="Navegación principal">
+            <!-- Crea el enlace «Inicio» hacia la página Inicio. Lo marca como la página que está abierta. -->
             <a href="index.html" aria-current="page">
+              <!-- Presenta el dibujo de Inicio. -->
               <span class="menu-icon menu-icon--inicio">
+              <!-- Termina el dibujo de Inicio. -->
               </span>
+              <!-- Es el texto «Inicio» del enlace que lleva a la página Inicio. -->
               Inicio
+            <!-- Termina el enlace «Inicio» hacia la página Inicio. -->
             </a>
+            <!-- Crea el enlace «Juegos» hacia la página Juegos. -->
             <a href="juegos.html">
+              <!-- Presenta el dibujo de Juegos. -->
               <span class="menu-icon menu-icon--juegos">
+              <!-- Termina el dibujo de Juegos. -->
               </span>
+              <!-- Es el texto «Juegos» del enlace que lleva a la página Juegos. -->
               Juegos
+            <!-- Termina el enlace «Juegos» hacia la página Juegos. -->
             </a>
+            <!-- Crea el enlace «Eventos» hacia la página Eventos. -->
             <a href="eventos.html">
+              <!-- Presenta el dibujo de Eventos. -->
               <span class="menu-icon menu-icon--eventos">
+              <!-- Termina el dibujo de Eventos. -->
               </span>
+              <!-- Es el texto «Eventos» del enlace que lleva a la página Eventos. -->
               Eventos
+            <!-- Termina el enlace «Eventos» hacia la página Eventos. -->
             </a>
+            <!-- Crea el enlace «Alquiler» hacia la página Alquiler. -->
             <a href="alquiler.html">
+              <!-- Presenta el dibujo de Alquiler. -->
               <span class="menu-icon menu-icon--alquiler">
+              <!-- Termina el dibujo de Alquiler. -->
               </span>
+              <!-- Es el texto «Alquiler» del enlace que lleva a la página Alquiler. -->
               Alquiler
+            <!-- Termina el enlace «Alquiler» hacia la página Alquiler. -->
             </a>
+            <!-- Crea el enlace «Contacto» hacia la página Contacto. -->
             <a href="contacto.html">
+              <!-- Presenta el dibujo de Contacto. -->
               <span class="menu-icon menu-icon--contacto">
+              <!-- Termina el dibujo de Contacto. -->
               </span>
+              <!-- Es el texto «Contacto» del enlace que lleva a la página Contacto. -->
               Contacto
+            <!-- Termina el enlace «Contacto» hacia la página Contacto. -->
             </a>
+            <!-- Regresa al catálogo llevando los juegos y cantidades que ya se eligieron. -->
+            <a class="combo-nav" href="juegos.html#mi-combo" data-combo-link>
+              <!-- Abre el signo de suma junto al nombre Mi combo. -->
+              <span class="combo-nav__symbol" aria-hidden="true">
+                <!-- Muestra el texto «+». -->
+                +
+              <!-- Termina el signo de suma junto al nombre Mi combo. -->
+              </span>
+              <!-- Muestra el texto «Mi combo». -->
+              Mi combo
+              <!-- Abre el contador de unidades elegidas. -->
+              <span class="combo-count" data-combo-count aria-label="0 unidades seleccionadas">
+                <!-- Muestra el texto «0». -->
+                0
+              <!-- Termina el contador de unidades elegidas. -->
+              </span>
+            <!-- Termina el acceso a Mi combo con el número de unidades elegidas. -->
+            </a>
+          <!-- Termina el menú y el acceso a Mi combo. -->
           </nav>
+        <!-- Termina el panel de opciones del menú. -->
         </div>
+      <!-- Termina los controles del menú. -->
       </div>
+    <!-- Termina la cabecera: contiene el logo de Jumanvi y las opciones para recorrer el sitio. -->
     </header>
+    <!-- Abre los accesos flotantes de Facebook y WhatsApp. -->
     <div class="floating-socials" aria-label="Redes sociales">
+      <!--
+        Crea el enlace «Facebook» hacia la página de Facebook de Jumanvi. Lo abre en otra pestaña sin dar acceso a
+        esta página.
+      -->
       <a class="social-link" href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <!--
+          Muestra «el símbolo de Facebook» desde «assets/icons/facebook.svg». Reserva sus proporciones con 48 de
+          ancho y 48 de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+      <!-- Termina el enlace «Facebook» hacia la página de Facebook de Jumanvi. -->
       </a>
+      <!--
+        Crea el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. Lo abre en otra pestaña sin dar
+        acceso a esta página.
+      -->
       <a class="social-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <!--
+          Muestra «el símbolo de WhatsApp» desde «assets/icons/whatsapp.svg». Reserva sus proporciones con 48 de
+          ancho y 48 de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+      <!-- Termina el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. -->
       </a>
+    <!-- Termina los accesos flotantes de Facebook y WhatsApp. -->
     </div>
+    <!-- Abre la parte principal de esta página; el enlace «Saltar al contenido» llega hasta aquí. -->
     <main class="site-main" id="contenido">
+      <!-- Abre el apartado «¡Diversión». -->
       <section class="screen home-screen">
+        <!-- Abre el contenido de la presentación inicial. -->
         <div class="screen-inner">
+          <!-- Abre la ruta que indica en qué página estás. -->
           <nav class="breadcrumbs" aria-label="Ubicación actual">
+            <!-- Presenta la parte del texto «Inicio». -->
             <span aria-current="page">
+              <!-- Muestra «Inicio» dentro de la parte del texto «Inicio». -->
               Inicio
+            <!-- Termina la parte del texto «Inicio». -->
             </span>
+          <!-- Termina la ruta que indica en qué página estás. -->
           </nav>
+          <!-- Presenta el título principal «¡Diversión sin límites!». -->
           <h1 class="screen-title home-title">
+            <!-- Presenta la palabra «¡Diversión». -->
             <span class="home-title__top">
+              <!-- Muestra «¡Diversión» dentro de la palabra «¡Diversión». -->
               ¡Diversión
+            <!-- Termina la palabra «¡Diversión». -->
             </span>
+            <!-- Presenta la fila «sin límites!». -->
             <span class="home-title__line">
+              <!-- Presenta la palabra «sin» sobre amarillo. -->
               <span class="home-title__sin">
+                <!-- Muestra «sin» dentro de la palabra «sin» sobre amarillo. -->
                 sin
+              <!-- Termina la palabra «sin» sobre amarillo. -->
               </span>
+              <!-- Presenta la palabra «límites!» sobre rosa. -->
               <span class="home-title__limits">
+                <!-- Muestra «límites!» dentro de la palabra «límites!» sobre rosa. -->
                 límites!
+              <!-- Termina la palabra «límites!» sobre rosa. -->
               </span>
+            <!-- Termina la fila «sin límites!». -->
             </span>
+          <!-- Termina el título principal «¡Diversión sin límites!». -->
           </h1>
+          <!-- Presenta la frase «Para tus mejores momentos». -->
           <p class="screen-subtitle home-tagline">
+            <!-- Muestra «Para tus mejores momentos» dentro de la frase «Para tus mejores momentos». -->
             Para tus mejores momentos
+          <!-- Termina la frase «Para tus mejores momentos». -->
           </p>
+          <!-- Abre la descripción verde de Jumanvi en Inicio. -->
           <div class="home-message">
+            <!-- Muestra «En» dentro de la descripción verde de Jumanvi en Inicio. -->
             En
+            <!-- Presenta el texto resaltado «Jumanvi». -->
             <strong>
+              <!-- Muestra «Jumanvi» dentro del texto resaltado «Jumanvi». -->
               Jumanvi
+            <!-- Termina el texto resaltado «Jumanvi». -->
             </strong>
+            <!--
+              Muestra «alquilamos juegos, inflables, atracciones y entretenimiento para distintas edades y
+              celebraciones.» dentro de la descripción verde de Jumanvi en Inicio.
+            -->
             alquilamos juegos, inflables, atracciones y entretenimiento para distintas edades y celebraciones.
+          <!-- Termina la descripción verde de Jumanvi en Inicio. -->
           </div>
+          <!-- Crea el enlace «Reservar ahora» hacia la página Alquiler, en la explicación para cotizar. -->
           <a class="button home-reserve-button" href="alquiler.html#cotizacion">
+            <!-- Abre el calendario dibujado del botón «Reservar ahora». -->
             <svg class="home-reserve-button__calendar" viewBox="0 0 48 48" aria-hidden="true">
+              <!-- Dibuja el borde, las dos anillas y la separación superior del calendario del botón rosa. -->
               <path d="M12 8v7M36 8v7M8 18h32M10 12h28a3 3 0 0 1 3 3v24a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3Z"/>
+              <!-- Dibuja los pequeños cuadros que representan los días dentro del calendario. -->
               <path d="M14 24h5v5h-5zM22 24h5v5h-5zM30 24h5v5h-5zM14 32h5v5h-5zM22 32h5v5h-5z"/>
+            <!-- Termina el calendario dibujado del botón «Reservar ahora». -->
             </svg>
+            <!-- Presenta la parte del texto «Reservar ahora». -->
             <span>
+              <!-- Muestra «Reservar ahora» dentro de la parte del texto «Reservar ahora». -->
               Reservar ahora
+            <!-- Termina la parte del texto «Reservar ahora». -->
             </span>
+            <!-- Presenta la flecha de «Reservar ahora». -->
             <span class="home-reserve-button__arrow" aria-hidden="true">
+              <!-- Muestra una flecha para acompañar la acción de la flecha de «Reservar ahora». -->
               →
+            <!-- Termina la flecha de «Reservar ahora». -->
             </span>
+          <!-- Termina el enlace «Reservar ahora» hacia la página Alquiler, en la explicación para cotizar. -->
           </a>
+          <!-- Abre los accesos a secciones de la presentación. -->
           <nav class="section-nav" aria-label="Explorar inicio">
+            <!-- Abre el catálogo para elegir varios juegos y formar una sola solicitud. -->
+            <a href="juegos.html#titulo-catalogo" data-combo-link="catalogo">
+              <!-- Escribe el acceso para crear una selección propia. -->
+              Armar mi combo
+            <!-- Termina el acceso al catálogo para armar el combo. -->
+            </a>
+            <!-- Crea el enlace «Explorar juegos» hacia la página Juegos. -->
             <a href="juegos.html">
+              <!-- Es el texto «Explorar juegos» del enlace que lleva a la página Juegos. -->
               Explorar juegos
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Explorar juegos» hacia la página Juegos. -->
             </a>
+            <!-- Crea el enlace «Elegir mi evento» hacia la página Eventos. -->
             <a href="eventos.html">
+              <!-- Es el texto «Elegir mi evento» del enlace que lleva a la página Eventos. -->
               Elegir mi evento
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Elegir mi evento» hacia la página Eventos. -->
             </a>
+            <!-- Crea el enlace «Comparar paquetes» hacia la página Alquiler, en los paquetes. -->
             <a href="alquiler.html#paquetes">
+              <!-- Es el texto «Comparar paquetes» del enlace que lleva a la página Alquiler, en los paquetes. -->
               Comparar paquetes
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Comparar paquetes» hacia la página Alquiler, en los paquetes. -->
             </a>
+            <!-- Crea el enlace «Nuestra ubicación» hacia esta misma página, en el mapa y la ubicación. -->
             <a href="#ubicacion">
+              <!--
+                Es el texto «Nuestra ubicación» del enlace que lleva a esta misma página, en el mapa y la
+                ubicación.
+              -->
               Nuestra ubicación
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Nuestra ubicación» hacia esta misma página, en el mapa y la ubicación. -->
             </a>
+          <!-- Termina los accesos a secciones de la presentación. -->
           </nav>
+        <!-- Termina el contenido de la presentación inicial. -->
         </div>
+      <!-- Termina el apartado «¡Diversión». -->
       </section>
+      <!-- Abre el apartado «Diversión para elegir». -->
       <section class="content-section" aria-labelledby="titulo-destacados">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta el título del apartado «Diversión para elegir». -->
             <h2 id="titulo-destacados">
+              <!-- Muestra «Diversión para elegir» dentro del título del apartado «Diversión para elegir». -->
               Diversión para elegir
+            <!-- Termina el título del apartado «Diversión para elegir». -->
             </h2>
+            <!--
+              Presenta el párrafo «Combina atracciones y experiencias según la edad de tus invitados y el estilo
+              de tu evento.».
+            -->
             <p>
+              <!--
+                Muestra «Combina atracciones y experiencias según la edad de tus invitados y el estilo de tu
+                evento.» dentro del párrafo «Combina atracciones y experiencias según la edad de tus invitados y
+                el estilo de tu evento.».
+              -->
               Combina atracciones y experiencias según la edad de tus invitados y el estilo de tu evento.
+            <!--
+              Termina el párrafo «Combina atracciones y experiencias según la edad de tus invitados y el estilo de
+              tu evento.».
+            -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre el conjunto de tarjetas informativas. -->
           <div class="detail-grid">
+            <!-- Abre la tarjeta «Inflables». -->
             <article class="detail-card">
+              <!--
+                Muestra «Castillo inflable colorido» desde «assets/images/games/inflables/castillo-inflable.jpeg».
+                La carga cuando se acerca a la vista. Reserva sus proporciones con 1200 de ancho y 1600 de alto;
+                el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable colorido" width="1200" height="1600" loading="lazy">
+              <!-- Abre la descripción y el botón de «Inflables». -->
               <div class="detail-card__body">
+                <!-- Presenta el título «Inflables». -->
                 <h3>
+                  <!-- Muestra «Inflables» dentro del título «Inflables». -->
                   Inflables
+                <!-- Termina el título «Inflables». -->
                 </h3>
+                <!--
+                  Presenta el párrafo «Castillos y recorridos llenos de color para mantener la energía en
+                  movimiento.».
+                -->
                 <p>
+                  <!--
+                    Muestra «Castillos y recorridos llenos de color para mantener la energía en movimiento.»
+                    dentro del párrafo «Castillos y recorridos llenos de color para mantener la energía en
+                    movimiento.».
+                  -->
                   Castillos y recorridos llenos de color para mantener la energía en movimiento.
+                <!--
+                  Termina el párrafo «Castillos y recorridos llenos de color para mantener la energía en
+                  movimiento.».
+                -->
                 </p>
+                <!-- Crea el enlace «Ver inflables» hacia la página Juegos, en «inflables». -->
                 <a class="button" href="juegos.html#inflables">
+                  <!-- Es el texto «Ver inflables» del enlace que lleva a la página Juegos, en «inflables». -->
                   Ver inflables
+                <!-- Termina el enlace «Ver inflables» hacia la página Juegos, en «inflables». -->
                 </a>
+              <!-- Termina la descripción y el botón de «Inflables». -->
               </div>
+            <!-- Termina la tarjeta «Inflables». -->
             </article>
+            <!-- Abre la tarjeta «Toro mecánico». -->
             <article class="detail-card">
+              <!--
+                Muestra «Toro mecánico con zona de seguridad» desde
+                «assets/images/games/toro-mecanico/toro-mecanico.jpeg». La carga cuando se acerca a la vista.
+                Reserva sus proporciones con 2048 de ancho y 1536 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico con zona de seguridad" width="2048" height="1536" loading="lazy">
+              <!-- Abre la descripción y el botón de «Toro mecánico». -->
               <div class="detail-card__body">
+                <!-- Presenta el título «Toro mecánico». -->
                 <h3>
+                  <!-- Muestra «Toro mecánico» dentro del título «Toro mecánico». -->
                   Toro mecánico
+                <!-- Termina el título «Toro mecánico». -->
                 </h3>
+                <!--
+                  Presenta el párrafo «Un desafío entretenido que anima reuniones familiares y eventos
+                  especiales.».
+                -->
                 <p>
+                  <!--
+                    Muestra «Un desafío entretenido que anima reuniones familiares y eventos especiales.» dentro
+                    del párrafo «Un desafío entretenido que anima reuniones familiares y eventos especiales.».
+                  -->
                   Un desafío entretenido que anima reuniones familiares y eventos especiales.
+                <!--
+                  Termina el párrafo «Un desafío entretenido que anima reuniones familiares y eventos
+                  especiales.».
+                -->
                 </p>
+                <!-- Crea el enlace «Conocer el reto» hacia la página Juegos, en «toro mecanico». -->
                 <a class="button button--blue" href="juegos.html#toro-mecanico">
+                  <!-- Es el texto «Conocer el reto» del enlace que lleva a la página Juegos, en «toro mecanico». -->
                   Conocer el reto
+                <!-- Termina el enlace «Conocer el reto» hacia la página Juegos, en «toro mecanico». -->
                 </a>
+              <!-- Termina la descripción y el botón de «Toro mecánico». -->
               </div>
+            <!-- Termina la tarjeta «Toro mecánico». -->
             </article>
+            <!-- Abre la tarjeta «Camas elásticas». -->
             <article class="detail-card">
+              <!--
+                Muestra «Cama elástica amplia y colorida» desde
+                «assets/images/games/camas-elasticas/cama-elastica-grande.jpeg». La carga cuando se acerca a la
+                vista. Reserva sus proporciones con 1080 de ancho y 810 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/camas-elasticas/cama-elastica-grande.jpeg" alt="Cama elástica amplia y colorida" width="1080" height="810" loading="lazy">
+              <!-- Abre la descripción y el botón de «Camas elásticas». -->
               <div class="detail-card__body">
+                <!-- Presenta el título «Camas elásticas». -->
                 <h3>
+                  <!-- Muestra «Camas elásticas» dentro del título «Camas elásticas». -->
                   Camas elásticas
+                <!-- Termina el título «Camas elásticas». -->
                 </h3>
+                <!-- Presenta el párrafo «Una alternativa activa para saltar, jugar y compartir con libertad.». -->
                 <p>
+                  <!--
+                    Muestra «Una alternativa activa para saltar, jugar y compartir con libertad.» dentro del
+                    párrafo «Una alternativa activa para saltar, jugar y compartir con libertad.».
+                  -->
                   Una alternativa activa para saltar, jugar y compartir con libertad.
+                <!-- Termina el párrafo «Una alternativa activa para saltar, jugar y compartir con libertad.». -->
                 </p>
+                <!-- Crea el enlace «Ver opciones» hacia la página Juegos, en «camas elasticas». -->
                 <a class="button button--green" href="juegos.html#camas-elasticas">
+                  <!-- Es el texto «Ver opciones» del enlace que lleva a la página Juegos, en «camas elasticas». -->
                   Ver opciones
+                <!-- Termina el enlace «Ver opciones» hacia la página Juegos, en «camas elasticas». -->
                 </a>
+              <!-- Termina la descripción y el botón de «Camas elásticas». -->
               </div>
+            <!-- Termina la tarjeta «Camas elásticas». -->
             </article>
+          <!-- Termina el conjunto de tarjetas informativas. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Diversión para elegir». -->
       </section>
+      <!-- Abre el apartado «Tu evento en tres pasos». -->
       <section class="content-section content-section--white" aria-labelledby="titulo-pasos">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta el título del apartado «Tu evento en tres pasos». -->
             <h2 id="titulo-pasos">
+              <!-- Muestra «Tu evento en tres pasos» dentro del título del apartado «Tu evento en tres pasos». -->
               Tu evento en tres pasos
+            <!-- Termina el título del apartado «Tu evento en tres pasos». -->
             </h2>
+            <!-- Presenta el párrafo «Una ruta directa para pasar de la idea a la celebración.». -->
             <p>
+              <!--
+                Muestra «Una ruta directa para pasar de la idea a la celebración.» dentro del párrafo «Una ruta
+                directa para pasar de la idea a la celebración.».
+              -->
               Una ruta directa para pasar de la idea a la celebración.
+            <!-- Termina el párrafo «Una ruta directa para pasar de la idea a la celebración.». -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre la fila de pasos explicativos. -->
           <div class="steps">
+            <!-- Abre la tarjeta «Explora». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «1» dentro del número de cada paso. -->
                 1
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Explora». -->
               <h3>
+                <!-- Muestra «Explora» dentro del título «Explora». -->
                 Explora
+              <!-- Termina el título «Explora». -->
               </h3>
+              <!-- Presenta el párrafo «Revisa juegos, tipos de evento y paquetes disponibles.». -->
               <p>
+                <!--
+                  Muestra «Revisa juegos, tipos de evento y paquetes disponibles.» dentro del párrafo «Revisa
+                  juegos, tipos de evento y paquetes disponibles.».
+                -->
                 Revisa juegos, tipos de evento y paquetes disponibles.
+              <!-- Termina el párrafo «Revisa juegos, tipos de evento y paquetes disponibles.». -->
               </p>
+            <!-- Termina la tarjeta «Explora». -->
             </article>
+            <!-- Abre la tarjeta «Elige». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «2» dentro del número de cada paso. -->
                 2
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Elige». -->
               <h3>
+                <!-- Muestra «Elige» dentro del título «Elige». -->
                 Elige
+              <!-- Termina el título «Elige». -->
               </h3>
+              <!--
+                Presenta el párrafo «Elige una atracción, compara paquetes o prepara una combinación para tu
+                evento.».
+              -->
               <p>
+                <!--
+                  Muestra «Elige una atracción, compara paquetes o prepara una combinación para tu evento.» dentro
+                  del párrafo «Elige una atracción, compara paquetes o prepara una combinación para tu evento.».
+                -->
                 Elige una atracción, compara paquetes o prepara una combinación para tu evento.
+              <!--
+                Termina el párrafo «Elige una atracción, compara paquetes o prepara una combinación para tu
+                evento.».
+              -->
               </p>
+            <!-- Termina la tarjeta «Elige». -->
             </article>
+            <!-- Abre la tarjeta «Confirma». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «3» dentro del número de cada paso. -->
                 3
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Confirma». -->
               <h3>
+                <!-- Muestra «Confirma» dentro del título «Confirma». -->
                 Confirma
+              <!-- Termina el título «Confirma». -->
               </h3>
+              <!-- Presenta el párrafo «Recibe la orientación y acuerda los detalles de la propuesta.». -->
               <p>
+                <!--
+                  Muestra «Recibe la orientación y acuerda los detalles de la propuesta.» dentro del párrafo
+                  «Recibe la orientación y acuerda los detalles de la propuesta.».
+                -->
                 Recibe la orientación y acuerda los detalles de la propuesta.
+              <!-- Termina el párrafo «Recibe la orientación y acuerda los detalles de la propuesta.». -->
               </p>
+            <!-- Termina la tarjeta «Confirma». -->
             </article>
+          <!-- Termina la fila de pasos explicativos. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Tu evento en tres pasos». -->
       </section>
+      <!-- Abre el apartado «Haz que tu celebración se recuerde». -->
       <section class="content-section">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el bloque que invita a preparar una celebración. -->
           <div class="cta-panel">
+            <!-- Abre el bloque «Haz que tu celebración se recuerde». -->
             <div>
+              <!-- Presenta el título del apartado «Haz que tu celebración se recuerde». -->
               <h2>
+                <!--
+                  Muestra «Haz que tu celebración se recuerde» dentro del título del apartado «Haz que tu
+                  celebración se recuerde».
+                -->
                 Haz que tu celebración se recuerde
+              <!-- Termina el título del apartado «Haz que tu celebración se recuerde». -->
               </h2>
+              <!-- Presenta el párrafo «Encuentra una combinación pensada para tu ocasión.». -->
               <p>
+                <!--
+                  Muestra «Encuentra una combinación pensada para tu ocasión.» dentro del párrafo «Encuentra una
+                  combinación pensada para tu ocasión.».
+                -->
                 Encuentra una combinación pensada para tu ocasión.
+              <!-- Termina el párrafo «Encuentra una combinación pensada para tu ocasión.». -->
               </p>
+            <!-- Termina el bloque «Haz que tu celebración se recuerde». -->
             </div>
+            <!-- Crea el enlace «Explorar alquileres» hacia la página Alquiler. -->
             <a class="button" href="alquiler.html">
+              <!-- Es el texto «Explorar alquileres» del enlace que lleva a la página Alquiler. -->
               Explorar alquileres
+            <!-- Termina el enlace «Explorar alquileres» hacia la página Alquiler. -->
             </a>
+          <!-- Termina el bloque que invita a preparar una celebración. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Haz que tu celebración se recuerde». -->
       </section>
+      <!--
+        Abre el apartado «Nuestra ubicación», identificado como «ubicacion». El nombre «ubicacion» permite llegar
+        directamente a este apartado desde un enlace.
+      -->
       <section class="content-section" id="ubicacion" aria-labelledby="titulo-ubicacion">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta la frase corta que presenta un apartado. -->
             <p class="eyebrow">
+              <!-- Muestra «Estamos más cerca de tu diversión» dentro de la frase corta que presenta un apartado. -->
               Estamos más cerca de tu diversión
+            <!-- Termina la frase corta que presenta un apartado. -->
             </p>
+            <!-- Presenta el título del apartado «Nuestra ubicación». -->
             <h2 id="titulo-ubicacion">
+              <!-- Muestra «Nuestra ubicación» dentro del título del apartado «Nuestra ubicación». -->
               Nuestra ubicación
+            <!-- Termina el título del apartado «Nuestra ubicación». -->
             </h2>
+            <!-- Presenta el párrafo «Encuentra Jumanvi en el mapa y prepara tu recorrido.». -->
             <p>
+              <!--
+                Muestra «Encuentra Jumanvi en el mapa y prepara tu recorrido.» dentro del párrafo «Encuentra
+                Jumanvi en el mapa y prepara tu recorrido.».
+              -->
               Encuentra Jumanvi en el mapa y prepara tu recorrido.
+            <!-- Termina el párrafo «Encuentra Jumanvi en el mapa y prepara tu recorrido.». -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre el bloque de ubicación de Inicio. -->
           <div class="location-panel">
+            <!-- Abre la descripción y el acceso a Google Maps. -->
             <div class="location-panel__info">
+              <!-- Presenta el título «Visita Jumanvi». -->
               <h3>
+                <!-- Muestra «Visita Jumanvi» dentro del título «Visita Jumanvi». -->
                 Visita Jumanvi
+              <!-- Termina el título «Visita Jumanvi». -->
               </h3>
+              <!--
+                Presenta el párrafo «Abre la ubicación en Google Maps para consultar el recorrido desde tu punto
+                de partida.».
+              -->
               <p>
+                <!--
+                  Muestra «Abre la ubicación en Google Maps para consultar el recorrido desde tu punto de
+                  partida.» dentro del párrafo «Abre la ubicación en Google Maps para consultar el recorrido desde
+                  tu punto de partida.».
+                -->
                 Abre la ubicación en Google Maps para consultar el recorrido desde tu punto de partida.
+              <!--
+                Termina el párrafo «Abre la ubicación en Google Maps para consultar el recorrido desde tu punto de
+                partida.».
+              -->
               </p>
+              <!--
+                Crea el enlace «Abrir en Google Maps» hacia la ubicación de Jumanvi en Google Maps. Lo abre en
+                otra pestaña sin dar acceso a esta página.
+              -->
               <a class="button button--blue" href="https://www.google.com/maps/search/?api=1&amp;query=-17.9665278%2C-67.1185556" target="_blank" rel="noopener noreferrer">
+                <!--
+                  Es el texto «Abrir en Google Maps» del enlace que lleva a la ubicación de Jumanvi en Google
+                  Maps.
+                -->
                 Abrir en Google Maps
+                <!-- Presenta la parte del texto «↗». -->
                 <span aria-hidden="true">
+                  <!-- Muestra una flecha para acompañar la acción de la parte del texto «↗». -->
                   ↗
+                <!-- Termina la parte del texto «↗». -->
                 </span>
+              <!-- Termina el enlace «Abrir en Google Maps» hacia la ubicación de Jumanvi en Google Maps. -->
               </a>
+              <!-- Presenta la nota bajo los datos de ubicación. -->
               <p class="location-panel__note">
+                <!--
+                  Muestra «Si necesitas coordinar tu visita, escríbenos por» dentro de la nota bajo los datos de
+                  ubicación.
+                -->
                 Si necesitas coordinar tu visita, escríbenos por
+                <!--
+                  Crea el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. Lo abre en otra pestaña
+                  sin dar acceso a esta página.
+                -->
                 <a class="text-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+                  <!-- Es el texto «WhatsApp» del enlace que lleva a WhatsApp de Jumanvi, al número 73835908. -->
                   WhatsApp
+                <!-- Termina el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. -->
                 </a>.
+              <!-- Termina la nota bajo los datos de ubicación. -->
               </p>
+            <!-- Termina la descripción y el acceso a Google Maps. -->
             </div>
+            <!-- Abre el espacio reservado para el mapa. -->
             <div class="location-panel__map">
+              <!--
+                Abre el mapa de Google Maps dentro del bloque de ubicación de Inicio.
+                src: usa el mapa con la ubicación exacta de Jumanvi.
+                title: identifica el mapa como «Ubicación de Jumanvi en Google Maps» para quien escucha la página.
+                width: propone 600 píxeles de ancho; los estilos lo ajustan al espacio disponible.
+                height: propone 450 píxeles de alto; los estilos adaptan la altura en móvil.
+                allowfullscreen: permite ampliar el mapa a pantalla completa cuando Google Maps ofrece esa opción.
+                loading: espera a que el mapa se acerque a la vista para empezar a cargarlo.
+                referrerpolicy: limita los datos de la dirección de esta página que recibe Google Maps.
+                La última línea cierra el espacio del mapa para que el contenido siguiente quede fuera de él.
+              -->
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3795.2624477054355!2d-67.1211202248216!3d-17.966522683022788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU3JzU5LjUiUyA2N8KwMDcnMDYuOCJX!5e0!3m2!1ses!2sbo!4v1791513290046!5m2!1ses!2sbo"
                 title="Ubicación de Jumanvi en Google Maps"
@@ -297,94 +746,206 @@
                 loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin">
               </iframe>
+            <!-- Termina el espacio reservado para el mapa. -->
             </div>
+          <!-- Termina el bloque de ubicación de Inicio. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Nuestra ubicación», identificado como «ubicacion». -->
       </section>
+    <!-- Termina la parte principal de esta página; el enlace «Saltar al contenido» llega hasta aquí. -->
     </main>
+    <!-- Abre el pie de página: reúne el logo, los enlaces, las redes sociales y los derechos de Jumanvi. -->
     <footer class="site-footer">
+      <!-- Abre las columnas del pie de página. -->
       <div class="container footer-grid">
+        <!-- Abre el logo y la descripción del pie de página. -->
         <div class="footer-brand">
+          <!--
+            Muestra «Jumanvi» desde «assets/images/brand/logo.svg». Reserva sus proporciones con 303 de ancho y
+            166 de alto; el diseño adapta su tamaño.
+          -->
           <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+          <!-- Presenta el párrafo «Juegos y experiencias para celebrar momentos inolvidables.». -->
           <p>
+            <!--
+              Muestra «Juegos y experiencias para celebrar momentos inolvidables.» dentro del párrafo «Juegos y
+              experiencias para celebrar momentos inolvidables.».
+            -->
             Juegos y experiencias para celebrar momentos inolvidables.
+          <!-- Termina el párrafo «Juegos y experiencias para celebrar momentos inolvidables.». -->
           </p>
+        <!-- Termina el logo y la descripción del pie de página. -->
         </div>
+        <!-- Abre el bloque «Explorar». -->
         <div>
+          <!-- Presenta el título del apartado «Explorar». -->
           <h2>
+            <!-- Muestra «Explorar» dentro del título del apartado «Explorar». -->
             Explorar
+          <!-- Termina el título del apartado «Explorar». -->
           </h2>
+          <!-- Abre las listas de enlaces del pie de página. -->
           <ul class="footer-links">
+            <!-- Abre la opción o característica «Juegos». -->
             <li>
+              <!-- Crea el enlace «Juegos» hacia la página Juegos. -->
               <a href="juegos.html">
+                <!-- Es el texto «Juegos» del enlace que lleva a la página Juegos. -->
                 Juegos
+              <!-- Termina el enlace «Juegos» hacia la página Juegos. -->
               </a>
+            <!-- Termina la opción o característica «Juegos». -->
             </li>
+            <!-- Abre la opción o característica «Eventos». -->
             <li>
+              <!-- Crea el enlace «Eventos» hacia la página Eventos. -->
               <a href="eventos.html">
+                <!-- Es el texto «Eventos» del enlace que lleva a la página Eventos. -->
                 Eventos
+              <!-- Termina el enlace «Eventos» hacia la página Eventos. -->
               </a>
+            <!-- Termina la opción o característica «Eventos». -->
             </li>
+            <!-- Abre la opción o característica «Alquiler». -->
             <li>
+              <!-- Crea el enlace «Alquiler» hacia la página Alquiler. -->
               <a href="alquiler.html">
+                <!-- Es el texto «Alquiler» del enlace que lleva a la página Alquiler. -->
                 Alquiler
+              <!-- Termina el enlace «Alquiler» hacia la página Alquiler. -->
               </a>
+            <!-- Termina la opción o característica «Alquiler». -->
             </li>
+            <!-- Abre la opción o característica «Contacto». -->
             <li>
+              <!-- Crea el enlace «Contacto» hacia la página Contacto. -->
               <a href="contacto.html">
+                <!-- Es el texto «Contacto» del enlace que lleva a la página Contacto. -->
                 Contacto
+              <!-- Termina el enlace «Contacto» hacia la página Contacto. -->
               </a>
+            <!-- Termina la opción o característica «Contacto». -->
             </li>
+            <!-- Abre la opción o característica «Ubicación». -->
             <li>
+              <!-- Crea el enlace «Ubicación» hacia esta misma página, en el mapa y la ubicación. -->
               <a href="#ubicacion">
+                <!-- Es el texto «Ubicación» del enlace que lleva a esta misma página, en el mapa y la ubicación. -->
                 Ubicación
+              <!-- Termina el enlace «Ubicación» hacia esta misma página, en el mapa y la ubicación. -->
               </a>
+            <!-- Termina la opción o característica «Ubicación». -->
             </li>
+          <!-- Termina las listas de enlaces del pie de página. -->
           </ul>
+        <!-- Termina el bloque «Explorar». -->
         </div>
+        <!-- Abre el bloque «Destacados». -->
         <div>
+          <!-- Presenta el título del apartado «Destacados». -->
           <h2>
+            <!-- Muestra «Destacados» dentro del título del apartado «Destacados». -->
             Destacados
+          <!-- Termina el título del apartado «Destacados». -->
           </h2>
+          <!-- Abre las listas de enlaces del pie de página. -->
           <ul class="footer-links">
+            <!-- Abre la opción o característica «Inflables». -->
             <li>
+              <!-- Crea el enlace «Inflables» hacia la página Juegos, en «inflables». -->
               <a href="juegos.html#inflables">
+                <!-- Es el texto «Inflables» del enlace que lleva a la página Juegos, en «inflables». -->
                 Inflables
+              <!-- Termina el enlace «Inflables» hacia la página Juegos, en «inflables». -->
               </a>
+            <!-- Termina la opción o característica «Inflables». -->
             </li>
+            <!-- Abre la opción o característica «Toro mecánico». -->
             <li>
+              <!-- Crea el enlace «Toro mecánico» hacia la página Juegos, en «toro mecanico». -->
               <a href="juegos.html#toro-mecanico">
+                <!-- Es el texto «Toro mecánico» del enlace que lleva a la página Juegos, en «toro mecanico». -->
                 Toro mecánico
+              <!-- Termina el enlace «Toro mecánico» hacia la página Juegos, en «toro mecanico». -->
               </a>
+            <!-- Termina la opción o característica «Toro mecánico». -->
             </li>
+            <!-- Abre la opción o característica «Cumpleaños». -->
             <li>
+              <!-- Crea el enlace «Cumpleaños» hacia la página Eventos, en «cumpleanos». -->
               <a href="eventos.html#cumpleanos">
+                <!-- Es el texto «Cumpleaños» del enlace que lleva a la página Eventos, en «cumpleanos». -->
                 Cumpleaños
+              <!-- Termina el enlace «Cumpleaños» hacia la página Eventos, en «cumpleanos». -->
               </a>
+            <!-- Termina la opción o característica «Cumpleaños». -->
             </li>
+          <!-- Termina las listas de enlaces del pie de página. -->
           </ul>
+        <!-- Termina el bloque «Destacados». -->
         </div>
+        <!-- Abre el bloque «Síguenos». -->
         <div>
+          <!-- Presenta el título del apartado «Síguenos». -->
           <h2>
+            <!-- Muestra «Síguenos» dentro del título del apartado «Síguenos». -->
             Síguenos
+          <!-- Termina el título del apartado «Síguenos». -->
           </h2>
+          <!-- Abre Facebook y WhatsApp en el pie de página. -->
           <div class="footer-socials">
+            <!--
+              Crea el enlace «Facebook» hacia la página de Facebook de Jumanvi. Lo abre en otra pestaña sin dar
+              acceso a esta página.
+            -->
             <a href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
+              <!--
+                Muestra «el símbolo de Facebook» desde «assets/icons/facebook.svg». Reserva sus proporciones con
+                48 de ancho y 48 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+              <!-- Es el texto «Facebook» del enlace que lleva a la página de Facebook de Jumanvi. -->
               Facebook
+            <!-- Termina el enlace «Facebook» hacia la página de Facebook de Jumanvi. -->
             </a>
+            <!--
+              Crea el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. Lo abre en otra pestaña sin
+              dar acceso a esta página.
+            -->
             <a href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+              <!--
+                Muestra «el símbolo de WhatsApp» desde «assets/icons/whatsapp.svg». Reserva sus proporciones con
+                48 de ancho y 48 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+              <!-- Es el texto «WhatsApp» del enlace que lleva a WhatsApp de Jumanvi, al número 73835908. -->
               WhatsApp
+            <!-- Termina el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. -->
             </a>
+          <!-- Termina Facebook y WhatsApp en el pie de página. -->
           </div>
+        <!-- Termina el bloque «Síguenos». -->
         </div>
+      <!-- Termina las columnas del pie de página. -->
       </div>
+      <!-- Abre la línea de derechos de Jumanvi. -->
       <div class="container footer-bottom">
+        <!-- Presenta el párrafo «© 2026 Jumanvi. Todos los derechos reservados.». -->
         <p>
+          <!--
+            Muestra «© 2026 Jumanvi. Todos los derechos reservados.» dentro del párrafo «© 2026 Jumanvi. Todos los
+            derechos reservados.».
+          -->
           © 2026 Jumanvi. Todos los derechos reservados.
+        <!-- Termina el párrafo «© 2026 Jumanvi. Todos los derechos reservados.». -->
         </p>
+      <!-- Termina la línea de derechos de Jumanvi. -->
       </div>
+    <!-- Termina el pie de página: reúne el logo, los enlaces, las redes sociales y los derechos de Jumanvi. -->
     </footer>
+  <!-- Termina todo lo que se muestra en la página Inicio. -->
   </body>
+<!-- Termina toda la página, con sus textos en español. -->
 </html>

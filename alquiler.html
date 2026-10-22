@@ -1,565 +1,1617 @@
+<!-- Indica al navegador que este archivo es una página web actual. -->
 <!doctype html>
+<!-- Abre toda la página, con sus textos en español. -->
 <html lang="es">
+  <!-- Abre la información de la pestaña, el icono y los archivos de diseño; no es el contenido visible. -->
   <head>
+    <!-- Permite mostrar correctamente las tildes, la ñ y los signos de los textos. -->
     <meta charset="utf-8">
+    <!-- Ajusta la página al ancho del teléfono o de la pantalla, sin empezar alejada. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+      Describe el sitio como «Explora las modalidades y paquetes de alquiler de Jumanvi para tu próximo evento.»
+      para los buscadores.
+    -->
     <meta name="description" content="Explora las modalidades y paquetes de alquiler de Jumanvi para tu próximo evento.">
+    <!--
+      Abre el nombre de la pestaña del navegador.
+      El texto «Alquiler | Jumanvi» es el título que muestra esa pestaña.
+      La última línea termina el nombre de la pestaña.
+    -->
     <title>
       Alquiler | Jumanvi
     </title>
+    <!-- Usa logo.svg de Jumanvi como el pequeño icono de la pestaña del navegador. -->
     <link rel="icon" href="assets/images/brand/logo.svg" type="image/svg+xml">
+    <!-- Recuerda los juegos de Mi combo y prepara su lista y sus enlaces en esta página. -->
+    <script src="assets/js/combo.js" defer></script>
+    <!-- Aplica estilos.css a esta página: controla colores, tamaños, distribución y movimientos. -->
     <link rel="stylesheet" href="assets/css/estilos.css">
+  <!-- Termina la información de la pestaña, el icono y los archivos de diseño; no es el contenido visible. -->
   </head>
+  <!-- Abre todo lo que se muestra en la página Alquiler. -->
   <body class="page-alquiler">
+    <!-- Crea el enlace «Saltar al contenido» hacia esta misma página, en el contenido principal. -->
     <a class="skip-link" href="#contenido">
+      <!-- Es el texto «Saltar al contenido» del enlace que lleva a esta misma página, en el contenido principal. -->
       Saltar al contenido
+    <!-- Termina el enlace «Saltar al contenido» hacia esta misma página, en el contenido principal. -->
     </a>
+    <!-- Abre la cabecera: contiene el logo de Jumanvi y las opciones para recorrer el sitio. -->
     <header class="site-header">
+      <!-- Crea el enlace «Ir al inicio de Jumanvi» hacia la página Inicio. -->
       <a class="brand" href="index.html" aria-label="Ir al inicio de Jumanvi">
+        <!--
+          Muestra «Jumanvi» desde «assets/images/brand/logo.svg». Reserva sus proporciones con 303 de ancho y 166
+          de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+      <!-- Termina el enlace «Ir al inicio de Jumanvi» hacia la página Inicio. -->
       </a>
+      <!-- Abre los controles del menú. -->
       <div class="navigation">
+        <!-- Guarda si el menú móvil está abierto o cerrado; el botón «Menú» cambia este control. -->
         <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="Abrir o cerrar el menú" aria-controls="menu-panel">
+        <!-- Presenta el botón visible «Menú», que abre o cierra las opciones en móvil. -->
         <label class="menu-button" for="menu-toggle">
+          <!-- Escribe «Menú» junto al campo o control que corresponde. -->
           Menú
+        <!-- Termina el botón visible «Menú», que abre o cierra las opciones en móvil. -->
         </label>
+        <!-- Abre el panel de opciones del menú. -->
         <div class="menu-panel" id="menu-panel">
+          <!-- Abre el menú Inicio, Juegos, Eventos, Alquiler y Contacto. -->
           <nav class="primary-nav" aria-label="Navegación principal">
+            <!-- Crea el enlace «Inicio» hacia la página Inicio. -->
             <a href="index.html">
+              <!-- Presenta el dibujo de Inicio. -->
               <span class="menu-icon menu-icon--inicio">
+              <!-- Termina el dibujo de Inicio. -->
               </span>
+              <!-- Es el texto «Inicio» del enlace que lleva a la página Inicio. -->
               Inicio
+            <!-- Termina el enlace «Inicio» hacia la página Inicio. -->
             </a>
+            <!-- Crea el enlace «Juegos» hacia la página Juegos. -->
             <a href="juegos.html">
+              <!-- Presenta el dibujo de Juegos. -->
               <span class="menu-icon menu-icon--juegos">
+              <!-- Termina el dibujo de Juegos. -->
               </span>
+              <!-- Es el texto «Juegos» del enlace que lleva a la página Juegos. -->
               Juegos
+            <!-- Termina el enlace «Juegos» hacia la página Juegos. -->
             </a>
+            <!-- Crea el enlace «Eventos» hacia la página Eventos. -->
             <a href="eventos.html">
+              <!-- Presenta el dibujo de Eventos. -->
               <span class="menu-icon menu-icon--eventos">
+              <!-- Termina el dibujo de Eventos. -->
               </span>
+              <!-- Es el texto «Eventos» del enlace que lleva a la página Eventos. -->
               Eventos
+            <!-- Termina el enlace «Eventos» hacia la página Eventos. -->
             </a>
+            <!-- Crea el enlace «Alquiler» hacia la página Alquiler. Lo marca como la página que está abierta. -->
             <a href="alquiler.html" aria-current="page">
+              <!-- Presenta el dibujo de Alquiler. -->
               <span class="menu-icon menu-icon--alquiler">
+              <!-- Termina el dibujo de Alquiler. -->
               </span>
+              <!-- Es el texto «Alquiler» del enlace que lleva a la página Alquiler. -->
               Alquiler
+            <!-- Termina el enlace «Alquiler» hacia la página Alquiler. -->
             </a>
+            <!-- Crea el enlace «Contacto» hacia la página Contacto. -->
             <a href="contacto.html">
+              <!-- Presenta el dibujo de Contacto. -->
               <span class="menu-icon menu-icon--contacto">
+              <!-- Termina el dibujo de Contacto. -->
               </span>
+              <!-- Es el texto «Contacto» del enlace que lleva a la página Contacto. -->
               Contacto
+            <!-- Termina el enlace «Contacto» hacia la página Contacto. -->
             </a>
+            <!-- Regresa al catálogo llevando los juegos y cantidades que ya se eligieron. -->
+            <a class="combo-nav" href="juegos.html#mi-combo" data-combo-link>
+              <!-- Abre el signo de suma junto al nombre Mi combo. -->
+              <span class="combo-nav__symbol" aria-hidden="true">
+                <!-- Muestra el texto «+». -->
+                +
+              <!-- Termina el signo de suma junto al nombre Mi combo. -->
+              </span>
+              <!-- Muestra el texto «Mi combo». -->
+              Mi combo
+              <!-- Abre el contador de unidades elegidas. -->
+              <span class="combo-count" data-combo-count aria-label="0 unidades seleccionadas">
+                <!-- Muestra el texto «0». -->
+                0
+              <!-- Termina el contador de unidades elegidas. -->
+              </span>
+            <!-- Termina el acceso a Mi combo con el número de unidades elegidas. -->
+            </a>
+          <!-- Termina el menú y el acceso a Mi combo. -->
           </nav>
+        <!-- Termina el panel de opciones del menú. -->
         </div>
+      <!-- Termina los controles del menú. -->
       </div>
+    <!-- Termina la cabecera: contiene el logo de Jumanvi y las opciones para recorrer el sitio. -->
     </header>
+    <!-- Abre los accesos flotantes de Facebook y WhatsApp. -->
     <div class="floating-socials" aria-label="Redes sociales">
+      <!--
+        Crea el enlace «Facebook» hacia la página de Facebook de Jumanvi. Lo abre en otra pestaña sin dar acceso a
+        esta página.
+      -->
       <a class="social-link" href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <!--
+          Muestra «el símbolo de Facebook» desde «assets/icons/facebook.svg». Reserva sus proporciones con 48 de
+          ancho y 48 de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+      <!-- Termina el enlace «Facebook» hacia la página de Facebook de Jumanvi. -->
       </a>
+      <!--
+        Crea el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. Lo abre en otra pestaña sin dar
+        acceso a esta página.
+      -->
       <a class="social-link" href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <!--
+          Muestra «el símbolo de WhatsApp» desde «assets/icons/whatsapp.svg». Reserva sus proporciones con 48 de
+          ancho y 48 de alto; el diseño adapta su tamaño.
+        -->
         <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+      <!-- Termina el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. -->
       </a>
+    <!-- Termina los accesos flotantes de Facebook y WhatsApp. -->
     </div>
+    <!-- Abre la parte principal de esta página; el enlace «Saltar al contenido» llega hasta aquí. -->
     <main class="site-main" id="contenido">
+      <!-- Abre el apartado «Alquiler». -->
       <section class="screen">
+        <!-- Abre el contenido de la presentación inicial. -->
         <div class="screen-inner">
+          <!-- Abre la ruta que indica en qué página estás. -->
           <nav class="breadcrumbs" aria-label="Ubicación actual">
+            <!-- Crea el enlace «Inicio» hacia la página Inicio. -->
             <a href="index.html">
+              <!-- Es el texto «Inicio» del enlace que lleva a la página Inicio. -->
               Inicio
+            <!-- Termina el enlace «Inicio» hacia la página Inicio. -->
             </a>
+            <!-- Presenta la parte del texto «/». -->
             <span aria-hidden="true">
+              <!-- Muestra «/» dentro de la parte del texto «/». -->
               /
+            <!-- Termina la parte del texto «/». -->
             </span>
+            <!-- Presenta la parte del texto «Alquiler». -->
             <span aria-current="page">
+              <!-- Muestra «Alquiler» dentro de la parte del texto «Alquiler». -->
               Alquiler
+            <!-- Termina la parte del texto «Alquiler». -->
             </span>
+          <!-- Termina la ruta que indica en qué página estás. -->
           </nav>
+          <!-- Abre el recuadro del título y su descripción. -->
           <div class="screen-header">
+            <!-- Presenta el título principal «Alquiler». -->
             <h1 class="screen-title">
+              <!-- Muestra «Alquiler» dentro del título principal «Alquiler». -->
               Alquiler
+            <!-- Termina el título principal «Alquiler». -->
             </h1>
+            <!-- Presenta la frase con fondo redondeado. -->
             <p class="screen-subtitle screen-subtitle--pill">
+              <!--
+                Muestra «Elige la opción que mejor se adapte a tu evento.» dentro de la frase con fondo
+                redondeado.
+              -->
               Elige la opción que mejor se adapte a tu evento.
+            <!-- Termina la frase con fondo redondeado. -->
             </p>
+          <!-- Termina el recuadro del título y su descripción. -->
           </div>
+          <!-- Abre las opciones iniciales de alquiler. -->
           <div class="visual-grid rental-grid">
+            <!-- Crea el enlace «Paquetes de alquiler» hacia esta misma página, en los paquetes. -->
             <a class="visual-card tone-pink" href="#paquetes">
+              <!--
+                Muestra «Castillo inflable de colores» desde
+                «assets/images/games/inflables/castillo-inflable.jpeg». Reserva sus proporciones con 1200 de ancho
+                y 1600 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable de colores" width="1200" height="1600">
+              <!-- Presenta el nombre «Paquetes de alquiler» sobre la imagen de esta tarjeta. -->
               <span class="card-label">
+                <!--
+                  Muestra «Paquetes de alquiler» dentro del nombre «Paquetes de alquiler» sobre la imagen de esta
+                  tarjeta.
+                -->
                 Paquetes de alquiler
+              <!-- Termina el nombre «Paquetes de alquiler» sobre la imagen de esta tarjeta. -->
               </span>
+            <!-- Termina el enlace «Paquetes de alquiler» hacia esta misma página, en los paquetes. -->
             </a>
+            <!-- Crea el enlace «Alquiler por juego» hacia esta misma página, en el alquiler por juego. -->
             <a class="visual-card tone-blue" href="#por-juego">
+              <!--
+                Muestra «Selección de atracciones disponibles» desde
+                «assets/images/games/inflables/area-inflables-collage.jpeg». Reserva sus proporciones con 934 de
+                ancho y 906 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/inflables/area-inflables-collage.jpeg" alt="Selección de atracciones disponibles" width="934" height="906">
+              <!-- Presenta el nombre «Alquiler por juego» sobre la imagen de esta tarjeta. -->
               <span class="card-label">
+                <!--
+                  Muestra «Alquiler por juego» dentro del nombre «Alquiler por juego» sobre la imagen de esta
+                  tarjeta.
+                -->
                 Alquiler por juego
+              <!-- Termina el nombre «Alquiler por juego» sobre la imagen de esta tarjeta. -->
               </span>
+            <!-- Termina el enlace «Alquiler por juego» hacia esta misma página, en el alquiler por juego. -->
             </a>
+            <!-- Crea el enlace «Combinaciones» hacia esta misma página, en las combinaciones. -->
             <a class="visual-card tone-green" href="#combinaciones">
-              <img src="assets/images/generated/eventos/celebraciones.png" alt="Celebración familiar con juegos" width="1456" height="1088">
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--celebraciones" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
+              </div>
+              <!-- Presenta el nombre «Combinaciones» sobre la imagen de esta tarjeta. -->
               <span class="card-label">
+                <!-- Muestra «Combinaciones» dentro del nombre «Combinaciones» sobre la imagen de esta tarjeta. -->
                 Combinaciones
+              <!-- Termina el nombre «Combinaciones» sobre la imagen de esta tarjeta. -->
               </span>
+            <!-- Termina el enlace «Combinaciones» hacia esta misma página, en las combinaciones. -->
             </a>
+            <!-- Crea el enlace «Cómo cotizar» hacia esta misma página, en la explicación para cotizar. -->
             <a class="visual-card tone-violet" href="#cotizacion">
+              <!--
+                Muestra «Carrusel infantil disponible para alquiler» desde
+                «assets/images/games/carritos/carrusel-carritos.jpeg». Reserva sus proporciones con 1296 de ancho
+                y 968 de alto; el diseño adapta su tamaño.
+              -->
               <img src="assets/images/games/carritos/carrusel-carritos.jpeg" alt="Carrusel infantil disponible para alquiler" width="1296" height="968">
+              <!-- Presenta el nombre «Cómo cotizar» sobre la imagen de esta tarjeta. -->
               <span class="card-label">
+                <!-- Muestra «Cómo cotizar» dentro del nombre «Cómo cotizar» sobre la imagen de esta tarjeta. -->
                 Cómo cotizar
+              <!-- Termina el nombre «Cómo cotizar» sobre la imagen de esta tarjeta. -->
               </span>
+            <!-- Termina el enlace «Cómo cotizar» hacia esta misma página, en la explicación para cotizar. -->
             </a>
+          <!-- Termina las opciones iniciales de alquiler. -->
           </div>
+          <!-- Abre los accesos a secciones de la presentación. -->
           <nav class="section-nav" aria-label="Explorar alquiler">
+            <!-- Abre el catálogo para elegir varios juegos y formar una sola solicitud. -->
+            <a href="juegos.html#titulo-catalogo" data-combo-link="catalogo">
+              <!-- Escribe el acceso para crear una selección propia. -->
+              Armar mi combo
+            <!-- Termina el acceso al catálogo para armar el combo. -->
+            </a>
+            <!-- Crea el enlace «Paquetes» hacia esta misma página, en los paquetes. -->
             <a href="#paquetes">
+              <!-- Es el texto «Paquetes» del enlace que lleva a esta misma página, en los paquetes. -->
               Paquetes
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Paquetes» hacia esta misma página, en los paquetes. -->
             </a>
+            <!-- Crea el enlace «Por juego» hacia esta misma página, en el alquiler por juego. -->
             <a href="#por-juego">
+              <!-- Es el texto «Por juego» del enlace que lleva a esta misma página, en el alquiler por juego. -->
               Por juego
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Por juego» hacia esta misma página, en el alquiler por juego. -->
             </a>
+            <!-- Crea el enlace «Combinaciones» hacia esta misma página, en las combinaciones. -->
             <a href="#combinaciones">
+              <!-- Es el texto «Combinaciones» del enlace que lleva a esta misma página, en las combinaciones. -->
               Combinaciones
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Combinaciones» hacia esta misma página, en las combinaciones. -->
             </a>
+            <!-- Crea el enlace «Cómo cotizar» hacia esta misma página, en la explicación para cotizar. -->
             <a href="#cotizacion">
+              <!--
+                Es el texto «Cómo cotizar» del enlace que lleva a esta misma página, en la explicación para
+                cotizar.
+              -->
               Cómo cotizar
+              <!-- Presenta la parte del texto «→». -->
               <span aria-hidden="true">
+                <!-- Muestra una flecha para acompañar la acción de la parte del texto «→». -->
                 →
+              <!-- Termina la parte del texto «→». -->
               </span>
+            <!-- Termina el enlace «Cómo cotizar» hacia esta misma página, en la explicación para cotizar. -->
             </a>
+          <!-- Termina los accesos a secciones de la presentación. -->
           </nav>
+        <!-- Termina el contenido de la presentación inicial. -->
         </div>
+      <!-- Termina el apartado «Alquiler». -->
       </section>
+      <!--
+        Abre el apartado «Paquetes de alquiler», identificado como «paquetes». El nombre «paquetes» permite llegar
+        directamente a este apartado desde un enlace.
+      -->
       <section class="content-section" id="paquetes" aria-labelledby="titulo-paquetes">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta el título del apartado «Paquetes de alquiler». -->
             <h2 id="titulo-paquetes">
+              <!-- Muestra «Paquetes de alquiler» dentro del título del apartado «Paquetes de alquiler». -->
               Paquetes de alquiler
+            <!-- Termina el título del apartado «Paquetes de alquiler». -->
             </h2>
+            <!--
+              Presenta el párrafo «Una base sencilla para organizar la diversión. La selección final se confirma
+              según la fecha, el espacio y la disponibilidad.».
+            -->
             <p>
+              <!--
+                Muestra «Una base sencilla para organizar la diversión. La selección final se confirma según la
+                fecha, el espacio y la disponibilidad.» dentro del párrafo «Una base sencilla para organizar la
+                diversión. La selección final se confirma según la fecha, el espacio y la disponibilidad.».
+              -->
               Una base sencilla para organizar la diversión. La selección final se confirma según la fecha, el espacio y la disponibilidad.
+            <!--
+              Termina el párrafo «Una base sencilla para organizar la diversión. La selección final se confirma
+              según la fecha, el espacio y la disponibilidad.».
+            -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre el conjunto de paquetes de alquiler. -->
           <div class="package-grid">
+            <!-- Abre la tarjeta «Paquete Esencial». -->
             <article class="package-card" id="paquete-esencial">
+              <!--
+                Muestra «Castillo inflable para una celebración infantil» desde
+                «assets/images/games/inflables/castillo-inflable.jpeg». La carga cuando se acerca a la vista.
+                Reserva sus proporciones con 800 de ancho y 600 de alto; el diseño adapta su tamaño.
+              -->
               <img class="package-photo" src="assets/images/games/inflables/castillo-inflable.jpeg" alt="Castillo inflable para una celebración infantil" width="800" height="600" loading="lazy">
+              <!-- Presenta la etiqueta destacada de una tarjeta. -->
               <span class="tag">
+                <!-- Muestra «Punto de partida» dentro de la etiqueta destacada de una tarjeta. -->
                 Punto de partida
+              <!-- Termina la etiqueta destacada de una tarjeta. -->
               </span>
+              <!-- Presenta el título «Paquete Esencial». -->
               <h3>
+                <!-- Muestra «Paquete Esencial» dentro del título «Paquete Esencial». -->
                 Paquete Esencial
+              <!-- Termina el título «Paquete Esencial». -->
               </h3>
+              <!-- Presenta el párrafo «Una opción compacta para reuniones y celebraciones pequeñas.». -->
               <p>
+                <!--
+                  Muestra «Una opción compacta para reuniones y celebraciones pequeñas.» dentro del párrafo «Una
+                  opción compacta para reuniones y celebraciones pequeñas.».
+                -->
                 Una opción compacta para reuniones y celebraciones pequeñas.
+              <!-- Termina el párrafo «Una opción compacta para reuniones y celebraciones pequeñas.». -->
               </p>
+              <!-- Abre la lista de características con marcas de comprobación. -->
               <ul class="check-list">
+                <!-- Abre la opción o característica «Selección principal de juegos». -->
                 <li>
+                  <!--
+                    Muestra «Selección principal de juegos» dentro de la opción o característica «Selección
+                    principal de juegos».
+                  -->
                   Selección principal de juegos
+                <!-- Termina la opción o característica «Selección principal de juegos». -->
                 </li>
+                <!-- Abre la opción o característica «Duración acordada». -->
                 <li>
+                  <!-- Muestra «Duración acordada» dentro de la opción o característica «Duración acordada». -->
                   Duración acordada
+                <!-- Termina la opción o característica «Duración acordada». -->
                 </li>
+                <!-- Abre la opción o característica «Orientación personalizada». -->
                 <li>
+                  <!--
+                    Muestra «Orientación personalizada» dentro de la opción o característica «Orientación
+                    personalizada».
+                  -->
                   Orientación personalizada
+                <!-- Termina la opción o característica «Orientación personalizada». -->
                 </li>
+              <!-- Termina la lista de características con marcas de comprobación. -->
               </ul>
+              <!--
+                Abre la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               <details class="card-details">
+                <!-- Presenta la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 <summary>
+                  <!--
+                    Muestra «Cómo preparar este paquete» dentro de la pregunta «Cómo preparar este paquete» que
+                    permite abrir o cerrar su explicación.
+                  -->
                   Cómo preparar este paquete
+                <!-- Termina la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 </summary>
+                <!--
+                  Presenta el párrafo «Comienza eligiendo una atracción principal. Comparte las edades y las
+                  medidas del lugar para valorar qué equipo se adapta me…».
+                -->
                 <p>
+                  <!--
+                    Muestra «Comienza eligiendo una atracción principal. Comparte las edades y las medidas del
+                    lugar para valorar qué equipo se adapta me…» dentro del párrafo «Comienza eligiendo una
+                    atracción principal. Comparte las edades y las medidas del lugar para valorar qué equipo se
+                    adapta me…».
+                  -->
                   Comienza eligiendo una atracción principal. Comparte las edades y las medidas del lugar para valorar qué equipo se adapta mejor.
+                <!--
+                  Termina el párrafo «Comienza eligiendo una atracción principal. Comparte las edades y las
+                  medidas del lugar para valorar qué equipo se adapta me…».
+                -->
                 </p>
+              <!--
+                Termina la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               </details>
+              <!--
+                Crea el enlace «Cotizar Esencial» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               <a class="button" href="contacto.html?interes=paquete-esencial#formulario">
+                <!--
+                  Es el texto «Cotizar Esencial» del enlace que lleva a la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
                 Cotizar Esencial
+              <!--
+                Termina el enlace «Cotizar Esencial» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               </a>
+            <!-- Termina la tarjeta «Paquete Esencial». -->
             </article>
+            <!-- Abre la tarjeta «Paquete Diversión». -->
             <article class="package-card" id="paquete-diversion">
-              <img class="package-photo" src="assets/images/generated/eventos/infantiles.png" alt="Celebración infantil con diferentes actividades" width="800" height="600" loading="lazy">
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--infantiles package-photo" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
+              </div>
+              <!-- Presenta la etiqueta destacada de una tarjeta. -->
               <span class="tag">
+                <!-- Muestra «Más variedad» dentro de la etiqueta destacada de una tarjeta. -->
                 Más variedad
+              <!-- Termina la etiqueta destacada de una tarjeta. -->
               </span>
+              <!-- Presenta el título «Paquete Diversión». -->
               <h3>
+                <!-- Muestra «Paquete Diversión» dentro del título «Paquete Diversión». -->
                 Paquete Diversión
+              <!-- Termina el título «Paquete Diversión». -->
               </h3>
+              <!-- Presenta el párrafo «Una combinación equilibrada para mantener el evento en movimiento.». -->
               <p>
+                <!--
+                  Muestra «Una combinación equilibrada para mantener el evento en movimiento.» dentro del párrafo
+                  «Una combinación equilibrada para mantener el evento en movimiento.».
+                -->
                 Una combinación equilibrada para mantener el evento en movimiento.
+              <!-- Termina el párrafo «Una combinación equilibrada para mantener el evento en movimiento.». -->
               </p>
+              <!-- Abre la lista de características con marcas de comprobación. -->
               <ul class="check-list">
+                <!-- Abre la opción o característica «Juegos de distintas categorías». -->
                 <li>
+                  <!--
+                    Muestra «Juegos de distintas categorías» dentro de la opción o característica «Juegos de
+                    distintas categorías».
+                  -->
                   Juegos de distintas categorías
+                <!-- Termina la opción o característica «Juegos de distintas categorías». -->
                 </li>
+                <!-- Abre la opción o característica «Propuesta según las edades». -->
                 <li>
+                  <!--
+                    Muestra «Propuesta según las edades» dentro de la opción o característica «Propuesta según las
+                    edades».
+                  -->
                   Propuesta según las edades
+                <!-- Termina la opción o característica «Propuesta según las edades». -->
                 </li>
+                <!-- Abre la opción o característica «Duración acordada». -->
                 <li>
+                  <!-- Muestra «Duración acordada» dentro de la opción o característica «Duración acordada». -->
                   Duración acordada
+                <!-- Termina la opción o característica «Duración acordada». -->
                 </li>
+              <!-- Termina la lista de características con marcas de comprobación. -->
               </ul>
+              <!--
+                Abre la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               <details class="card-details">
+                <!-- Presenta la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 <summary>
+                  <!--
+                    Muestra «Cómo preparar este paquete» dentro de la pregunta «Cómo preparar este paquete» que
+                    permite abrir o cerrar su explicación.
+                  -->
                   Cómo preparar este paquete
+                <!-- Termina la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 </summary>
+                <!--
+                  Presenta el párrafo «Reúne juegos activos y opciones para compartir. La combinación final, el
+                  horario y el número de equipos se definen en la pro…».
+                -->
                 <p>
+                  <!--
+                    Muestra «Reúne juegos activos y opciones para compartir. La combinación final, el horario y el
+                    número de equipos se definen en la pro…» dentro del párrafo «Reúne juegos activos y opciones
+                    para compartir. La combinación final, el horario y el número de equipos se definen en la
+                    pro…».
+                  -->
                   Reúne juegos activos y opciones para compartir. La combinación final, el horario y el número de equipos se definen en la propuesta.
+                <!--
+                  Termina el párrafo «Reúne juegos activos y opciones para compartir. La combinación final, el
+                  horario y el número de equipos se definen en la pro…».
+                -->
                 </p>
+              <!--
+                Termina la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               </details>
+              <!--
+                Crea el enlace «Cotizar Diversión» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               <a class="button" href="contacto.html?interes=paquete-diversion#formulario">
+                <!--
+                  Es el texto «Cotizar Diversión» del enlace que lleva a la página Contacto con el servicio
+                  elegido para la consulta.
+                -->
                 Cotizar Diversión
+              <!--
+                Termina el enlace «Cotizar Diversión» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               </a>
+            <!-- Termina la tarjeta «Paquete Diversión». -->
             </article>
+            <!-- Abre la tarjeta «Paquete Gran Evento». -->
             <article class="package-card" id="paquete-gran-evento">
-              <img class="package-photo" src="assets/images/generated/eventos/empresariales.png" alt="Familias compartiendo una jornada de integración" width="800" height="600" loading="lazy">
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--empresariales package-photo" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
+              </div>
+              <!-- Presenta la etiqueta destacada de una tarjeta. -->
               <span class="tag">
+                <!-- Muestra «Experiencia amplia» dentro de la etiqueta destacada de una tarjeta. -->
                 Experiencia amplia
+              <!-- Termina la etiqueta destacada de una tarjeta. -->
               </span>
+              <!-- Presenta el título «Paquete Gran Evento». -->
               <h3>
+                <!-- Muestra «Paquete Gran Evento» dentro del título «Paquete Gran Evento». -->
                 Paquete Gran Evento
+              <!-- Termina el título «Paquete Gran Evento». -->
               </h3>
+              <!-- Presenta el párrafo «Una propuesta completa para jornadas con más invitados y actividades.». -->
               <p>
+                <!--
+                  Muestra «Una propuesta completa para jornadas con más invitados y actividades.» dentro del
+                  párrafo «Una propuesta completa para jornadas con más invitados y actividades.».
+                -->
                 Una propuesta completa para jornadas con más invitados y actividades.
+              <!-- Termina el párrafo «Una propuesta completa para jornadas con más invitados y actividades.». -->
               </p>
+              <!-- Abre la lista de características con marcas de comprobación. -->
               <ul class="check-list">
+                <!-- Abre la opción o característica «Selección amplia de atracciones». -->
                 <li>
+                  <!--
+                    Muestra «Selección amplia de atracciones» dentro de la opción o característica «Selección
+                    amplia de atracciones».
+                  -->
                   Selección amplia de atracciones
+                <!-- Termina la opción o característica «Selección amplia de atracciones». -->
                 </li>
+                <!-- Abre la opción o característica «Organización de la experiencia». -->
                 <li>
+                  <!--
+                    Muestra «Organización de la experiencia» dentro de la opción o característica «Organización de
+                    la experiencia».
+                  -->
                   Organización de la experiencia
+                <!-- Termina la opción o característica «Organización de la experiencia». -->
                 </li>
+                <!-- Abre la opción o característica «Atención para tu solicitud». -->
                 <li>
+                  <!--
+                    Muestra «Atención para tu solicitud» dentro de la opción o característica «Atención para tu
+                    solicitud».
+                  -->
                   Atención para tu solicitud
+                <!-- Termina la opción o característica «Atención para tu solicitud». -->
                 </li>
+              <!-- Termina la lista de características con marcas de comprobación. -->
               </ul>
+              <!--
+                Abre la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               <details class="card-details">
+                <!-- Presenta la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 <summary>
+                  <!--
+                    Muestra «Cómo preparar este paquete» dentro de la pregunta «Cómo preparar este paquete» que
+                    permite abrir o cerrar su explicación.
+                  -->
                   Cómo preparar este paquete
+                <!-- Termina la pregunta «Cómo preparar este paquete» que permite abrir o cerrar su explicación. -->
                 </summary>
+                <!--
+                  Presenta el párrafo «Plantea varias zonas de actividad para una jornada amplia. Indica el aforo,
+                  los turnos y el espacio para revisar la organiza…».
+                -->
                 <p>
+                  <!--
+                    Muestra «Plantea varias zonas de actividad para una jornada amplia. Indica el aforo, los
+                    turnos y el espacio para revisar la organiza…» dentro del párrafo «Plantea varias zonas de
+                    actividad para una jornada amplia. Indica el aforo, los turnos y el espacio para revisar la
+                    organiza…».
+                  -->
                   Plantea varias zonas de actividad para una jornada amplia. Indica el aforo, los turnos y el espacio para revisar la organización.
+                <!--
+                  Termina el párrafo «Plantea varias zonas de actividad para una jornada amplia. Indica el aforo,
+                  los turnos y el espacio para revisar la organiza…».
+                -->
                 </p>
+              <!--
+                Termina la explicación de «Cómo preparar este paquete», que se abre y se cierra al pulsar esa
+                pregunta.
+              -->
               </details>
+              <!--
+                Crea el enlace «Cotizar Gran Evento» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               <a class="button" href="contacto.html?interes=paquete-gran-evento#formulario">
+                <!--
+                  Es el texto «Cotizar Gran Evento» del enlace que lleva a la página Contacto con el servicio
+                  elegido para la consulta.
+                -->
                 Cotizar Gran Evento
+              <!--
+                Termina el enlace «Cotizar Gran Evento» hacia la página Contacto con el servicio elegido para la
+                consulta.
+              -->
               </a>
+            <!-- Termina la tarjeta «Paquete Gran Evento». -->
             </article>
+          <!-- Termina el conjunto de paquetes de alquiler. -->
           </div>
+          <!-- Presenta el título del apartado «¿Qué incluye?». -->
           <h2 class="included-title">
+            <!-- Muestra «¿Qué incluye?» dentro del título del apartado «¿Qué incluye?». -->
             ¿Qué incluye?
+          <!-- Termina el título del apartado «¿Qué incluye?». -->
           </h2>
+          <!-- Abre el conjunto de servicios incluidos. -->
           <div class="included-grid">
+            <!-- Abre cada servicio incluido. -->
             <div class="included-item">
+              <!-- Muestra «Atención personalizada» dentro de cada servicio incluido. -->
               Atención personalizada
+            <!-- Termina cada servicio incluido. -->
             </div>
+            <!-- Abre cada servicio incluido. -->
             <div class="included-item">
+              <!-- Muestra «Coordinación del servicio» dentro de cada servicio incluido. -->
               Coordinación del servicio
+            <!-- Termina cada servicio incluido. -->
             </div>
+            <!-- Abre cada servicio incluido. -->
             <div class="included-item">
+              <!-- Muestra «Instalación y desmontaje» dentro de cada servicio incluido. -->
               Instalación y desmontaje
+            <!-- Termina cada servicio incluido. -->
             </div>
+          <!-- Termina el conjunto de servicios incluidos. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Paquetes de alquiler», identificado como «paquetes». -->
       </section>
+      <!--
+        Abre el apartado «Alquiler por juego», identificado como «por-juego». El nombre «por-juego» permite llegar
+        directamente a este apartado desde un enlace.
+      -->
       <section class="content-section content-section--white" id="por-juego" aria-labelledby="titulo-por-juego">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta la frase corta que presenta un apartado. -->
             <p class="eyebrow">
+              <!-- Muestra «Una atracción, una elección clara» dentro de la frase corta que presenta un apartado. -->
               Una atracción, una elección clara
+            <!-- Termina la frase corta que presenta un apartado. -->
             </p>
+            <!-- Presenta el título del apartado «Alquiler por juego». -->
             <h2 id="titulo-por-juego">
+              <!-- Muestra «Alquiler por juego» dentro del título del apartado «Alquiler por juego». -->
               Alquiler por juego
+            <!-- Termina el título del apartado «Alquiler por juego». -->
             </h2>
+            <!--
+              Presenta el párrafo «Elige una categoría, revisa sus condiciones y consulta por la atracción que
+              realmente te interesa.».
+            -->
             <p>
+              <!--
+                Muestra «Elige una categoría, revisa sus condiciones y consulta por la atracción que realmente te
+                interesa.» dentro del párrafo «Elige una categoría, revisa sus condiciones y consulta por la
+                atracción que realmente te interesa.».
+              -->
               Elige una categoría, revisa sus condiciones y consulta por la atracción que realmente te interesa.
+            <!--
+              Termina el párrafo «Elige una categoría, revisa sus condiciones y consulta por la atracción que
+              realmente te interesa.».
+            -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre el bloque con fotografía y explicación del alquiler por juego. -->
           <div class="feature-panel">
+            <!--
+              Muestra «Toro mecánico con su zona inflable de protección» desde
+              «assets/images/games/toro-mecanico/toro-mecanico.jpeg». La carga cuando se acerca a la vista.
+              Reserva sus proporciones con 2048 de ancho y 1536 de alto; el diseño adapta su tamaño.
+            -->
             <img src="assets/images/games/toro-mecanico/toro-mecanico.jpeg" alt="Toro mecánico con su zona inflable de protección" width="2048" height="1536" loading="lazy">
+            <!-- Abre la explicación junto a la fotografía del alquiler por juego. -->
             <div class="feature-panel__body">
+              <!-- Presenta el título «Empieza por tu favorito». -->
               <h3>
+                <!-- Muestra «Empieza por tu favorito» dentro del título «Empieza por tu favorito». -->
                 Empieza por tu favorito
+              <!-- Termina el título «Empieza por tu favorito». -->
               </h3>
+              <!--
+                Presenta el párrafo «Esta modalidad sirve cuando buscas una atracción concreta. El catálogo
+                distingue inflables, toro mecánico, carruseles, camas…».
+              -->
               <p>
+                <!--
+                  Muestra «Esta modalidad sirve cuando buscas una atracción concreta. El catálogo distingue
+                  inflables, toro mecánico, carruseles, camas…» dentro del párrafo «Esta modalidad sirve cuando
+                  buscas una atracción concreta. El catálogo distingue inflables, toro mecánico, carruseles,
+                  camas…».
+                -->
                 Esta modalidad sirve cuando buscas una atracción concreta. El catálogo distingue inflables, toro mecánico, carruseles, camas elásticas, futbolines y carritos.
+              <!--
+                Termina el párrafo «Esta modalidad sirve cuando buscas una atracción concreta. El catálogo
+                distingue inflables, toro mecánico, carruseles, camas…».
+              -->
               </p>
+              <!-- Abre la lista de características con marcas de comprobación. -->
               <ul class="check-list">
+                <!-- Abre la opción o característica «Revisa la categoría y sus indicaciones antes de elegir.». -->
                 <li>
+                  <!--
+                    Muestra «Revisa la categoría y sus indicaciones antes de elegir.» dentro de la opción o
+                    característica «Revisa la categoría y sus indicaciones antes de elegir.».
+                  -->
                   Revisa la categoría y sus indicaciones antes de elegir.
+                <!-- Termina la opción o característica «Revisa la categoría y sus indicaciones antes de elegir.». -->
                 </li>
+                <!-- Abre la opción o característica «Comparte fecha, horario, ubicación y medidas del espacio.». -->
                 <li>
+                  <!--
+                    Muestra «Comparte fecha, horario, ubicación y medidas del espacio.» dentro de la opción o
+                    característica «Comparte fecha, horario, ubicación y medidas del espacio.».
+                  -->
                   Comparte fecha, horario, ubicación y medidas del espacio.
+                <!-- Termina la opción o característica «Comparte fecha, horario, ubicación y medidas del espacio.». -->
                 </li>
+                <!--
+                  Abre la opción o característica «Recibe una propuesta con equipo, duración y condiciones
+                  confirmadas.».
+                -->
                 <li>
+                  <!--
+                    Muestra «Recibe una propuesta con equipo, duración y condiciones confirmadas.» dentro de la
+                    opción o característica «Recibe una propuesta con equipo, duración y condiciones
+                    confirmadas.».
+                  -->
                   Recibe una propuesta con equipo, duración y condiciones confirmadas.
+                <!--
+                  Termina la opción o característica «Recibe una propuesta con equipo, duración y condiciones
+                  confirmadas.».
+                -->
                 </li>
+              <!-- Termina la lista de características con marcas de comprobación. -->
               </ul>
+              <!-- Crea el enlace «Elegir mi juego» hacia la página Juegos, en «titulo catalogo». -->
               <a class="button button--blue" href="juegos.html#titulo-catalogo">
+                <!-- Es el texto «Elegir mi juego» del enlace que lleva a la página Juegos, en «titulo catalogo». -->
                 Elegir mi juego
+              <!-- Termina el enlace «Elegir mi juego» hacia la página Juegos, en «titulo catalogo». -->
               </a>
+            <!-- Termina la explicación junto a la fotografía del alquiler por juego. -->
             </div>
+          <!-- Termina el bloque con fotografía y explicación del alquiler por juego. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Alquiler por juego», identificado como «por-juego». -->
       </section>
+      <!--
+        Abre el apartado «Combinaciones para tu evento», identificado como «combinaciones». El nombre
+        «combinaciones» permite llegar directamente a este apartado desde un enlace.
+      -->
       <section class="content-section" id="combinaciones" aria-labelledby="titulo-combinaciones">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta la frase corta que presenta un apartado. -->
             <p class="eyebrow">
+              <!-- Muestra «Diseña tu propia mezcla» dentro de la frase corta que presenta un apartado. -->
               Diseña tu propia mezcla
+            <!-- Termina la frase corta que presenta un apartado. -->
             </p>
+            <!-- Presenta el título del apartado «Combinaciones para tu evento». -->
             <h2 id="titulo-combinaciones">
+              <!--
+                Muestra «Combinaciones para tu evento» dentro del título del apartado «Combinaciones para tu
+                evento».
+              -->
               Combinaciones para tu evento
+            <!-- Termina el título del apartado «Combinaciones para tu evento». -->
             </h2>
+            <!--
+              Presenta el párrafo «Estas ideas son puntos de partida. La disponibilidad, la selección final y el
+              precio se confirman en la cotización.».
+            -->
             <p>
+              <!--
+                Muestra «Estas ideas son puntos de partida. La disponibilidad, la selección final y el precio se
+                confirman en la cotización.» dentro del párrafo «Estas ideas son puntos de partida. La
+                disponibilidad, la selección final y el precio se confirman en la cotización.».
+              -->
               Estas ideas son puntos de partida. La disponibilidad, la selección final y el precio se confirman en la cotización.
+            <!--
+              Termina el párrafo «Estas ideas son puntos de partida. La disponibilidad, la selección final y el
+              precio se confirman en la cotización.».
+            -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre el conjunto de tarjetas informativas. -->
           <div class="detail-grid">
+            <!-- Abre la tarjeta «Pequeños exploradores». -->
             <article class="detail-card" id="combinacion-infantil">
-              <img src="assets/images/generated/eventos/infantiles.png" alt="Niños disfrutando una celebración con juegos" width="1456" height="1088" loading="lazy">
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--infantiles" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
+              </div>
+              <!-- Abre la descripción y el botón de «Pequeños exploradores». -->
               <div class="detail-card__body">
+                <!-- Presenta el título «Pequeños exploradores». -->
                 <h3>
+                  <!-- Muestra «Pequeños exploradores» dentro del título «Pequeños exploradores». -->
                   Pequeños exploradores
+                <!-- Termina el título «Pequeños exploradores». -->
                 </h3>
+                <!--
+                  Presenta el párrafo «Una propuesta infantil que puede combinar un inflable con carrusel o camas
+                  elásticas, según las edades y el espacio.».
+                -->
                 <p>
+                  <!--
+                    Muestra «Una propuesta infantil que puede combinar un inflable con carrusel o camas elásticas,
+                    según las edades y el espacio.» dentro del párrafo «Una propuesta infantil que puede combinar
+                    un inflable con carrusel o camas elásticas, según las edades y el espacio.».
+                  -->
                   Una propuesta infantil que puede combinar un inflable con carrusel o camas elásticas, según las edades y el espacio.
+                <!--
+                  Termina el párrafo «Una propuesta infantil que puede combinar un inflable con carrusel o camas
+                  elásticas, según las edades y el espacio.».
+                -->
                 </p>
+                <!--
+                  Crea el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
                 <a class="button" href="contacto.html?interes=combinacion-infantil&amp;evento=Evento%20infantil#formulario">
+                  <!--
+                    Es el texto «Consultar esta combinación» del enlace que lleva a la página Contacto con el
+                    servicio elegido para la consulta.
+                  -->
                   Consultar esta combinación
+                <!--
+                  Termina el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
                 </a>
+              <!-- Termina la descripción y el botón de «Pequeños exploradores». -->
               </div>
+            <!-- Termina la tarjeta «Pequeños exploradores». -->
             </article>
+            <!-- Abre la tarjeta «Familia en juego». -->
             <article class="detail-card" id="combinacion-familiar">
-              <img src="assets/images/generated/eventos/celebraciones.png" alt="Familia reunida durante una celebración" width="1456" height="1088" loading="lazy">
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--celebraciones" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
+              </div>
+              <!-- Abre la descripción y el botón de «Familia en juego». -->
               <div class="detail-card__body">
+                <!-- Presenta el título «Familia en juego». -->
                 <h3>
+                  <!-- Muestra «Familia en juego» dentro del título «Familia en juego». -->
                   Familia en juego
+                <!-- Termina el título «Familia en juego». -->
                 </h3>
+                <!--
+                  Presenta el párrafo «Combina una actividad para compartir, como los futbolines, con una
+                  atracción infantil para distintos momentos de la reunión.».
+                -->
                 <p>
+                  <!--
+                    Muestra «Combina una actividad para compartir, como los futbolines, con una atracción infantil
+                    para distintos momentos de la reunión.» dentro del párrafo «Combina una actividad para
+                    compartir, como los futbolines, con una atracción infantil para distintos momentos de la
+                    reunión.».
+                  -->
                   Combina una actividad para compartir, como los futbolines, con una atracción infantil para distintos momentos de la reunión.
+                <!--
+                  Termina el párrafo «Combina una actividad para compartir, como los futbolines, con una atracción
+                  infantil para distintos momentos de la reunión.».
+                -->
                 </p>
+                <!--
+                  Crea el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
                 <a class="button button--green" href="contacto.html?interes=combinacion-familiar&amp;evento=Fiesta%20o%20celebraci%C3%B3n#formulario">
+                  <!--
+                    Es el texto «Consultar esta combinación» del enlace que lleva a la página Contacto con el
+                    servicio elegido para la consulta.
+                  -->
                   Consultar esta combinación
+                <!--
+                  Termina el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
                 </a>
+              <!-- Termina la descripción y el botón de «Familia en juego». -->
               </div>
+            <!-- Termina la tarjeta «Familia en juego». -->
             </article>
+            <!-- Abre la tarjeta «Desafío en equipo». -->
             <article class="detail-card" id="combinacion-equipos">
-              <img src="assets/images/generated/eventos/empresariales.png" alt="Jornada recreativa compartida por colaboradores y familias" width="1456" height="1088" loading="lazy">
-              <div class="detail-card__body">
-                <h3>
-                  Desafío en equipo
-                </h3>
-                <p>
-                  Toro mecánico y partidas de futbolín como ideas para una jornada de integración, sujetas a las condiciones del lugar.
-                </p>
-                <a class="button button--violet" href="contacto.html?interes=combinacion-equipos&amp;evento=Evento%20empresarial#formulario">
-                  Consultar esta combinación
-                </a>
+              <!-- Muestra un fondo de colores para este apartado, sin utilizar una fotografía de ejemplo. -->
+              <div class="color-panel color-panel--empresariales" aria-hidden="true">
+              <!-- Termina el fondo de colores de este apartado. -->
               </div>
+              <!-- Abre la descripción y el botón de «Desafío en equipo». -->
+              <div class="detail-card__body">
+                <!-- Presenta el título «Desafío en equipo». -->
+                <h3>
+                  <!-- Muestra «Desafío en equipo» dentro del título «Desafío en equipo». -->
+                  Desafío en equipo
+                <!-- Termina el título «Desafío en equipo». -->
+                </h3>
+                <!--
+                  Presenta el párrafo «Toro mecánico y partidas de futbolín como ideas para una jornada de
+                  integración, sujetas a las condiciones del lugar.».
+                -->
+                <p>
+                  <!--
+                    Muestra «Toro mecánico y partidas de futbolín como ideas para una jornada de integración,
+                    sujetas a las condiciones del lugar.» dentro del párrafo «Toro mecánico y partidas de futbolín
+                    como ideas para una jornada de integración, sujetas a las condiciones del lugar.».
+                  -->
+                  Toro mecánico y partidas de futbolín como ideas para una jornada de integración, sujetas a las condiciones del lugar.
+                <!--
+                  Termina el párrafo «Toro mecánico y partidas de futbolín como ideas para una jornada de
+                  integración, sujetas a las condiciones del lugar.».
+                -->
+                </p>
+                <!--
+                  Crea el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
+                <a class="button button--violet" href="contacto.html?interes=combinacion-equipos&amp;evento=Evento%20empresarial#formulario">
+                  <!--
+                    Es el texto «Consultar esta combinación» del enlace que lleva a la página Contacto con el
+                    servicio elegido para la consulta.
+                  -->
+                  Consultar esta combinación
+                <!--
+                  Termina el enlace «Consultar esta combinación» hacia la página Contacto con el servicio elegido
+                  para la consulta.
+                -->
+                </a>
+              <!-- Termina la descripción y el botón de «Desafío en equipo». -->
+              </div>
+            <!-- Termina la tarjeta «Desafío en equipo». -->
             </article>
+          <!-- Termina el conjunto de tarjetas informativas. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Combinaciones para tu evento», identificado como «combinaciones». -->
       </section>
+      <!--
+        Abre el apartado «Cómo solicitar una cotización», identificado como «cotizacion». El nombre «cotizacion»
+        permite llegar directamente a este apartado desde un enlace.
+      -->
       <section class="content-section content-section--white" id="cotizacion" aria-labelledby="titulo-cotizacion">
+        <!-- Abre el bloque de contenido centrado. -->
         <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
           <div class="section-heading">
+            <!-- Presenta la frase corta que presenta un apartado. -->
             <p class="eyebrow">
+              <!-- Muestra «De tu idea a una propuesta» dentro de la frase corta que presenta un apartado. -->
               De tu idea a una propuesta
+            <!-- Termina la frase corta que presenta un apartado. -->
             </p>
+            <!-- Presenta el título del apartado «Cómo solicitar una cotización». -->
             <h2 id="titulo-cotizacion">
+              <!--
+                Muestra «Cómo solicitar una cotización» dentro del título del apartado «Cómo solicitar una
+                cotización».
+              -->
               Cómo solicitar una cotización
+            <!-- Termina el título del apartado «Cómo solicitar una cotización». -->
             </h2>
+            <!--
+              Presenta el párrafo «Consultar no confirma una reserva. Primero revisamos tu evento y después
+              acordamos la propuesta.».
+            -->
             <p>
+              <!--
+                Muestra «Consultar no confirma una reserva. Primero revisamos tu evento y después acordamos la
+                propuesta.» dentro del párrafo «Consultar no confirma una reserva. Primero revisamos tu evento y
+                después acordamos la propuesta.».
+              -->
               Consultar no confirma una reserva. Primero revisamos tu evento y después acordamos la propuesta.
+            <!--
+              Termina el párrafo «Consultar no confirma una reserva. Primero revisamos tu evento y después
+              acordamos la propuesta.».
+            -->
             </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre la fila de pasos explicativos. -->
           <div class="steps">
+            <!-- Abre la tarjeta «Elige el servicio». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «1» dentro del número de cada paso. -->
                 1
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Elige el servicio». -->
               <h3>
+                <!-- Muestra «Elige el servicio» dentro del título «Elige el servicio». -->
                 Elige el servicio
+              <!-- Termina el título «Elige el servicio». -->
               </h3>
+              <!--
+                Presenta el párrafo «Busca un juego, compara paquetes o elige una combinación. Su nombre
+                acompañará la consulta.».
+              -->
               <p>
+                <!--
+                  Muestra «Busca un juego, compara paquetes o elige una combinación. Su nombre acompañará la
+                  consulta.» dentro del párrafo «Busca un juego, compara paquetes o elige una combinación. Su
+                  nombre acompañará la consulta.».
+                -->
                 Busca un juego, compara paquetes o elige una combinación. Su nombre acompañará la consulta.
+              <!--
+                Termina el párrafo «Busca un juego, compara paquetes o elige una combinación. Su nombre acompañará
+                la consulta.».
+              -->
               </p>
+            <!-- Termina la tarjeta «Elige el servicio». -->
             </article>
+            <!-- Abre la tarjeta «Completa los detalles». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «2» dentro del número de cada paso. -->
                 2
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Completa los detalles». -->
               <h3>
+                <!-- Muestra «Completa los detalles» dentro del título «Completa los detalles». -->
                 Completa los detalles
+              <!-- Termina el título «Completa los detalles». -->
               </h3>
+              <!--
+                Presenta el párrafo «Comparte fecha, lugar, invitados y horario en el formulario. Puedes cambiar
+                la selección antes de enviarla.».
+              -->
               <p>
+                <!--
+                  Muestra «Comparte fecha, lugar, invitados y horario en el formulario. Puedes cambiar la
+                  selección antes de enviarla.» dentro del párrafo «Comparte fecha, lugar, invitados y horario en
+                  el formulario. Puedes cambiar la selección antes de enviarla.».
+                -->
                 Comparte fecha, lugar, invitados y horario en el formulario. Puedes cambiar la selección antes de enviarla.
+              <!--
+                Termina el párrafo «Comparte fecha, lugar, invitados y horario en el formulario. Puedes cambiar la
+                selección antes de enviarla.».
+              -->
               </p>
+            <!-- Termina la tarjeta «Completa los detalles». -->
             </article>
+            <!-- Abre la tarjeta «Revisa y confirma». -->
             <article class="step">
+              <!-- Presenta el número de cada paso. -->
               <span class="step-number">
+                <!-- Muestra «3» dentro del número de cada paso. -->
                 3
+              <!-- Termina el número de cada paso. -->
               </span>
+              <!-- Presenta el título «Revisa y confirma». -->
               <h3>
+                <!-- Muestra «Revisa y confirma» dentro del título «Revisa y confirma». -->
                 Revisa y confirma
+              <!-- Termina el título «Revisa y confirma». -->
               </h3>
+              <!--
+                Presenta el párrafo «Envía el mensaje en WhatsApp. El equipo revisará disponibilidad, precio,
+                instalación y condiciones contigo.».
+              -->
               <p>
+                <!--
+                  Muestra «Envía el mensaje en WhatsApp. El equipo revisará disponibilidad, precio, instalación y
+                  condiciones contigo.» dentro del párrafo «Envía el mensaje en WhatsApp. El equipo revisará
+                  disponibilidad, precio, instalación y condiciones contigo.».
+                -->
                 Envía el mensaje en WhatsApp. El equipo revisará disponibilidad, precio, instalación y condiciones contigo.
+              <!--
+                Termina el párrafo «Envía el mensaje en WhatsApp. El equipo revisará disponibilidad, precio,
+                instalación y condiciones contigo.».
+              -->
               </p>
-            </article>          </div>
-          <div class="section-actions">
-            <a class="button" href="contacto.html?interes=cotizacion-general#formulario">
-              Preparar mi cotización
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="content-section content-section--white" aria-labelledby="titulo-preguntas">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="titulo-preguntas">
-              Preguntas frecuentes
-            </h2>
-            <p>
-              Información básica para preparar la consulta.
-            </p>
-          </div>
-          <div class="faq-list">
-            <details>
-              <summary>
-                ¿Cómo confirmo la disponibilidad?
-              </summary>
-              <p>
-                Envía la fecha, el lugar y el tipo de evento para revisar las opciones disponibles.
-              </p>
-            </details>
-            <details>
-              <summary>
-                ¿Puedo combinar juegos distintos?
-              </summary>
-              <p>
-                Sí. Puedes indicar todas las atracciones que te interesen para preparar una propuesta adecuada.
-              </p>
-            </details>
-            <details>
-              <summary>
-                ¿Cuándo se informa el precio?
-              </summary>
-              <p>
-                El valor se confirma en la cotización después de revisar los detalles del evento.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="container">
-          <div class="cta-panel">
-            <div>
-              <h2>
-                ¿Preparamos tu propuesta?
-              </h2>
-              <p>
-                Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.
-              </p>
+            <!-- Termina la tarjeta «Revisa y confirma». -->
+            </article>
+            <!-- Termina la fila de pasos explicativos. -->
             </div>
-            <a class="button" href="contacto.html#formulario">
-              Solicitar cotización
+          <!-- Abre el botón colocado debajo de una sección. -->
+          <div class="section-actions">
+            <!--
+              Crea el enlace «Preparar mi cotización» hacia la página Contacto con el servicio elegido para la
+              consulta.
+            -->
+            <a class="button" href="contacto.html?interes=cotizacion-general#formulario">
+              <!--
+                Es el texto «Preparar mi cotización» del enlace que lleva a la página Contacto con el servicio
+                elegido para la consulta.
+              -->
+              Preparar mi cotización
+            <!--
+              Termina el enlace «Preparar mi cotización» hacia la página Contacto con el servicio elegido para la
+              consulta.
+            -->
             </a>
+          <!-- Termina el botón colocado debajo de una sección. -->
           </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Cómo solicitar una cotización», identificado como «cotizacion». -->
       </section>
-    </main>
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
-          <p>
-            Juegos y experiencias para celebrar momentos inolvidables.
-          </p>
-        </div>
-        <div>
-          <h2>
-            Explorar
-          </h2>
-          <ul class="footer-links">
-            <li>
-              <a href="index.html">
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a href="juegos.html">
-                Juegos
-              </a>
-            </li>
-            <li>
-              <a href="eventos.html">
-                Eventos
-              </a>
-            </li>
-            <li>
-              <a href="contacto.html">
-                Contacto
-              </a>
-            </li>
-            <li>
-              <a href="index.html#ubicacion">
-                Ubicación
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>
-            Alquiler
-          </h2>
-          <ul class="footer-links">
-            <li>
-              <a href="#paquetes">
-                Paquetes
-              </a>
-            </li>
-            <li>
-              <a href="#por-juego">
-                Por juego
-              </a>
-            </li>
-            <li>
-              <a href="#cotizacion">
-                Cotización
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2>
-            Síguenos
-          </h2>
-          <div class="footer-socials">
-            <a href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
-              <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
-              Facebook
-            </a>
-            <a href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
-              <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
-              WhatsApp
-            </a>
+      <!-- Abre el apartado «Preguntas frecuentes». -->
+      <section class="content-section content-section--white" aria-labelledby="titulo-preguntas">
+        <!-- Abre el bloque de contenido centrado. -->
+        <div class="container">
+          <!-- Abre el título y la introducción de una sección. -->
+          <div class="section-heading">
+            <!-- Presenta el título del apartado «Preguntas frecuentes». -->
+            <h2 id="titulo-preguntas">
+              <!-- Muestra «Preguntas frecuentes» dentro del título del apartado «Preguntas frecuentes». -->
+              Preguntas frecuentes
+            <!-- Termina el título del apartado «Preguntas frecuentes». -->
+            </h2>
+            <!-- Presenta el párrafo «Información básica para preparar la consulta.». -->
+            <p>
+              <!--
+                Muestra «Información básica para preparar la consulta.» dentro del párrafo «Información básica
+                para preparar la consulta.».
+              -->
+              Información básica para preparar la consulta.
+            <!-- Termina el párrafo «Información básica para preparar la consulta.». -->
+            </p>
+          <!-- Termina el título y la introducción de una sección. -->
           </div>
+          <!-- Abre las preguntas frecuentes de alquiler. -->
+          <div class="faq-list">
+            <!--
+              Abre la explicación de «¿Cómo confirmo la disponibilidad?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            <details>
+              <!--
+                Presenta la pregunta «¿Cómo confirmo la disponibilidad?» que permite abrir o cerrar su
+                explicación.
+              -->
+              <summary>
+                <!--
+                  Muestra «¿Cómo confirmo la disponibilidad?» dentro de la pregunta «¿Cómo confirmo la
+                  disponibilidad?» que permite abrir o cerrar su explicación.
+                -->
+                ¿Cómo confirmo la disponibilidad?
+              <!-- Termina la pregunta «¿Cómo confirmo la disponibilidad?» que permite abrir o cerrar su explicación. -->
+              </summary>
+              <!--
+                Presenta el párrafo «Envía la fecha, el lugar y el tipo de evento para revisar las opciones
+                disponibles.».
+              -->
+              <p>
+                <!--
+                  Muestra «Envía la fecha, el lugar y el tipo de evento para revisar las opciones disponibles.»
+                  dentro del párrafo «Envía la fecha, el lugar y el tipo de evento para revisar las opciones
+                  disponibles.».
+                -->
+                Envía la fecha, el lugar y el tipo de evento para revisar las opciones disponibles.
+              <!--
+                Termina el párrafo «Envía la fecha, el lugar y el tipo de evento para revisar las opciones
+                disponibles.».
+              -->
+              </p>
+            <!--
+              Termina la explicación de «¿Cómo confirmo la disponibilidad?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            </details>
+            <!--
+              Abre la explicación de «¿Puedo combinar juegos distintos?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            <details>
+              <!--
+                Presenta la pregunta «¿Puedo combinar juegos distintos?» que permite abrir o cerrar su
+                explicación.
+              -->
+              <summary>
+                <!--
+                  Muestra «¿Puedo combinar juegos distintos?» dentro de la pregunta «¿Puedo combinar juegos
+                  distintos?» que permite abrir o cerrar su explicación.
+                -->
+                ¿Puedo combinar juegos distintos?
+              <!-- Termina la pregunta «¿Puedo combinar juegos distintos?» que permite abrir o cerrar su explicación. -->
+              </summary>
+              <!--
+                Presenta el párrafo «Sí. Puedes indicar todas las atracciones que te interesen para preparar una
+                propuesta adecuada.».
+              -->
+              <p>
+                <!--
+                  Muestra «Sí. Puedes indicar todas las atracciones que te interesen para preparar una propuesta
+                  adecuada.» dentro del párrafo «Sí. Puedes indicar todas las atracciones que te interesen para
+                  preparar una propuesta adecuada.».
+                -->
+                Sí. Puedes indicar todas las atracciones que te interesen para preparar una propuesta adecuada.
+              <!--
+                Termina el párrafo «Sí. Puedes indicar todas las atracciones que te interesen para preparar una
+                propuesta adecuada.».
+              -->
+              </p>
+            <!--
+              Termina la explicación de «¿Puedo combinar juegos distintos?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            </details>
+            <!--
+              Abre la explicación de «¿Cuándo se informa el precio?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            <details>
+              <!-- Presenta la pregunta «¿Cuándo se informa el precio?» que permite abrir o cerrar su explicación. -->
+              <summary>
+                <!--
+                  Muestra «¿Cuándo se informa el precio?» dentro de la pregunta «¿Cuándo se informa el precio?»
+                  que permite abrir o cerrar su explicación.
+                -->
+                ¿Cuándo se informa el precio?
+              <!-- Termina la pregunta «¿Cuándo se informa el precio?» que permite abrir o cerrar su explicación. -->
+              </summary>
+              <!--
+                Presenta el párrafo «El valor se confirma en la cotización después de revisar los detalles del
+                evento.».
+              -->
+              <p>
+                <!--
+                  Muestra «El valor se confirma en la cotización después de revisar los detalles del evento.»
+                  dentro del párrafo «El valor se confirma en la cotización después de revisar los detalles del
+                  evento.».
+                -->
+                El valor se confirma en la cotización después de revisar los detalles del evento.
+              <!--
+                Termina el párrafo «El valor se confirma en la cotización después de revisar los detalles del
+                evento.».
+              -->
+              </p>
+            <!--
+              Termina la explicación de «¿Cuándo se informa el precio?», que se abre y se cierra al pulsar esa
+              pregunta.
+            -->
+            </details>
+          <!-- Termina las preguntas frecuentes de alquiler. -->
+          </div>
+        <!-- Termina el bloque de contenido centrado. -->
         </div>
+      <!-- Termina el apartado «Preguntas frecuentes». -->
+      </section>
+      <!-- Abre el apartado «¿Preparamos tu propuesta?». -->
+      <section class="content-section">
+        <!-- Abre el bloque de contenido centrado. -->
+        <div class="container">
+          <!-- Abre el bloque que invita a preparar una celebración. -->
+          <div class="cta-panel">
+            <!-- Abre el bloque «¿Preparamos tu propuesta?». -->
+            <div>
+              <!-- Presenta el título del apartado «¿Preparamos tu propuesta?». -->
+              <h2>
+                <!-- Muestra «¿Preparamos tu propuesta?» dentro del título del apartado «¿Preparamos tu propuesta?». -->
+                ¿Preparamos tu propuesta?
+              <!-- Termina el título del apartado «¿Preparamos tu propuesta?». -->
+              </h2>
+              <!-- Presenta el párrafo «Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.». -->
+              <p>
+                <!--
+                  Muestra «Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.» dentro del
+                  párrafo «Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.».
+                -->
+                Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.
+              <!-- Termina el párrafo «Cuéntanos la fecha, el tipo de evento y los juegos que te interesan.». -->
+              </p>
+            <!-- Termina el bloque «¿Preparamos tu propuesta?». -->
+            </div>
+            <!-- Crea el enlace «Solicitar cotización» hacia la página Contacto, en el formulario de consulta. -->
+            <a class="button" href="contacto.html#formulario">
+              <!--
+                Es el texto «Solicitar cotización» del enlace que lleva a la página Contacto, en el formulario de
+                consulta.
+              -->
+              Solicitar cotización
+            <!-- Termina el enlace «Solicitar cotización» hacia la página Contacto, en el formulario de consulta. -->
+            </a>
+          <!-- Termina el bloque que invita a preparar una celebración. -->
+          </div>
+        <!-- Termina el bloque de contenido centrado. -->
+        </div>
+      <!-- Termina el apartado «¿Preparamos tu propuesta?». -->
+      </section>
+    <!-- Termina la parte principal de esta página; el enlace «Saltar al contenido» llega hasta aquí. -->
+    </main>
+    <!-- Abre el pie de página: reúne el logo, los enlaces, las redes sociales y los derechos de Jumanvi. -->
+    <footer class="site-footer">
+      <!-- Abre las columnas del pie de página. -->
+      <div class="container footer-grid">
+        <!-- Abre el logo y la descripción del pie de página. -->
+        <div class="footer-brand">
+          <!--
+            Muestra «Jumanvi» desde «assets/images/brand/logo.svg». Reserva sus proporciones con 303 de ancho y
+            166 de alto; el diseño adapta su tamaño.
+          -->
+          <img src="assets/images/brand/logo.svg" alt="Jumanvi" width="303" height="166">
+          <!-- Presenta el párrafo «Juegos y experiencias para celebrar momentos inolvidables.». -->
+          <p>
+            <!--
+              Muestra «Juegos y experiencias para celebrar momentos inolvidables.» dentro del párrafo «Juegos y
+              experiencias para celebrar momentos inolvidables.».
+            -->
+            Juegos y experiencias para celebrar momentos inolvidables.
+          <!-- Termina el párrafo «Juegos y experiencias para celebrar momentos inolvidables.». -->
+          </p>
+        <!-- Termina el logo y la descripción del pie de página. -->
+        </div>
+        <!-- Abre el bloque «Explorar». -->
+        <div>
+          <!-- Presenta el título del apartado «Explorar». -->
+          <h2>
+            <!-- Muestra «Explorar» dentro del título del apartado «Explorar». -->
+            Explorar
+          <!-- Termina el título del apartado «Explorar». -->
+          </h2>
+          <!-- Abre las listas de enlaces del pie de página. -->
+          <ul class="footer-links">
+            <!-- Abre la opción o característica «Inicio». -->
+            <li>
+              <!-- Crea el enlace «Inicio» hacia la página Inicio. -->
+              <a href="index.html">
+                <!-- Es el texto «Inicio» del enlace que lleva a la página Inicio. -->
+                Inicio
+              <!-- Termina el enlace «Inicio» hacia la página Inicio. -->
+              </a>
+            <!-- Termina la opción o característica «Inicio». -->
+            </li>
+            <!-- Abre la opción o característica «Juegos». -->
+            <li>
+              <!-- Crea el enlace «Juegos» hacia la página Juegos. -->
+              <a href="juegos.html">
+                <!-- Es el texto «Juegos» del enlace que lleva a la página Juegos. -->
+                Juegos
+              <!-- Termina el enlace «Juegos» hacia la página Juegos. -->
+              </a>
+            <!-- Termina la opción o característica «Juegos». -->
+            </li>
+            <!-- Abre la opción o característica «Eventos». -->
+            <li>
+              <!-- Crea el enlace «Eventos» hacia la página Eventos. -->
+              <a href="eventos.html">
+                <!-- Es el texto «Eventos» del enlace que lleva a la página Eventos. -->
+                Eventos
+              <!-- Termina el enlace «Eventos» hacia la página Eventos. -->
+              </a>
+            <!-- Termina la opción o característica «Eventos». -->
+            </li>
+            <!-- Abre la opción o característica «Contacto». -->
+            <li>
+              <!-- Crea el enlace «Contacto» hacia la página Contacto. -->
+              <a href="contacto.html">
+                <!-- Es el texto «Contacto» del enlace que lleva a la página Contacto. -->
+                Contacto
+              <!-- Termina el enlace «Contacto» hacia la página Contacto. -->
+              </a>
+            <!-- Termina la opción o característica «Contacto». -->
+            </li>
+            <!-- Abre la opción o característica «Ubicación». -->
+            <li>
+              <!-- Crea el enlace «Ubicación» hacia la página Inicio, en el mapa y la ubicación. -->
+              <a href="index.html#ubicacion">
+                <!-- Es el texto «Ubicación» del enlace que lleva a la página Inicio, en el mapa y la ubicación. -->
+                Ubicación
+              <!-- Termina el enlace «Ubicación» hacia la página Inicio, en el mapa y la ubicación. -->
+              </a>
+            <!-- Termina la opción o característica «Ubicación». -->
+            </li>
+          <!-- Termina las listas de enlaces del pie de página. -->
+          </ul>
+        <!-- Termina el bloque «Explorar». -->
+        </div>
+        <!-- Abre el bloque «Alquiler». -->
+        <div>
+          <!-- Presenta el título del apartado «Alquiler». -->
+          <h2>
+            <!-- Muestra «Alquiler» dentro del título del apartado «Alquiler». -->
+            Alquiler
+          <!-- Termina el título del apartado «Alquiler». -->
+          </h2>
+          <!-- Abre las listas de enlaces del pie de página. -->
+          <ul class="footer-links">
+            <!-- Abre la opción o característica «Paquetes». -->
+            <li>
+              <!-- Crea el enlace «Paquetes» hacia esta misma página, en los paquetes. -->
+              <a href="#paquetes">
+                <!-- Es el texto «Paquetes» del enlace que lleva a esta misma página, en los paquetes. -->
+                Paquetes
+              <!-- Termina el enlace «Paquetes» hacia esta misma página, en los paquetes. -->
+              </a>
+            <!-- Termina la opción o característica «Paquetes». -->
+            </li>
+            <!-- Abre la opción o característica «Por juego». -->
+            <li>
+              <!-- Crea el enlace «Por juego» hacia esta misma página, en el alquiler por juego. -->
+              <a href="#por-juego">
+                <!-- Es el texto «Por juego» del enlace que lleva a esta misma página, en el alquiler por juego. -->
+                Por juego
+              <!-- Termina el enlace «Por juego» hacia esta misma página, en el alquiler por juego. -->
+              </a>
+            <!-- Termina la opción o característica «Por juego». -->
+            </li>
+            <!-- Abre la opción o característica «Cotización». -->
+            <li>
+              <!-- Crea el enlace «Cotización» hacia esta misma página, en la explicación para cotizar. -->
+              <a href="#cotizacion">
+                <!--
+                  Es el texto «Cotización» del enlace que lleva a esta misma página, en la explicación para
+                  cotizar.
+                -->
+                Cotización
+              <!-- Termina el enlace «Cotización» hacia esta misma página, en la explicación para cotizar. -->
+              </a>
+            <!-- Termina la opción o característica «Cotización». -->
+            </li>
+          <!-- Termina las listas de enlaces del pie de página. -->
+          </ul>
+        <!-- Termina el bloque «Alquiler». -->
+        </div>
+        <!-- Abre el bloque «Síguenos». -->
+        <div>
+          <!-- Presenta el título del apartado «Síguenos». -->
+          <h2>
+            <!-- Muestra «Síguenos» dentro del título del apartado «Síguenos». -->
+            Síguenos
+          <!-- Termina el título del apartado «Síguenos». -->
+          </h2>
+          <!-- Abre Facebook y WhatsApp en el pie de página. -->
+          <div class="footer-socials">
+            <!--
+              Crea el enlace «Facebook» hacia la página de Facebook de Jumanvi. Lo abre en otra pestaña sin dar
+              acceso a esta página.
+            -->
+            <a href="https://www.facebook.com/share/14ofRNHxwtY/" target="_blank" rel="noopener noreferrer">
+              <!--
+                Muestra «el símbolo de Facebook» desde «assets/icons/facebook.svg». Reserva sus proporciones con
+                48 de ancho y 48 de alto; el diseño adapta su tamaño.
+              -->
+              <img src="assets/icons/facebook.svg" alt="" width="48" height="48">
+              <!-- Es el texto «Facebook» del enlace que lleva a la página de Facebook de Jumanvi. -->
+              Facebook
+            <!-- Termina el enlace «Facebook» hacia la página de Facebook de Jumanvi. -->
+            </a>
+            <!--
+              Crea el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. Lo abre en otra pestaña sin
+              dar acceso a esta página.
+            -->
+            <a href="https://wa.me/59173835908" target="_blank" rel="noopener noreferrer">
+              <!--
+                Muestra «el símbolo de WhatsApp» desde «assets/icons/whatsapp.svg». Reserva sus proporciones con
+                48 de ancho y 48 de alto; el diseño adapta su tamaño.
+              -->
+              <img src="assets/icons/whatsapp.svg" alt="" width="48" height="48">
+              <!-- Es el texto «WhatsApp» del enlace que lleva a WhatsApp de Jumanvi, al número 73835908. -->
+              WhatsApp
+            <!-- Termina el enlace «WhatsApp» hacia WhatsApp de Jumanvi, al número 73835908. -->
+            </a>
+          <!-- Termina Facebook y WhatsApp en el pie de página. -->
+          </div>
+        <!-- Termina el bloque «Síguenos». -->
+        </div>
+      <!-- Termina las columnas del pie de página. -->
       </div>
+      <!-- Abre la línea de derechos de Jumanvi. -->
       <div class="container footer-bottom">
+        <!-- Presenta el párrafo «© 2026 Jumanvi. Todos los derechos reservados.». -->
         <p>
+          <!--
+            Muestra «© 2026 Jumanvi. Todos los derechos reservados.» dentro del párrafo «© 2026 Jumanvi. Todos los
+            derechos reservados.».
+          -->
           © 2026 Jumanvi. Todos los derechos reservados.
+        <!-- Termina el párrafo «© 2026 Jumanvi. Todos los derechos reservados.». -->
         </p>
+      <!-- Termina la línea de derechos de Jumanvi. -->
       </div>
+    <!-- Termina el pie de página: reúne el logo, los enlaces, las redes sociales y los derechos de Jumanvi. -->
     </footer>
+  <!-- Termina todo lo que se muestra en la página Alquiler. -->
   </body>
+<!-- Termina toda la página, con sus textos en español. -->
 </html>
