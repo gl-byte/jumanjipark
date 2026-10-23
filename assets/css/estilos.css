@@ -3673,8 +3673,8 @@ h3 {
 
 /* Empieza el aspecto de la página Eventos. */
 .page-eventos {
-  /* Usa una mezcla de verde claro y turquesa como fondo de la página Eventos. */
-  --hero-photo: linear-gradient(135deg, var(--verde-fondo-claro), var(--turquesa));
+  /* Usa la fotografía real de una actividad infantil como fondo de Eventos. */
+  --hero-photo: url("../images/events/infantiles/actividad-infantil-con-juegos.jpeg");
 /* Termina el aspecto de la página Eventos. */
 }
 
@@ -3690,8 +3690,8 @@ h3 {
 
 /* Empieza el aspecto de la página Contacto. */
 .page-contacto {
-  /* Usa una mezcla de verde claro y rosa suave como fondo de la página Contacto. */
-  --hero-photo: linear-gradient(135deg, var(--verde-fondo-claro), #fbd9e8);
+  /* Muestra el salón preparado para recibir una celebración como fondo de Contacto. */
+  --hero-photo: url("../images/events/celebraciones/salon-preparado-con-juegos.jpeg");
 /* Termina el aspecto de la página Contacto. */
 }
 
@@ -5347,7 +5347,6 @@ summary:focus-visible,
 /* Termina las adaptaciones para pantallas de hasta 680 píxeles. */
 }
 
-
 /* Aplica estas adaptaciones cuando la pantalla mide 920 píxeles de ancho o menos. */
 @media (max-width: 920px) {
   /* Incluye en este mismo diseño la ruta que indica en qué página estás. */
@@ -5657,94 +5656,6 @@ summary:focus-visible,
   }
 /* Termina las adaptaciones para menos movimiento. */
 }
-
-
-/* Define el aspecto de los fondos de color que sustituyen las imágenes de ejemplo. */
-.color-panel {
-  /* Elige azul como color inicial de esta mezcla en los fondos de color que sustituyen las imágenes de ejemplo. */
-  --panel-start: var(--azul);
-  /* Elige turquesa como color final de esta mezcla en los fondos de color que sustituyen las imágenes de ejemplo. */
-  --panel-end: var(--turquesa);
-  /* Reserva un bloque propio para este fondo en los fondos de color que sustituyen las imágenes de ejemplo. */
-  display: block;
-  /* Fija el ancho en todo el espacio disponible en los fondos de color que sustituyen las imágenes de ejemplo. */
-  width: 100%;
-  /* Fija la altura en 205 píxeles en los fondos de color que sustituyen las imágenes de ejemplo. */
-  height: 205px;
-  /* Evita que el fondo de color pierda altura al repartir el espacio en los fondos de color que sustituyen las imágenes de ejemplo. */
-  flex-shrink: 0;
-  /* Redondea las esquinas con 12 píxeles en los fondos de color que sustituyen las imágenes de ejemplo. */
-  border-radius: 12px;
-  /* Mezcla los colores elegidos y añade un brillo suave sin utilizar archivos de imagen en los fondos de color que sustituyen las imágenes de ejemplo. */
-  background: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.55), transparent 55%), linear-gradient(135deg, var(--panel-start), var(--panel-end));
-/* Termina el aspecto de los fondos de color que sustituyen las imágenes de ejemplo. */
-}
-/* Define el aspecto del fondo de las tarjetas de cumpleaños. */
-.color-panel--cumpleanos {
-  /* Elige rosa como color inicial de esta mezcla en el fondo de las tarjetas de cumpleaños. */
-  --panel-start: var(--rosa);
-  /* Elige naranja como color final de esta mezcla en el fondo de las tarjetas de cumpleaños. */
-  --panel-end: var(--naranja);
-/* Termina el aspecto del fondo de las tarjetas de cumpleaños. */
-}
-/* Define el aspecto del fondo de las tarjetas de colegios. */
-.color-panel--colegios {
-  /* Elige azul como color inicial de esta mezcla en el fondo de las tarjetas de colegios. */
-  --panel-start: var(--azul);
-  /* Elige turquesa como color final de esta mezcla en el fondo de las tarjetas de colegios. */
-  --panel-end: var(--turquesa);
-/* Termina el aspecto del fondo de las tarjetas de colegios. */
-}
-/* Define el aspecto del fondo de las tarjetas de eventos infantiles. */
-.color-panel--infantiles {
-  /* Elige violeta como color inicial de esta mezcla en el fondo de las tarjetas de eventos infantiles. */
-  --panel-start: var(--violeta);
-  /* Elige rosa como color final de esta mezcla en el fondo de las tarjetas de eventos infantiles. */
-  --panel-end: var(--rosa);
-/* Termina el aspecto del fondo de las tarjetas de eventos infantiles. */
-}
-/* Define el aspecto del fondo de las tarjetas de eventos empresariales. */
-.color-panel--empresariales {
-  /* Elige azul oscuro como color inicial de esta mezcla en el fondo de las tarjetas de eventos empresariales. */
-  --panel-start: var(--azul-oscuro);
-  /* Elige azul como color final de esta mezcla en el fondo de las tarjetas de eventos empresariales. */
-  --panel-end: var(--azul);
-/* Termina el aspecto del fondo de las tarjetas de eventos empresariales. */
-}
-/* Define el aspecto del fondo de las tarjetas de celebraciones. */
-.color-panel--celebraciones {
-  /* Elige verde como color inicial de esta mezcla en el fondo de las tarjetas de celebraciones. */
-  --panel-start: var(--verde);
-  /* Elige turquesa como color final de esta mezcla en el fondo de las tarjetas de celebraciones. */
-  --panel-end: var(--turquesa);
-/* Termina el aspecto del fondo de las tarjetas de celebraciones. */
-}
-/* Define el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-.visual-card .color-panel {
-  /* Fija la altura en 160 píxeles en los fondos de las tarjetas pequeñas de la presentación. */
-  height: 160px;
-  /* Dibuja el borde con las medidas y el color indicados; la primera cifra define su grosor en los fondos de las tarjetas pequeñas de la presentación. */
-  border: 6px solid rgba(255, 255, 255, 0.76);
-/* Termina el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-}
-/* Define el aspecto de los fondos de las opciones iniciales de alquiler. */
-.rental-grid .color-panel {
-  /* Fija la altura en 178 píxeles en los fondos de las opciones iniciales de alquiler. */
-  height: 178px;
-/* Termina el aspecto de los fondos de las opciones iniciales de alquiler. */
-}
-/* Define el aspecto del fondo superior de las tarjetas informativas. */
-.detail-card > .color-panel {
-  /* Mantiene las esquinas rectas para que sigan el contorno de la tarjeta en el fondo superior de las tarjetas informativas. */
-  border-radius: 0;
-/* Termina el aspecto del fondo superior de las tarjetas informativas. */
-}
-/* Define el aspecto del fondo superior de los paquetes que no tienen una fotografía real. */
-.package-photo.color-panel {
-  /* Fija la altura en 175 píxeles en el fondo superior de los paquetes que no tienen una fotografía real. */
-  height: 175px;
-/* Termina el aspecto del fondo superior de los paquetes que no tienen una fotografía real. */
-}
 /* Define el aspecto del signo de suma junto a Mi combo. */
 .combo-nav__symbol {
   /* Organiza el contenido en filas y columnas en el signo de suma junto a Mi combo. */
@@ -6047,36 +5958,8 @@ summary:focus-visible,
   }
 /* Termina los cambios de color al utilizar un ratón. */
 }
-/* Ajusta los fondos y el combo cuando la pantalla mide 1180 píxeles de ancho o menos. */
-@media (max-width: 1180px) {
-  /* Define el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-  .visual-card .color-panel {
-    /* Fija la altura en 132 píxeles en los fondos de las tarjetas pequeñas de la presentación. */
-    height: 132px;
-  /* Termina el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-  }
-  /* Define el aspecto de los fondos de las opciones iniciales de alquiler. */
-  .rental-grid .color-panel {
-    /* Fija la altura en 156 píxeles en los fondos de las opciones iniciales de alquiler. */
-    height: 156px;
-  /* Termina el aspecto de los fondos de las opciones iniciales de alquiler. */
-  }
-/* Termina las adaptaciones para pantallas de hasta 1180 píxeles. */
-}
 /* Ajusta los fondos y el combo cuando la pantalla mide 680 píxeles de ancho o menos. */
 @media (max-width: 680px) {
-  /* Define el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-  .visual-card .color-panel {
-    /* Fija la altura en 120 píxeles en los fondos de las tarjetas pequeñas de la presentación. */
-    height: 120px;
-  /* Termina el aspecto de los fondos de las tarjetas pequeñas de la presentación. */
-  }
-  /* Define el aspecto de los fondos de las opciones iniciales de alquiler. */
-  .rental-grid .color-panel {
-    /* Fija la altura en 145 píxeles en los fondos de las opciones iniciales de alquiler. */
-    height: 145px;
-  /* Termina el aspecto de los fondos de las opciones iniciales de alquiler. */
-  }
   /* Define el aspecto de cada fila con un juego elegido. */
   .combo-item {
     /* Coloca el nombre y sus controles en una sola columna en cada fila con un juego elegido. */
@@ -6111,14 +5994,6 @@ summary:focus-visible,
 }
 /* Ajusta los fondos y el combo cuando la pantalla mide 390 píxeles de ancho o menos. */
 @media (max-width: 390px) {
-  /* Incluye en este mismo aspecto los fondos de las tarjetas pequeñas de la presentación. */
-  .visual-card .color-panel,
-  /* Define el aspecto de los fondos de las opciones iniciales de alquiler. */
-  .rental-grid .color-panel {
-    /* Fija la altura en 105 píxeles en los fondos de las tarjetas pequeñas de la presentación y los fondos de las opciones iniciales de alquiler. */
-    height: 105px;
-  /* Termina el aspecto de los fondos de las tarjetas pequeñas de la presentación y los fondos de las opciones iniciales de alquiler. */
-  }
   /* Define el aspecto del grupo Cantidad, su caja y Quitar. */
   .combo-item__controls {
     /* Fija el ancho en todo el espacio disponible en el grupo Cantidad, su caja y Quitar. */
@@ -6138,11 +6013,10 @@ summary:focus-visible,
 /* Termina las adaptaciones para pantallas de hasta 390 píxeles. */
 }
 
-
 /* Define los colores de fondo de la nueva página Mi combo. */
 .page-combo {
-  /* Mezcla verde muy claro y turquesa sin utilizar una fotografía de ejemplo. */
-  --hero-photo: linear-gradient(135deg, var(--verde-fondo-claro), var(--turquesa));
+  /* Usa la fotografía real con inflables y futbolines detrás de la presentación de Mi combo. */
+  --hero-photo: url("../images/events/infantiles/actividad-infantil-con-juegos.jpeg");
 /* Termina el fondo de la página Mi combo. */
 }
 
@@ -6243,4 +6117,64 @@ summary:focus-visible,
   /* Termina el tamaño de la fotografía en móvil. */
   }
 /* Termina la adaptación móvil de la página Mi combo. */
+}
+
+/* Mantiene los colores originales de las fotografías recién incorporadas, también al pasar el puntero. */
+.photo-original {
+  /* Evita que los efectos de las tarjetas intensifiquen o cambien los colores de estas fotos. */
+  filter: none !important;
+/* Termina la conservación de los colores originales de las fotografías. */
+}
+
+/* Organiza las cinco opciones de Alquiler en dos filas equilibradas en escritorio. */
+.rental-grid {
+  /* Reserva seis partes iguales para distribuir tres tarjetas arriba y dos centradas debajo. */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+/* Termina la distribución general de las opciones de Alquiler. */
+}
+
+/* Define el ancho habitual de cada opción de alquiler. */
+.rental-grid > .visual-card {
+  /* Hace que cada tarjeta ocupe dos de las seis partes, sin deformar su fotografía. */
+  grid-column: span 2;
+/* Termina el ancho de cada opción de alquiler. */
+}
+
+/* Coloca la cuarta opción en el centro izquierdo de la segunda fila. */
+.rental-grid > .visual-card:nth-child(4) {
+  /* Empieza en la segunda parte y ocupa dos espacios para centrar el grupo inferior. */
+  grid-column: 2 / span 2;
+/* Termina la posición de la cuarta opción. */
+}
+
+/* Coloca la quinta opción junto a la cuarta en la segunda fila. */
+.rental-grid > .visual-card:nth-child(5) {
+  /* Empieza en la cuarta parte y conserva el mismo ancho que las otras tarjetas. */
+  grid-column: 4 / span 2;
+/* Termina la posición de la quinta opción. */
+}
+
+/* Mantiene las tarjetas de Alquiler proporcionadas en tabletas y teléfonos. */
+@media (max-width: 920px) {
+  /* Reorganiza las cinco opciones cuando hay menos espacio horizontal. */
+  .rental-grid {
+    /* Coloca dos tarjetas por fila sin obligar a que sean más anchas que la pantalla. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Termina la distribución de dos columnas en pantallas pequeñas. */
+  }
+
+  /* Retira las posiciones de escritorio de todas las tarjetas de Alquiler. */
+  .rental-grid > .visual-card:nth-child(n) {
+    /* Deja que cada opción ocupe su lugar normal en la fila. */
+    grid-column: auto;
+  /* Termina el ajuste de posición para las tarjetas pequeñas. */
+  }
+
+  /* Da un lugar completo a la última opción para evitar una tarjeta aislada a un lado. */
+  .rental-grid > .visual-card:last-child {
+    /* Ocupa las dos columnas de la última fila. */
+    grid-column: 1 / -1;
+  /* Termina el ancho de la última opción en móvil y tableta. */
+  }
+/* Termina la adaptación móvil de las cinco opciones de Alquiler. */
 }
