@@ -112,8 +112,8 @@
               Contacto
             <!-- Termina el enlace «Contacto» hacia la página Contacto. -->
             </a>
-            <!-- Regresa al catálogo llevando los juegos y cantidades que ya se eligieron. -->
-            <a class="combo-nav" href="juegos.html#mi-combo" data-combo-link>
+            <!-- Abre la página Mi combo conservando los juegos y cantidades elegidos. -->
+            <a class="combo-nav" href="combo.html" data-combo-link>
               <!-- Abre el signo de suma junto al nombre Mi combo. -->
               <span class="combo-nav__symbol" aria-hidden="true">
                 <!-- Muestra el texto «+». -->
@@ -327,8 +327,8 @@
           </div>
           <!-- Abre los accesos a secciones de la presentación. -->
           <nav class="section-nav" aria-label="Explorar juegos">
-            <!-- Abre el catálogo para elegir varios juegos y formar una sola solicitud. -->
-            <a href="juegos.html#titulo-catalogo" data-combo-link="catalogo">
+            <!-- Abre Mi combo para conocer el alquiler de varios juegos y preparar una selección propia. -->
+            <a href="combo.html" data-combo-link>
               <!-- Escribe el acceso para crear una selección propia. -->
               Armar mi combo
             <!-- Termina el acceso al catálogo para armar el combo. -->
@@ -1029,93 +1029,44 @@
       <!-- Termina el apartado «Conoce el catálogo». -->
       </section>
       <!-- Abre el apartado donde se revisa y se edita Mi combo. -->
-      <section class="content-section content-section--white" id="mi-combo" aria-labelledby="titulo-mi-combo">
-        <!-- Abre el espacio centrado del resumen del combo. -->
-        <div class="container">
-          <!-- Abre el título y la explicación para armar un combo. -->
-          <div class="section-heading">
-            <!-- Abre el título «Arma tu propio combo». -->
-            <h2 id="titulo-mi-combo">
-              <!-- Muestra el texto «Arma tu propio combo». -->
-              Arma tu propio combo
-            <!-- Termina el título «Arma tu propio combo». -->
-            </h2>
-            <!-- Abre la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-            <p class="combo-note">
-              <!-- Muestra el texto «Agrega tus favoritos desde las tarjetas, ajusta las cantidades y envía una sola consulta con todo tu combo.». -->
-              Agrega tus favoritos desde las tarjetas, ajusta las cantidades y envía una sola consulta con todo tu combo.
-            <!-- Termina la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-            </p>
-          <!-- Termina el título y la explicación para armar un combo. -->
-          </div>
-          <!-- Abre la lista editable de juegos con sus cantidades y las acciones para continuar. -->
-          <div class="combo-panel" data-combo-panel>
-            <!-- Abre el total de unidades y tipos de juego. -->
-            <p class="combo-total" data-combo-total aria-live="polite">
-              <!-- Muestra el texto «0 unidades · 0 tipos de juego». -->
-              0 unidades · 0 tipos de juego
-            <!-- Termina el total de unidades y tipos de juego. -->
-            </p>
-            <!-- Abre el aviso que se muestra cuando todavía no hay juegos elegidos. -->
-            <p class="combo-empty" data-combo-empty>
-              <!-- Muestra el texto «Tu combo está vacío. Elige los juegos que te interesan y agrégalos desde el catálogo.». -->
-              Tu combo está vacío. Elige los juegos que te interesan y agrégalos desde el catálogo.
-            <!-- Termina el aviso que se muestra cuando todavía no hay juegos elegidos. -->
-            </p>
-            <!-- Abre las filas con el nombre, la cantidad y la opción de quitar cada juego. -->
-            <ul class="combo-list" data-combo-list>
-            <!-- Termina las filas con el nombre, la cantidad y la opción de quitar cada juego. -->
-            </ul>
-            <!-- Abre la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-            <p class="combo-note">
-              <!-- Muestra el texto «Las cantidades son una solicitud, no disponibilidad confirmada.». -->
-              Las cantidades son una solicitud, no disponibilidad confirmada.
-              <!-- Muestra el texto «El equipo confirmará disponibilidad, precio y condiciones contigo.». -->
-              El equipo confirmará disponibilidad, precio y condiciones contigo.
-            <!-- Termina la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-            </p>
-            <!-- Abre las opciones para continuar, volver al catálogo o vaciar el combo. -->
-            <div class="combo-actions">
-              <!-- Abre Contacto con la selección completa; permanece oculto si el combo está vacío. -->
-              <a class="button" href="contacto.html?interes=combo-personalizado#formulario" data-combo-continue hidden>
-                <!-- Muestra el texto «Continuar con mi combo →». -->
-                Continuar con mi combo →
-              <!-- Termina el acceso al formulario con todos los juegos y cantidades. -->
-              </a>
-              <!-- Regresa al catálogo llevando los juegos y cantidades que ya se eligieron. -->
-              <a class="text-link" href="juegos.html#titulo-catalogo" data-combo-link="catalogo">
-                <!-- Muestra el texto «Seguir eligiendo juegos». -->
-                Seguir eligiendo juegos
-              <!-- Termina el regreso al catálogo conservando el combo. -->
-              </a>
-              <!-- Prepara el botón que retira todos los juegos sin enviar el formulario. -->
-              <button class="combo-clear" type="button" data-combo-clear hidden>
-                <!-- Muestra el texto «Vaciar combo». -->
-                Vaciar combo
-              <!-- Termina el botón que retira todos los juegos sin enviar el formulario. -->
-              </button>
-            <!-- Termina las opciones para continuar, volver al catálogo o vaciar el combo. -->
-            </div>
-            <!-- Abre el aviso sobre el último juego agregado, quitado o modificado. -->
-            <p class="combo-status" data-combo-status role="status">
-            <!-- Termina el aviso sobre el último juego agregado, quitado o modificado. -->
-            </p>
-            <!-- Abre la alternativa para consultar si están desactivadas las acciones del combo. -->
-            <noscript>
-              <!-- Abre la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-              <p class="combo-note">
-                <!-- Muestra el texto «Para guardar tu combo necesitas JavaScript. También puedes escribir los juegos y cantidades en el mensaje de tu consulta.». -->
-                Para guardar tu combo necesitas JavaScript. También puedes escribir los juegos y cantidades en el mensaje de tu consulta.
-              <!-- Termina la aclaración sobre la solicitud y la disponibilidad de los juegos. -->
-              </p>
-            <!-- Termina la alternativa para consultar si están desactivadas las acciones del combo. -->
-            </noscript>
-          <!-- Termina la lista editable de juegos con sus cantidades y las acciones para continuar. -->
-          </div>
-        <!-- Termina el espacio centrado del resumen del combo. -->
-        </div>
-      <!-- Termina el apartado donde se revisa y se edita Mi combo. -->
-      </section>
+      <!-- Presenta el apartado que explica cómo preparar una solicitud. -->
+<section class="content-section content-section--white" id="mi-combo" aria-labelledby="titulo-revisar-combo">
+  <!-- Presenta el espacio centrado de este apartado. -->
+  <div class="container">
+    <!-- Presenta el acceso desdel catálogo al resumen de Mi combo. -->
+    <div class="cta-panel">
+      <!-- Presenta el título y la introducción de este apartado. -->
+      <div class="section-heading">
+        <!-- Presenta el título «Revisa los juegos de tu combo». -->
+        <h2 id="titulo-revisar-combo">
+          <!-- Muestra el texto «Revisa los juegos de tu combo». -->
+          Revisa los juegos de tu combo
+        <!-- Termina el título «Revisa los juegos de tu combo». -->
+        </h2>
+        <!-- Presenta el párrafo que explica «La página Mi combo reúne tu selección, permite ajustar cantidades y explica cómo solicitar el alquiler de varios juegos.». -->
+        <p>
+          <!-- Muestra el texto «La página Mi combo reúne tu selección, permite ajustar cantidades y explica cómo solicitar el alquiler de varios juegos.». -->
+          La página Mi combo reúne tu selección, permite ajustar cantidades y explica cómo solicitar el alquiler de varios juegos.
+        <!-- Termina el párrafo que explica «La página Mi combo reúne tu selección, permite ajustar cantidades y explica cómo solicitar el alquiler de varios juegos.». -->
+        </p>
+        <!-- Presenta el aviso de la última elección realizada. -->
+        <p class="combo-status" data-combo-status role="status">
+        <!-- Termina el aviso de la última elección realizada. -->
+        </p>
+      <!-- Termina el título y la introducción de este apartado. -->
+      </div>
+      <!-- Abre el acceso a la página donde se revisa Mi combo. -->
+      <a class="button" href="combo.html#mi-combo" data-combo-link="resumen">
+        <!-- Muestra el texto «Revisar mi combo →». -->
+        Revisar mi combo →
+      <!-- Termina el acceso a la página donde se revisa Mi combo. -->
+      </a>
+    <!-- Termina el acceso desdel catálogo al resumen de Mi combo. -->
+    </div>
+  <!-- Termina el espacio centrado de este apartado. -->
+  </div>
+<!-- Termina el apartado que explica cómo preparar una solicitud. -->
+</section>
       <!-- Abre el apartado «¿Ya elegiste tus favoritos?». -->
       <section class="content-section content-section--white">
         <!-- Abre el bloque de contenido centrado. -->

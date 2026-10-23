@@ -12,7 +12,7 @@ const servicios = {
     // Usa este nombre para el resumen y el mensaje de WhatsApp.
     "label": "Mi combo personalizado",
     // Permite volver a revisar y editar todos los juegos elegidos.
-    "url": "juegos.html#mi-combo"
+    "url": "combo.html#mi-combo"
   // Termina los datos de la consulta del combo.
   },
   // Empieza la información de «Cotización personalizada»; «cotizacion-general» permite reconocer esta elección al

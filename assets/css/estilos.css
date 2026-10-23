@@ -6137,3 +6137,110 @@ summary:focus-visible,
   }
 /* Termina las adaptaciones para pantallas de hasta 390 píxeles. */
 }
+
+
+/* Define los colores de fondo de la nueva página Mi combo. */
+.page-combo {
+  /* Mezcla verde muy claro y turquesa sin utilizar una fotografía de ejemplo. */
+  --hero-photo: linear-gradient(135deg, var(--verde-fondo-claro), var(--turquesa));
+/* Termina el fondo de la página Mi combo. */
+}
+
+/* Ajusta la altura de la presentación para que no deje espacio vacío innecesario. */
+.page-combo .screen {
+  /* Deja que el título, la explicación y la foto determinen la altura de esta portada. */
+  min-height: auto;
+/* Termina el ajuste de altura de la portada. */
+}
+
+/* Reúne la fotografía real y la explicación breve del alquiler de varios juegos. */
+.combo-presentation {
+  /* Coloca la fotografía y su explicación en dos columnas. */
+  display: grid;
+  /* Reparte el ancho con algo más de espacio para el texto sin desbordar la pantalla. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  /* Limita el ancho de esta explicación a 960 píxeles. */
+  max-width: 960px;
+  /* Centra el conjunto y lo separa del título superior. */
+  margin: 28px auto 0;
+  /* Recorta los bordes de la fotografía siguiendo las esquinas del conjunto. */
+  overflow: hidden;
+  /* Traza un borde blanco para mantener el aspecto de las tarjetas del sitio. */
+  border: 4px solid var(--blanco);
+  /* Redondea las esquinas del conjunto. */
+  border-radius: 28px;
+  /* Mantiene un fondo blanco detrás de la explicación. */
+  background: var(--blanco);
+  /* Usa la misma sombra suave que otros bloques del sitio. */
+  box-shadow: var(--sombra-suave);
+  /* Muestra el conjunto con la entrada suave ya utilizada en las demás páginas. */
+  animation: content-enter 650ms ease-out both;
+/* Termina la distribución de fotografía y explicación. */
+}
+
+/* Define la fotografía real que acompaña a la explicación del combo. */
+.combo-presentation > img {
+  /* Ocupa todo el ancho de su columna. */
+  width: 100%;
+  /* Sigue la altura del espacio que comparte con el texto. */
+  height: 100%;
+  /* Evita que la fotografía quede demasiado baja en escritorio. */
+  min-height: 260px;
+  /* Llena el espacio sin deformar la fotografía; puede recortar sus bordes. */
+  object-fit: cover;
+/* Termina el ajuste de la fotografía real. */
+}
+
+/* Separa el texto de los bordes del bloque de presentación. */
+.combo-presentation__body {
+  /* Amplía el espacio interior de 22 a 34 píxeles según el ancho disponible. */
+  padding: clamp(22px, 3vw, 34px);
+  /* Alinea la explicación a la izquierda para facilitar su lectura. */
+  text-align: left;
+/* Termina el espacio interior de la explicación. */
+}
+
+/* Ajusta el título que explica qué es un combo. */
+.combo-presentation__body h2 {
+  /* Hace que el título crezca con la pantalla entre 1.4 y 1.85 veces el tamaño base. */
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+/* Termina el tamaño del título explicativo. */
+}
+
+/* Ajusta el párrafo introductorio del alquiler de varios juegos. */
+.combo-presentation__body p {
+  /* Mantiene una letra compacta y legible junto a la fotografía. */
+  font-size: 0.95rem;
+  /* Deja aire entre las líneas de la explicación. */
+  line-height: 1.55;
+/* Termina la lectura del párrafo introductorio. */
+}
+
+/* Integra las características del combo en el mismo bloque de presentación. */
+.combo-presentation__body .check-list {
+  /* Quita la separación inferior adicional después de la última característica. */
+  margin-bottom: 0;
+/* Termina el espacio bajo las características del combo. */
+}
+
+/* Adapta la explicación y su fotografía a las pantallas de hasta 680 píxeles de ancho. */
+@media (max-width: 680px) {
+  /* Cambia la presentación del combo para que se lea de arriba abajo en móvil. */
+  .combo-presentation {
+    /* Coloca primero la foto y después la explicación, en una sola columna. */
+    grid-template-columns: 1fr;
+    /* Reduce ligeramente las esquinas en la pantalla pequeña. */
+    border-radius: 22px;
+  /* Termina la distribución de la presentación en móvil. */
+  }
+
+  /* Proporciona la fotografía sin ocupar toda la pantalla del teléfono. */
+  .combo-presentation > img {
+    /* Fija una altura compacta de 220 píxeles. */
+    height: 220px;
+    /* Retira la altura mínima de escritorio para respetar la medida móvil. */
+    min-height: 0;
+  /* Termina el tamaño de la fotografía en móvil. */
+  }
+/* Termina la adaptación móvil de la página Mi combo. */
+}

@@ -123,11 +123,18 @@
   // Termina la preparación de un enlace interno con el combo.
   }
 
-  // Prepara el regreso al catálogo llevando la selección actual en el enlace.
+  // Prepara el regreso a las tarjetas donde se agregan juegos.
   function enlaceCatalogo() {
-    // Incluye incluso una lista vacía para no recuperar un combo que se acaba de quitar.
-    return conSeleccion("juegos.html#mi-combo");
+    // Conserva la selección y abre la parte del catálogo que contiene los botones de cada juego.
+    return conSeleccion("juegos.html#titulo-catalogo");
   // Termina la preparación del regreso al catálogo.
+  }
+
+  // Prepara el acceso a la página que explica y reúne el alquiler de varios juegos.
+  function enlaceCombo() {
+    // Lleva la selección actual a Mi combo sin saltarse su explicación inicial.
+    return conSeleccion("combo.html");
+  // Termina la preparación del acceso a Mi combo.
   }
 
   // Cuenta las unidades solicitadas de todos los juegos.
@@ -139,7 +146,7 @@
 
   // Informa del resultado de agregar, quitar o modificar juegos.
   function avisar(texto) {
-    // Actualiza el aviso del catálogo o del formulario, según la página abierta.
+    // Actualiza los avisos de selección en la página que esté abierta.
     document.querySelectorAll("[data-combo-status]").forEach((aviso) => {
       // Explica cómo continuar si no se pudo recordar el combo entre visitas.
       aviso.textContent = texto + (puedeGuardar ? "" : " El navegador no permite recordarlo. Usa los enlaces de Mi combo para conservar la selección al continuar.");
@@ -170,7 +177,7 @@
   // Termina la preparación para recargar conservando el último combo.
   }
 
-  // Dibuja la misma selección en el catálogo y en el formulario.
+  // Dibuja la selección en Mi combo y en el formulario, y actualiza los botones del catálogo.
   function mostrar() {
     // Actualiza los números que acompañan a Mi combo en el menú.
     document.querySelectorAll("[data-combo-count]").forEach((contador) => {
@@ -182,8 +189,10 @@
     });
     // Lleva la selección actual en los enlaces que regresan a Mi combo.
     document.querySelectorAll("[data-combo-link]").forEach((enlace) => {
-      // Actualiza el regreso al catálogo con los juegos elegidos.
-      enlace.href = enlaceCatalogo().replace("#mi-combo", enlace.dataset.comboLink === "catalogo" ? "#titulo-catalogo" : "#mi-combo");
+      // Distingue entre elegir más juegos y abrir la explicación de Mi combo.
+      const destino = enlace.dataset.comboLink === "catalogo" ? enlaceCatalogo() : enlaceCombo();
+      // Lleva directamente a la lista solo cuando el acceso dice Revisar mi combo.
+      enlace.href = destino + (enlace.dataset.comboLink === "resumen" ? "#mi-combo" : "");
     // Termina la preparación de los enlaces del catálogo.
     });
     // Prepara los enlaces para continuar con el combo hacia Contacto.
@@ -198,8 +207,8 @@
     document.querySelectorAll("a[href]").forEach((enlace) => {
       // Lee el destino de este enlace sin incluir direcciones de redes sociales.
       const destino = enlace.getAttribute("href");
-      // Reconoce únicamente las cinco páginas locales del proyecto.
-      if (/^(index|juegos|eventos|alquiler|contacto)\.html(?:[?#]|$)/.test(destino)) {
+      // Reconoce únicamente las páginas locales del proyecto.
+      if (/^(index|juegos|eventos|alquiler|combo|contacto)\.html(?:[?#]|$)/.test(destino)) {
         // Lleva la selección actual sin alterar el apartado o el servicio de ese enlace.
         enlace.href = conSeleccion(destino);
       // Termina la comprobación del destino interno.
@@ -346,6 +355,8 @@
     conSeleccion,
     // Comparte el regreso al catálogo llevando la selección actual.
     enlaceCatalogo,
+    // Comparte el acceso a la página explicativa del combo con los juegos elegidos.
+    enlaceCombo,
     // Prepara las líneas de juegos que se adjuntarán al mensaje de WhatsApp.
     lineasMensaje: () => combo.length ? [
       // Separa el combo de la información anterior del mensaje.
